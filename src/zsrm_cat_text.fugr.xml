@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>To Fetch CATEGORY Text</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZSRM_CAT_TEXTTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZSRM_CAT_TEXT</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZSRM_CAT_TEXT</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>To Fetch CATEGORY Text</SHORT_TEXT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>OUTPUT_TAB</PARAMETER>
+       <TYP>ZSRM_T_CAT_TEXT</TYP>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>OUTPUT_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Output table</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

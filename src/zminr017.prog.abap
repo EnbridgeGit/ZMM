@@ -1,0 +1,82 @@
+REPORT ZMINR017 NO STANDARD PAGE HEADING LINE-COUNT 65 LINE-SIZE 120
+MESSAGE-ID ZM.
+************************************************************************
+*    Program     :  ZMINR017
+*    Programmer  :  Gus Spartalis/OmniLogic Systems Group
+*    Client      :  Centra Union Gas Limited
+*    Date        :  December 6 1996
+*
+*    This ABAP will take a new vendor number and get all the material
+*    numbers. The material numbers displayed will be the Old Union
+*    Material #, Old Centra Material #, New Material # and Material
+*    Description.
+************************************************************************
+TABLES: MARA, MAKT, EINA.
+
+DATA: TEMPSRCE(4)   TYPE C,
+      TEMPSEQNO(5),
+      TEMPTYPE(2).
+
+DATA   : BEGIN OF TABLE1 OCCURS 100000,
+          LIFNR     LIKE EINA-LIFNR,
+          MATNR     LIKE MARA-MATNR,
+          UNION(8)  TYPE C,
+          CENTR(6)  TYPE C,
+          MAKTX     LIKE MAKT-MAKTX,
+        END OF TABLE1.
+
+SELECTION-SCREEN BEGIN OF BLOCK BOX1 WITH FRAME.
+SELECT-OPTIONS:
+       S_LIFNR          FOR EINA-LIFNR.
+SELECTION-SCREEN END OF BLOCK BOX1.
+
+INCLUDE <ICON>.
+************************************************************************
+TOP-OF-PAGE.
+WRITE: / ICON_DATE AS ICON.
+WRITE: SY-DATUM COLOR COL_GROUP INTENSIFIED OFF INVERSE ON.
+WRITE: 50 TEXT-002 COLOR COL_HEADING.
+WRITE: 111 SY-REPID COLOR COL_NEGATIVE.
+
+WRITE: / ICON_TIME AS ICON.
+WRITE: SY-UZEIT COLOR COL_GROUP INTENSIFIED OFF INVERSE ON.
+ULINE: 49(15).
+WRITE: 111 'PAGE:' INTENSIFIED OFF.
+WRITE: 116(3) SY-PAGNO COLOR COL_GROUP INTENSIFIED OFF INVERSE ON.
+WRITE: /.
+FORMAT COLOR COL_NORMAL.
+ULINE.
+
+WRITE: /1 TEXT-008, 15 TEXT-003, 30 TEXT-004, 50 TEXT-008.
+WRITE: /1 TEXT-006, 15 TEXT-011, 30 TEXT-011, 50 TEXT-011, 70 TEXT-011.
+WRITE: /1 TEXT-005, 15 TEXT-005, 30 TEXT-005, 50 TEXT-005, 70 TEXT-012.
+ULINE.
+WRITE: /.
+**************************** MAIN  PROGRAM *****************************
+START-OF-SELECTION.
+SELECT * FROM EINA WHERE LIFNR IN S_LIFNR.
+      SELECT SINGLE * FROM MARA WHERE MATNR = EINA-MATNR.
+      MOVE EINA-LIFNR       TO TABLE1-LIFNR.
+      MOVE EINA-MATNR       TO TABLE1-MATNR.
+      MOVE MARA-BISMT(8)    TO TABLE1-UNION.
+      MOVE MARA-BISMT+9(6)  TO TABLE1-CENTR.
+          SELECT SINGLE * FROM MAKT WHERE MATNR = MARA-MATNR
+                                      AND SPRAS = SY-LANGU.
+      MOVE MAKT-MAKTX       TO TABLE1-MAKTX.
+      APPEND TABLE1.
+      CLEAR  TABLE1.
+ENDSELECT.
+
+SORT TABLE1 BY LIFNR ASCENDING
+               MATNR ASCENDING.
+
+LOOP AT TABLE1.
+ON CHANGE OF TABLE1-LIFNR.
+    NEW-PAGE.
+    WRITE: /1 TABLE1-LIFNR, 15 TABLE1-UNION, 30 TABLE1-CENTR.
+    WRITE: 50 TABLE1-MATNR, 70 TABLE1-MAKTX.
+ELSE.
+    WRITE: /15 TABLE1-UNION, 30 TABLE1-CENTR.
+    WRITE:  50 TABLE1-MATNR, 70 TABLE1-MAKTX.
+ENDON.
+ENDLOOP.

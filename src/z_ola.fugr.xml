@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Function Group For OLA</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZ_OLATOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZ_OLA</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>Z_GET_OLA_DETAILS</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>FM to get OLA details</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IMP_LIFNR</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>EKKO-LIFNR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IMP_EKORG</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>EKKO-EKORG</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IMP_ZTERM</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>EKKO-ZTERM</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IMP_MATKL</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>EKPO-MATKL</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IMP_COUNT</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>SY-TABIX</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EXP_EKKO_EKPO</PARAMETER>
+       <TYP>ZTTY_EKKO_EKPO</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IMP_LIFNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Vendor Account Number</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IMP_EKORG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Purchasing Organization</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IMP_ZTERM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Terms of Payment Key</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IMP_MATKL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Material Group</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IMP_COUNT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Total number of exntries required</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EXP_EKKO_EKPO</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Table Type For Fields in Table EKKO and EKPO</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

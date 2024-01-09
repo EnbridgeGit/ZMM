@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SCVI" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SCVI>
+    <SHDSVCI>
+     <SCVARIANT>ZMIR4_6211</SCVARIANT>
+     <PROGNAME>SAPLMR1M</PROGNAME>
+     <DYNPRO>6211</DYNPRO>
+     <VERSION>8</VERSION>
+    </SHDSVCI>
+    <SHDSVTXCI>
+     <SHDSVTXCI>
+      <LANGU>E</LANGU>
+      <SCVARIANT>ZMIR4_6211</SCVARIANT>
+     </SHDSVTXCI>
+    </SHDSVTXCI>
+    <SHDSVFVCI>
+     <SHDSVFVCI>
+      <SCVARIANT>ZMIR4_6211</SCVARIANT>
+      <FIELDNAME>RM08M-EBELN</FIELDNAME>
+      <ACTIVE>X</ACTIVE>
+      <INPUT_OFF>X</INPUT_OFF>
+      <ITYPE>C</ITYPE>
+     </SHDSVFVCI>
+     <SHDSVFVCI>
+      <SCVARIANT>ZMIR4_6211</SCVARIANT>
+      <FIELDNAME>RM08M-EBELP</FIELDNAME>
+      <ACTIVE>X</ACTIVE>
+      <INPUT_OFF>X</INPUT_OFF>
+      <ITYPE>N</ITYPE>
+     </SHDSVFVCI>
+     <SHDSVFVCI>
+      <SCVARIANT>ZMIR4_6211</SCVARIANT>
+      <FIELDNAME>RM08M-PRICE_DET</FIELDNAME>
+      <ACTIVE>X</ACTIVE>
+      <INPUT_OFF>X</INPUT_OFF>
+      <ITYPE>0</ITYPE>
+     </SHDSVFVCI>
+     <SHDSVFVCI>
+      <SCVARIANT>ZMIR4_6211</SCVARIANT>
+      <FIELDNAME>RM08M-XMSEL</FIELDNAME>
+      <ACTIVE>X</ACTIVE>
+      <INPUT_OFF>X</INPUT_OFF>
+      <ITYPE>0</ITYPE>
+     </SHDSVFVCI>
+    </SHDSVFVCI>
+   </SCVI>
+  </asx:values>
+ </asx:abap>
+</abapGit>

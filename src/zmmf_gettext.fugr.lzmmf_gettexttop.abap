@@ -1,0 +1,2 @@
+FUNCTION-POOL ZMMF_GETTEXT.                 "MESSAGE-ID ..
+

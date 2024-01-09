@@ -1,0 +1,79 @@
+  include lmgd1i7p .  " mesub_help
+
+  INCLUDE LMGD1I7H .  " MARA-PRDHA_HELP
+
+  INCLUDE LMGD1I7G .  " MVKE-PRODH_HELP
+
+  INCLUDE LMGD1I7F .  " MBEW-BKLAS_HELP
+
+  INCLUDE LMGD1I7E .  " MEABM_HELP
+
+  INCLUDE LMGD1I7D .  " MEALL_HELP
+
+  INCLUDE LMGD1I7C .  " MEGEW_HELP
+
+  INCLUDE LMGD1I7B .  " MEKFM_HELP
+
+
+  INCLUDE LMGD1I7A .  " MARC-STRGR_HELP
+
+
+  INCLUDE LMGD1I79 .  " MEVOL_HELP
+
+  INCLUDE LMGD1I78 .  " MEZEI_HELP
+
+  INCLUDE LMGD1I77 .  " MFHM-MGFORM_HELP
+
+  INCLUDE LMGD1I76 .  " MFHM-EWFORM_HELP
+
+  INCLUDE LMGD1I75 .  " MPOP-GEWGR_HELP
+
+  INCLUDE LMGD1I74 .  " STEUER_TAXKM_HELP
+
+  INCLUDE LMGD1I73 .  " STEUER_TAXIM_HELP
+
+  INCLUDE LMGD1I72 .  " MARC-LFRHY_HELP
+
+
+  INCLUDE LMGD1I71 .  " MARC-MRPPP_HELP
+
+
+  INCLUDE LMGD1I70 .  " MARC-RDPRF_HELP
+
+
+  INCLUDE LMGD1I6Z .  " MARC-RWPRO_HELP
+
+
+  INCLUDE LMGD1I6Y .  " SMEINH-MEINH_HELP
+
+
+  INCLUDE LMGD1I6X .  " MARC-EPRIO_HELP
+
+  INCLUDE LMGD1I6W .  " DEST_VALUES
+
+  INCLUDE LMGD1I6V .  " MARD_LWMKB_HELP
+
+  INCLUDE LMGD1I6U .  " MARC_ABCIN_HELP
+
+*------------------------------------------------------------------
+*Module MBEW-KOSGR_HELP
+*Aufruf der speziellen Eingabehilfe für Gemeinkostengruppe
+*------------------------------------------------------------------
+MODULE MBEW-KOSGR_HELP.    "//br270996 neu zu 3.0f siehe Hinweis 50952
+                           "ch zu 4.0c nochmal eingebaut neuer H.109797
+  PERFORM SET_DISPLAY.
+
+  GET CURSOR FIELD FELD1.
+
+  CALL FUNCTION 'KK_F4_GKGRP_PER_BWKEY'
+       EXPORTING
+            P_BWKEY        = RMMG1-BWKEY
+            DISPLAY        = DISPLAY
+       IMPORTING
+            GKGRP          = MBEW-KOSGR
+       EXCEPTIONS
+            NO_ENTRIES     = 1
+            INTERNAL_ERROR = 2
+            OTHERS         = 3.
+
+ENDMODULE.                     " MBEW-KOSGR_HELP

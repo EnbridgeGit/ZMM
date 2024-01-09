@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<abapGit version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TDLINES>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>FROMADDR</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;MSEG-BWART&amp; = &apos;935&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ADDRESS PARAGRAPH LL</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  TITLE    &amp;T001W-ANRED&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  NAME     &amp;T001W-NAME1&amp;, &amp;T001W-NAME2&amp;, &amp;T001W-NAME3&amp;, &amp;T001W-NAME4&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  STREET   &amp;T001W-STRAS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  POBOX    &amp;T001W-PFACH&amp;  CODE &amp;T001W-PSTL2&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  CITY     &amp;T001W-ORT01&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  POSTCODE &amp;T001W-PSTLZ&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  COUNTRY  &amp;T001W-LAND1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  REGION   &amp;T001W-REGIO&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  FROMCOUNTRY &amp;T001W-LAND1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDADDRESS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>FUSS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Release 2.1: /:BOTTOM - ENDBOTTOM removed</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>FUSS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,Mvt. type: &amp;T156T-BWART&amp; &amp;T156T-BTEXT&amp;,,Issued by: &amp;MKPF-USNAM&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>MAIN</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Release 2.1: elements /E set outside /: statements</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>KOPF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>return document</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;MSEG-BWART&amp; = &apos;935&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>CC</TDFORMAT>
+     <TDLINE>&lt;F1&gt;&lt;B&gt;RETURN DOCUMENT&lt;/&gt;&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>97/04/28 - RAARSSEN</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>         - Move warranty ID into descriptive text</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>         - Move document number after date</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>,,                        ,,Warranty ID No.: &amp;ZMWAP-WREID&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,Plant:      &amp;MSEG-WERKS&amp;,,THIS WARRANTY ID NO.&amp;ZMWAP-WREID&amp; MUST</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>APPEAR</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,Stor. Loc.: &amp;MSEG-LGORT&amp;,,ON ALL BILLS OF LADING, INVOICES,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,                        ,,DELIVERY, SLIPS, PACKAGES &amp; CONTAINERS,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,From:                   ,,CORRESPONDENCE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,                        ,,Date:            &amp;MKPF-BUDAT&amp;,,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,                        ,,Doc. No.:        &amp;MSEG-MBLNR&amp;,,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,Invoice to: Union Gas Limited  ,,Ship To:</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,            P.O.Box 2001</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,            Chatham ON N7L 3V9</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>others</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>CC</TDFORMAT>
+     <TDLINE>&lt;F1&gt;&lt;B&gt;GR/GI SLIP&lt;/&gt;&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>CC</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,Document No.: &amp;MSEG-MBLNR&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>BACOKOPF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>POS_ZEILE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>return document</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;MSEG-BWART&amp; = &apos;935&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,Return For: &amp;ZMWAP-REFOR&amp;,,R.G.A.#: &amp;ZMWAP-RGAUT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,            &amp;ZMWAP-OTTXT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,Customer Name: &amp;ZMWAP-CNAME&amp; ,,Date Installed: &amp;ZMWAP-INDAT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,Address:       &amp;ZMWAP-CADDR1&amp;,,Date Replaced:  &amp;ZMWAP-REDAT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,               &amp;ZMWAP-CADDR2&amp;,,Orig.P.O./Inv#: &amp;ZMWAP-MTSNR&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,Material#:   &amp;ZMWAP-MATNR&amp;,,Quantity: &amp;ZMWAP-ERFMG+5(.0)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,Description: &amp;MABDR-MAKTX&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>TT</TDFORMAT>
+     <TDLINE>,,Model#,,Serial#,,Part#</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>TT</TDFORMAT>
+     <TDLINE>,,&amp;ZMWAP-MODNM&amp;,,&amp;ZMWAP-SERNM&amp;,,&amp;ZMWAP-PRTNM&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,Warranty Status: &amp;ZMWAP-WTYST&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,Reason For Return: &amp;ZMWAP-RETXT1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,                   &amp;ZMWAP-RETXT2&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>TT</TDFORMAT>
+     <TDLINE>,,,,,,Signature: _________________</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>other</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,Posting date: &amp;MKPF-BUDAT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,Current date: &amp;MKPF-CPUDT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,Plant:        &amp;T001W-WERKS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,Description:  &amp;T001W-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,Material:     &amp;MSEG-MATNR&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,Batch:        &amp;MSEG-CHARG&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,Description:  &amp;MABDR-MAKTX&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,Quantity:     &amp;MSEG-MENGE&amp; &amp;MSEG-MEINS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,Storage loc.: &amp;MSEG-LGORT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+     <TDLINE>,,Storage bin:  &amp;MABDR-LGPBE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>HH</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>,,&amp;AM07M-KOTXT&amp; &amp;AM07M-KONTIERUNG&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>TOADDR</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;MSEG-BWART&amp; = &apos;935&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ADDRESS PARAGRAPH AS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  TITLE    &amp;LFA1-ANRED&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  NAME     &amp;LFA1-NAME1&amp;, &amp;LFA1-NAME2&amp;, &amp;LFA1-NAME3&amp;, &amp;LFA1-NAME4&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  STREET   &amp;LFA1-STRAS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  POBOX    &amp;LFA1-PFACH&amp;  CODE &amp;LFA1-PSTL2&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  CITY     &amp;LFA1-ORT01&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  POSTCODE &amp;LFA1-PSTLZ&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  COUNTRY  &amp;LFA1-LAND1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  REGION   &amp;LFA1-REGIO&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  FROMCOUNTRY &amp;T001-LAND1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDADDRESS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+   </TDLINES>
+  </asx:values>
+ </asx:abap>
+</abapGit>

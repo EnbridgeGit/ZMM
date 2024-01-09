@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>COG MM Objects Location, MSA, Deal</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZMMCOGTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZMMCOG</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZLMMI036_CARE_LOCMAST</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Interface from CARE to SAP to get locations/pipeline data</SHORT_TEXT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>TAB_LOCMAST</PARAMETER>
+       <DBSTRUCT>ZMMT_LOCMAST</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>UPDATE_FAILED</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>TAB_LOCMAST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Location Master</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>UPDATE_FAILED</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Unable to update/modify table ZMMT_LOCMAST</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZLMMI037_OPLK_MASTAGREE</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Interface from Openlink to SAP to get Master Service Agreements</SHORT_TEXT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>TAB_MASTAGREE</PARAMETER>
+       <DBSTRUCT>ZMMT_MASTAGREE</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>TAB_DUPLICATE</PARAMETER>
+       <DBSTRUCT>ZMMT_MASTAGREE</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>UPDATE_FAILED</EXCEPTION>
+      </RSEXC>
+      <RSEXC>
+       <EXCEPTION>DUPLICATE_MSA</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>TAB_MASTAGREE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Master Service Agreement</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TAB_DUPLICATE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Duplicate Master service agreement</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>UPDATE_FAILED</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Unable to update/modify table ZMMT_LOCMAST</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>DUPLICATE_MSA</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Duplicate MSA data for MSA Name</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZLMMI039_OPLK_DEALID</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Openlink to SAP DealId</SHORT_TEXT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>TAB_DEALID</PARAMETER>
+       <DBSTRUCT>ZMMS_OPLK_DEALID</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>TAB_NODEAL</PARAMETER>
+       <DBSTRUCT>ZMMS_OPLK_DEALID_RETURN</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>TAB_DEALID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Openlink to SAP Deal ID structure</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TAB_NODEAL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>No Deal at SAP</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZMM_GENERATE_SA</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Generate Schdeluning Agreement</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_MATERIAL</PARAMETER>
+       <DEFAULT>&apos;NATGAS&apos;</DEFAULT>
+       <TYP>CHAR18</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_PLANT</PARAMETER>
+       <TYP>WERKS_D</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_STORLOC</PARAMETER>
+       <DEFAULT>&apos;A001&apos;</DEFAULT>
+       <TYP>LGORT_D</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_DEAL_SDATE</PARAMETER>
+       <TYP>ZZFROMDATE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_DEAL_EDATE</PARAMETER>
+       <TYP>ZZTODATE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_UOM</PARAMETER>
+       <TYP>CHAR3</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_TAXCODE</PARAMETER>
+       <TYP>MWSKZ</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_SHIPPINGINST</PARAMETER>
+       <DEFAULT>&apos;FI&apos;</DEFAULT>
+       <TYP>CHAR2</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_DAILYQUAN</PARAMETER>
+       <TYP>Z_CONDAYQTY</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_AGREEMTYPE</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>BSART</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_PEAKMAT</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>CHAR18</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_NO_OF_MONTHS</PARAMETER>
+       <TYP>CHAR13</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_MATGRP</PARAMETER>
+       <TYP>MATKL</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_PEAKMATGRP</PARAMETER>
+       <TYP>MATKL</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_MONTHLY_AMOUNT</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>KBETR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_PURORG</PARAMETER>
+       <TYP>EKORG</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_INDEX</PARAMETER>
+       <TYP>INCO1</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_FIXPRICE</PARAMETER>
+       <TYP>KBETR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_CURCY</PARAMETER>
+       <TYP>WAERS</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>ES_ERROR</PARAMETER>
+       <TYP>ZMMS_ERROR</TYP>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>T_SALINEITEMS</PARAMETER>
+       <DBSTRUCT>ZMMS_GEN_SA</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NO_RECORD_FOUND</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_MATERIAL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Material Number</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_PLANT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Plant</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_STORLOC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Storage location</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_DEAL_SDATE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>From Date</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_DEAL_EDATE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>To date</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_UOM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>UOM</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_TAXCODE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tax on sales/purchases code</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_SHIPPINGINST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Version Number Component</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_DAILYQUAN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Contract Daily Quantity</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_AGREEMTYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Order Type (Purchasing)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_PEAKMAT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Material Number</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_NO_OF_MONTHS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>KTMNG</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_MATGRP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Material Group</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_PEAKMATGRP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Material Group</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_MONTHLY_AMOUNT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>NETPR</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_PURORG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Purchasing Organization</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_INDEX</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Incoterms (Part 1)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_FIXPRICE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Rate (condition amount or percentage)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_CURCY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Currency Key</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ES_ERROR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return Parameter</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_SALINEITEMS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Structure for SA Generation</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NO_RECORD_FOUND</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Record not found</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

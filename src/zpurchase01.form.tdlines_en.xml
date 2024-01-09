@@ -1,0 +1,5483 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<abapGit version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TDLINES>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>ADDRESS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>this is the vendor address</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKKO-ADRNR(K)&amp; EQ &apos;          &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ADDRESS PARAGRAPH AS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  TITLE    &amp;LFA1-ANRED&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  NAME     &amp;LFA1-NAME1&amp;, &amp;LFA1-NAME2&amp;, &amp;LFA1-NAME3&amp;, &amp;LFA1-NAME4&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>NAME     &amp;LFA1-NAME2&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  STREET   &amp;LFA1-STRAS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  POBOX    &amp;LFA1-PFACH&amp;  CODE &amp;LFA1-PSTL2&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  CITY     &amp;LFA1-ORT01&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  POSTCODE &amp;LFA1-PSTLZ&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  COUNTRY  &amp;LFA1-LAND1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  REGION   &amp;LFA1-REGIO&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  FROMCOUNTRY &amp;T001-LAND1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDADDRESS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>           used for one-time vendor</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ADDRESS PARAGRAPH AS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>   ADDRESSNUMBER &amp;EKKO-ADRNR(K)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>   FROMCOUNTRY &amp;T001-LAND1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDADDRESS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>DEFINE &amp;ISNPROV1&amp; = &apos;&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>DEFINE &amp;ISNPROV2&amp; = &apos;&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>PERFORM GET_ISNSTATUS IN PROGRAM ZMM_SAPSCRIPT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>USING &amp;EKKO-LIFNR&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>USING &amp;EKKO-EBELN&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>USING &amp;EKKO-BSTYP&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>USING &amp;EKKO-BSART&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>CHANGING &amp;ISNPROV1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>CHANGING &amp;ISNPROV2&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDPERFORM</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;ISNPROV1&amp; &lt;&gt; &apos;&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+     <TDLINE>Pre-Qual Status:,,&amp;ISNPROV1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;ISNPROV2&amp; &lt;&gt; &apos;&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+     <TDLINE>,,,,,,,,,,,,,,,,&amp;ISNPROV2&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>BUYER</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX FRAME 10 TW INTENSITY 10</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z4</TDFORMAT>
+     <TDLINE>BUYER</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z4</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AS</TDFORMAT>
+     <TDLINE>&amp;T024-EKNAM&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>COMMMETH</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX FRAME 10 TW INTENSITY 10</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>II</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z4</TDFORMAT>
+     <TDLINE> COMM.METHOD</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z4</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>CASE &amp;NAST-LDEST&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>WHEN &apos; &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>F1</TDFORMAT>
+     <TDLINE>   EMAIL</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>WHEN &apos;ZFAX&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>F1</TDFORMAT>
+     <TDLINE>   FAX</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>WHEN &apos;RightFax&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>F1</TDFORMAT>
+     <TDLINE>   FAX</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>WHEN OTHERS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>F1</TDFORMAT>
+     <TDLINE>   PRINTER</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDCASE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>CONSGNEE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>HEADER_DELADDRESS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>this is the address where the goods purchased will be sent to</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>(i.e. union-centra address)</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>the shipto NAME is set to &quot;Union Gas Limited&quot; if plant# starts by &quot;P1&quot;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>the shipto NAME is set to &quot;Centra Gas Ontario&quot; if plant# starts by &quot;P2&quot;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>otherwise, the layout set will output the NAME that it finds in the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>system.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>The reason why we have to put an if-then clause here is that both</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Union Gas &amp; Centra Gas are using the same plant# and plant address.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>However, they are still 2 entities now. So, the purchase orders have</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>to be addressed to the proper entity name.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Changes</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>2001/04/23 mdemeest #--- Ship to address for &apos;P4&apos; plants</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>2000/09/08 mdemeest 4.6B Copied from MEDRUCK to incorporate 4.6b changes</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>                         &quot;Please deliver to:&apos; not required - preprinted</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>97/02/07 - SHINES (Scott Hines)</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>         The &quot;Union Gas Limited&quot; and &quot;Centra Gas Ontario&quot; names have</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>         been enter in the address of the plant in configuration.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>         Therefore the if-then clause is no longer needed.  SADR-NAME4</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>         has also been removed from the output, this field is used to</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>         enter the plant name for EDI purchase orders.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>2014/07/15 - PANUSURI SDP71397</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>         SADR changed to SADR1 in below code to fix PO printout</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>         incorrect when changing delivery address.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>2015/07/03 - PANUSURI SDP86610</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>         Adjusted the font size for the &quot;Ship To&quot; address to match the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>         &quot;Invoice To&quot;, so that few more characters can be fit in to the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>         address.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>CONSIGNEE WINDOW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Please deliver to:</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;PEKKO-ADRNR(K)&amp; EQ &apos;          &apos; AND &amp;PEKKO-ADRN2(K) EQ &apos;          &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>CONSIGNEE - test1 &amp;SADR1-NAME2&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ADDRESS DELIVERY PARAGRAPH AS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ADDRESS DELIVERY PARAGRAPH Z6</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  TITLE    &amp;SADR1-ANRED&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>  NAME     &amp;SADR1-NAME1&amp;, &amp;SADR1-NAME2&amp;, &amp;SADR1-NAME3&amp;, &amp;SADR1-NAME4&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  NAME     &amp;SADR1-NAME2&amp;, &amp;SADR1-NAME3&amp;, &amp;SADR1-NAME4&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  STREET   &amp;SADR1-STRAS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  CITY     &amp;SADR1-ORT01&amp;, &amp;SADR1-ORT02&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  POSTCODE &amp;SADR1-PSTLZ&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  COUNTRY  &amp;SADR1-LAND1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  REGION   &amp;SADR1-REGIO&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  FROMCOUNTRY &amp;LFA1-LAND1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDADDRESS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;PEKKO-ADRNR(K)&amp; NE &apos;         &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>test2 &amp;SADR1-NAME2&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;SADR1-NAME2&amp; EQ &apos;              &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>test2a &amp;SADR1-NAME2&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ADDRESS DELIVERY PARAGRAPH AS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ADDRESS DELIVERY PARAGRAPH Z6</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ADDRESSNUMBER &amp;PEKKO-ADRNR(K)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>   FROMCOUNTRY &amp;LFA1-LAND1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDADDRESS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>     ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>test2b &amp;SADR1-NAME2&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>       IF &amp;PEKKO-WERKS(2)&amp; = &apos;P4&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>    ADDRESS DELIVERY PARAGRAPH AS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>    ADDRESS DELIVERY PARAGRAPH Z6</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>    ADDRESSNUMBER &amp;PEKKO-ADRNR(K)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>      NAME   &apos;UNION GAS LIMITED&apos;, &amp;SADR1-NAME2&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>      STREET  &amp;SADR1-STRAS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>      CITY    &amp;SADR1-ORT01&amp;, &amp;SADR1-ORT02&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>      POSTCODE &amp;SADR1-PSTLZ&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>      COUNTRY  &amp;SADR1-LAND1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>      REGION   &amp;SADR1-REGIO&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>      FROMCOUNTRY  &amp;LFA1-LAND1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>    ENDADDRESS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>        ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ADDRESS DELIVERY PARAGRAPH AS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ADDRESS DELIVERY PARAGRAPH Z6</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>   NAME       &amp;SADR1-NAME2&amp;, &amp;SADR1-NAME3&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>   STREET     &amp;SADR1-STRAS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>   CITY       &amp;SADR1-ORT01&amp;, &amp;SADR1-ORT02&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>   POSTCODE   &amp;SADR1-PSTLZ&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>   COUNTRY    &amp;SADR1-LAND1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>   REGION     &amp;SADR1-REGIO&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>   FROMCOUNTRY &amp;LFA1-LAND1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDADDRESS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>     ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>     ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>     ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>  ==&gt; adrnr not equal blank &amp; adrn2 may or maynot be entered</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE> ADDRESS DELIVERY PARAGRAPH AS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE> ADDRESS DELIVERY PARAGRAPH Z6</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE> ADDRESSNUMBER &amp;PEKKO-ADRN2(K)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ADDRESS will default to SAP-defined ADDRESS unless overridden as below</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  TITLE    &amp;SADR1-ANRED&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  NAME     &amp;SADR1-NAME2&amp;, &amp;SADR1-NAME3&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  STREET   &amp;SADR1-STRAS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  CITY     &amp;SADR1-ORT01&amp;, &amp;SADR1-ORT02&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  POSTCODE &amp;SADR1-PSTLZ&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  COUNTRY  &amp;SADR1-LAND1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  REGION   &amp;SADR1-REGIO&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  FROMCOUNTRY &amp;LFA1-LAND1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDADDRESS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>DELDATE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>HEADER_DATES</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>DELDATE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>DISCLAIM</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX FRAME 10 TW INTENSITY 10</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z4</TDFORMAT>
+     <TDLINE> * THIS DOCUMENT NUMBER MUST APPEAR ON ALL</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z4</TDFORMAT>
+     <TDLINE> PACKAGES, INVOICES, CORRESPONDENCE, ETC.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z4</TDFORMAT>
+     <TDLINE> * NOTIFY US IMMEDIATELY IF YOU ARE UNABLE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z4</TDFORMAT>
+     <TDLINE> TO SHIP AS SPECIFIED BELOW.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>FAXCODE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>PRINT-CONTROL ^[Cmmmmmmm         COVER PAGE MESSAGE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>PRINT-CONTROL ^[D####...##       Dial Number - Set to LAF1-TELX1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>PRINT-CONTROL ^[Mmmmmmmm         MESSAGE OR SUBJECT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>PRINT-CONTROL ^[Nnnnnnnn         Destination Name - set to LAF1-NAME1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>PRINT-CONTROL ^[Oooooooo         FAX Originator - set to SY-UNAME</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>PRINT-CONTROL ^[Ssssssss         Sender Name</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>DEFINE &amp;FAXUSER&amp;=&apos;SAPEPOFAX&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>DEFINE &amp;OUT_DEVICE&amp;=&apos;ZFAX&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;NAST-LDEST&amp;=&amp;OUT_DEVICE&amp; OR &amp;NAST-LDEST&amp;=&apos;ZFXT&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>PRINT-CONTROL ZFAXS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>D&amp;LFA1-TELX1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>PRINT-CONTROL ZFAXF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>/: PRINT-CONTROL ZFAXS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>*  S&amp;LFA1-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>/: PRINT-CONTROL ZFAXF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>PRINT-CONTROL ZFAXS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>O&amp;FAXUSER&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>PRINT-CONTROL ZFAXF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>PRINT-CONTROL ZFAXS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>NPO # &amp;EKKO-EBELN&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>PRINT-CONTROL ZFAXF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ELSEIF &amp;NAST-LDEST&amp;=&apos;RightFax&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>&lt;TOFAXNUM:&amp;LFA1-TELX1&amp;&gt;&lt;TONAME:PO # &amp;EKKO-EBELN&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>=</TDFORMAT>
+     <TDLINE>&gt;&lt;NOCOVER&gt;&lt;WHO:SAPEPOFAX&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>HEADER</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>INFO</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>this is the header level information</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>e.g. ORDER DATE, F.O.B., TERMS, BUYER</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>-- create the boxes surrounding the header info -----------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>SET DATE MASK = &apos;YYYY.MM.DD&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z2</TDFORMAT>
+     <TDLINE>,,ORDER DATE(y/m/d),,F.O.B.,,TERMS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>-----------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>-- output the header info ---------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKKO-INCO1&amp; &lt;&gt; &apos;FOB&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z6</TDFORMAT>
+     <TDLINE>,,&amp;EKKO-AEDAT&amp;,,&amp;TINCT-BEZEI(35)&amp;,,&amp;T052U-TEXT1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z6</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z6</TDFORMAT>
+     <TDLINE>,,&amp;EKKO-AEDAT&amp;,,&amp;EKKO-INCO2&amp;,,&amp;T052U-TEXT1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>-----------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>INVTO</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>this is the address where the goods purchased will be invoiced to:</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>(i.e. union-centra address)</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>the shipto NAME is set to &quot;Union Gas Limited&quot; if plant# starts by &quot;P1&quot;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>the shipto NAME is set to &quot;Centra Gas Ontario&quot; if plant# starts by &quot;P2&quot;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>otherwise, the layout set will output the NAME that it finds in the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>system.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>The reason why we have to put an if-then clause here is that both</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Union Gas &amp; Centra Gas are using the same plant# and plant address.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>However, they are still 2 entities now. So, the purchase orders have</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>to be addressed to the proper entity name.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Changes</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>2012/02/01 APC - GYMANA - Change Invoice To Address</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>2001/04/23 #--- mdemeest - P4 ==&gt; Union Gas Limited</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>1998/06/15 #537 MDEMEEST - P3 ==&gt; Union Gas Limited</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>MRadsma - re: Merger, both P1 and P2 point to &apos;Union Gas Limited&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ADDRESS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;TNAPR-KSCHL&amp; = &apos;MAHN&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AS</TDFORMAT>
+     <TDLINE>&lt;B&gt;Invoice To:&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>AS</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKKO-BUKRS&amp; &lt;&gt; &apos;UGL&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>F1</TDFORMAT>
+     <TDLINE>&amp;T001-BUTXT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ADDRESS PARAGRAPH F1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>  TITLE    &amp;T001W-ANRED&amp;                                     &quot;2001/04/23</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>IF &amp;EKPO-WERKS+0(2)&amp; = &apos;P1&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>  NAME     &apos;Union Gas Limited&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ELSEIF &amp;EKPO-WERKS+0(2)&amp; = &apos;P3&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>  NAME     &apos;Union Gas Limited&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ELSEIF &amp;EKPO-WERKS+0(2)&amp; = &apos;P4&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>  NAME     &apos;Union Gas Limited&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>  NAME     &amp;T001W-NAME1&amp;, &amp;T001W-NAME2&amp;, &amp;T001W-NAME3&amp;, &amp;T001W-NAME4&amp;,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>  NAME     &amp;T001W-NAME1&amp;, &amp;T001W-NAME2&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>  NAME     &apos;Union Gas Limited&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>  STREET   &amp;T001W-STRAS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>  CITY     &amp;T001W-ORT01&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>  POBOX    &apos;2001&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>  POSTCODE &amp;T001W-PSTLZ&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>  COUNTRY  &amp;T001W-LAND1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>  REGION   &amp;T001W-REGIO&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>  FROMCOUNTRY &amp;T001W-LAND1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ENDADDRESS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>BOC by KMB CHG0131803 on 04/12/2018 logo and address changes</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Union Gas Limited</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>PO Box 2005</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Chatham, Ontario</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>N7M 0J9</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>&lt;S&gt;APCAEastInvoices@SpectraEnergy.com&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z6</TDFORMAT>
+     <TDLINE>Enbridge Gas Inc.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z6</TDFORMAT>
+     <TDLINE>PO Box 2005</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z6</TDFORMAT>
+     <TDLINE>Chatham, Ontario</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z6</TDFORMAT>
+     <TDLINE>N7M 0J9</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Following Line Deleted D30K932534</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>&lt;S&gt;APCAEastInvoices@SpectraEnergy.com&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Following Line Added D30K932534</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z6</TDFORMAT>
+     <TDLINE>&lt;S&gt;apcaeastinvoices@enbridge.com&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>EOC by KMB CHG0131803  on 04/12/2018 logo and address changes</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>INVTXT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKKO-BUKRS&amp; &lt;&gt; &apos;UGL&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z4</TDFORMAT>
+     <TDLINE>INVOICE TO: C/O</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z4</TDFORMAT>
+     <TDLINE>INVOICE TO:</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>LOGO</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>-----------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Changes logs:</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>-----------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>2017/01/09: CKUMAR FS:2755</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Replace the UGL logo by Enbridge logo</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKKO-BUKRS&amp; = &apos;UGL &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>INCLUDE ZUGLSPECTRALOGO ID &apos;ST&apos; LANGUAGE &apos;E&apos; PARAGRAPH LL</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>BOC by KMB CHG0131803 on 4/12/2018 Logo and Address changes</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>INCLUDE ZUGL_ENBRIDGE_LOGO ID &apos;ST&apos; LANGUAGE &apos;E&apos; PARAGRAPH LL</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BITMAP &apos;ZLOGO_ENBRIDGE_PO_N1&apos; OBJECT GRAPHICS ID BMAP TYPE BMON DPI 300</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>EOC by KMB CHG0131803 on 4/12/2018 Logo and Address changes</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>BITMAP &apos;ZUNION_SPECTRA&apos; OBJECT GRAPHICS ID BMAP TYPE BCOL DPI 300</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSEIF &amp;EKKO-BUKRS&amp; = &apos;CGO &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>INCLUDE ZUGLSPECTRALOGO ID &apos;ST&apos; LANGUAGE &apos;E&apos; PARAGRAPH LL</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>BITMAP &apos;ZUNION_SPECTRA&apos; OBJECT GRAPHICS ID BMAP TYPE BCOL DPI 300</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>CC</TDFORMAT>
+     <TDLINE>&lt;B2&gt;&amp;T001-BUTXT&amp;&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>MAIN</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>This is the main window of the layout set. It prints out all the details</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>of the purchase order. e.g.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Changes</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>97/02/07 - SH3621</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>         Removed SADR-NAME4 from the print out for delivery address at</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>         the item level.  This field will be used for specifying the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>         plant name for EDI purchase orders.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>97/11/11 - MRadsma</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>         New message to appear after the totals, only to appear Nov 15</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>         to Dec 15.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>99/11/03 - M DeMeester - Issue Log #721</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>         New message to appear after the totals regarding Purolator</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>99/12/08 - M DeMeester - Issue Log #721</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>         Changed 3rd party account number</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>99/12/21 - M DeMeester - Issue Log #721</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>         Removed the Purolator instruction text from the PO</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>00/01/11 - M DeMeester 4.6B</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>         Restored conditional printing of delivery date</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>01/08/20 - M DeMeester</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>         Changed note regarding Loomis - should run for 2 months</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>2006/07/05 - G Ymana</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>         Changed hardcoded tax codes</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>2007.12.97 0 M DeMeester - TR497</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>         Tax code changes C1--&gt; T1, C5 --&gt; T5, C2 --&gt; T2, Q1--&gt; Q2</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>2019/10/14 - AHMADT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>             Commented Warning Message for Item Text which appears to</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>             reference form 10072 which is no longer needed.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>BOC BY KUMARCHS CHG0212613 :Adding Terms &amp; Conditions Text</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>DEFINE &amp;LAST_PAGE&amp; = &apos;FALSE&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>EOC BY KUMARCHS CHG0212613 :Adding Terms &amp; Conditions Text</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Header data</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>HEADER_TEXT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>header level text</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>INCLUDE &amp;T166K-TXNAM&amp; OBJECT &amp;T166K-TDOBJECT&amp; ID &amp;T166K-TDID&amp; LANGUAGE &amp;EKKO-SPRAS&amp; PARAGRAPH Z1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>HEADER_INFO_ACKNOW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>this line is printed when an acknowledgement is required for ALL items</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>in the purchase order.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z1</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z1</TDFORMAT>
+     <TDLINE>&lt;I&gt;We require an order acknowledgement for the following items:&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>HEADER_INFO</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>this line is ONLY going to appear on REMINDERS.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>SET DATE MASK = &apos;YYYY.MM.DD&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;TNAPR-KSCHL&amp; = &apos;MAHN&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z3</TDFORMAT>
+     <TDLINE>The following items where ordered on P.O. &amp;EKKO-EBELN&amp; dated</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>&amp;EKKO-AEDAT&amp; have not been delivered. Please contact the buyer with</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>revised delivery schedule or any problem by phone or fax (519-426-4665).</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>TERMS_OF_PAYMENT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>HEADER_TARGET_VALUE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>CHANGE_REMARKS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>this indicates what has been changed from the original PO (Z1)</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z1</TDFORMAT>
+     <TDLINE>*** &amp;T166T-CHTXT&amp; ***</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>DEFINE &amp;CHG&amp; = &apos;Y&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Item data</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_HEADER_F</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_INFO_DATE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_INFO_WEMNG</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_LINE_2F</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_LINE_3F</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_LINE_3F_PRICE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_HEADER_A</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_LINE_A</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_HEADER_R</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_LINE_2R</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_LINE_3R</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_INFO_1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_INFO_REC</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_INFO_ZONE1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_INFO_ZONE2</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_LINE_1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>this prints out the item line of both PO and PO reminder.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>for PO, information includes:</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>item#, qty, UoM, material#, description, delivery date, unit price</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>for PO reminder, information includes:</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>item#, qty, UoM, material#, description, del date, qty rec&apos;d, qty o/s</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Note: The biggest possible quantity is:   9,999,999        i.e.(9.0)</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>      The biggest possible unit price is: 99,999,999.99    i.e.(13.2)</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L1</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>SET COUNTRY &apos;CAN&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>SET DATE MASK = &apos;YYYY.MM.DD&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>IF &amp;PRT_TOTAL&amp; = &amp;SPACE&amp; OR &amp;PRT_TAX&amp; = &amp;SPACE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>DEFINE &amp;PRT_TOTAL&amp; = &apos;Y&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>DEFINE &amp;PRT_TAX&amp; = &apos;Y&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>DEFINE &amp;LAST_MWSKZ&amp; = &amp;SPACE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>reminder</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;TNAPR-KSCHL&amp; = &apos;MAHN&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L2</TDFORMAT>
+     <TDLINE>,,&amp;EKPO-EBELP(Z)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>suppress printing quantity if unit of measure = &apos;XX&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKPO-BPRME&amp; &lt;&gt; &apos;XX &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>,,&amp;EKPO-MENGE(9.0)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>,,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>suppress printing unit of measure if uom = &apos;XX&apos; or &apos;DOL&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKPO-BPRME&amp; &lt;&gt; &apos;DOL&apos; AND &amp;EKPO-BPRME&amp; &lt;&gt; &apos;XX &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>,,&amp;EKPO-BPRME&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>,,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>suppress printing total if any UoM in the document is &apos;XX&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKPO-BPRME&amp; = &apos;XX &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>DEFINE &amp;PRT_TOTAL&amp; = &apos;N&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDLINE>,,&amp;EKPO-MATNR(C)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>DEFINE &amp;DESC&amp; = &apos;Product Description:&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>,,&amp;DESC&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>,,&amp;EKPO-TXZ01&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>print out delivery date only if it&apos;s a future date</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>IF &amp;EKET-EINDT&amp; &gt;= &amp;SY-DATUM&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>,,&amp;EKET-EINDT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>,,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>,,&amp;EKET-WEMNG(9.0)&amp;,,&amp;EKET-DABMG(9.0)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>purchase order document (default output type)</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L1</TDFORMAT>
+     <TDLINE>,,&amp;EKPO-EBELP(Z)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>suppress printing quantity if uom = &apos;XX&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKPO-BPRME&amp; &lt;&gt; &apos;XX &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>,,&amp;EKPO-MENGE(9.0)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>,,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>suppress printing uom if uom = &apos;XX&apos; or &apos;DOL&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKPO-BPRME&amp; &lt;&gt; &apos;DOL&apos; AND &amp;EKPO-BPRME&amp; &lt;&gt; &apos;XX &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>,,&amp;EKPO-BPRME&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>,,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>suppress printing total if any UoM in the document is &apos;XX&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKPO-BPRME&amp; = &apos;XX &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>DEFINE &amp;PRT_TOTAL&amp; = &apos;N&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDLINE>,,&amp;EKPO-MATNR(C)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>DEFINE &amp;DESC&amp; = &apos;Product Description:&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>,,&amp;DESC&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>,,&amp;EKPO-TXZ01&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>print delivery date only if it&apos;s in the future</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKET-EINDT&amp; &gt;= &amp;SY-DATUM&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>,,&amp;EKET-EINDT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>,,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>suppress printing price as indicated in the purchase order</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKPO-PRSDR&amp; = &apos;X&apos;.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>,,&amp;EKPO-NETPR(14.2C)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>other item level information</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>vendor part #</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKPO-IDNLF&amp; &lt;&gt; &amp;SPACE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z1</TDFORMAT>
+     <TDLINE>&amp;&apos;Vendor Material No.: &apos;EKPO-IDNLF&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>DEFINE &amp;PRT_ITM_TXT&amp; = &apos;Y&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>print tax only if all items in the document has same tax code</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;LAST_MWSKZ&amp; &lt;&gt; &amp;SPACE&amp; AND &amp;LAST_MWSKZ&amp; &lt;&gt; &amp;EKPO-MWSKZ+0(2)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>DEFINE &amp;PRT_TAX&amp; = &apos;N&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>DEFINE &amp;LAST_MWSKZ&amp; = &amp;EKPO-MWSKZ&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_INFO_2</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Shipping instruction on individual item</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;T027B-EVTXT&amp; &lt;&gt; &amp;SPACE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z1</TDFORMAT>
+     <TDLINE>&amp;&apos;Ship via: &apos;T027B-EVTXT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_INFO_ACKNOW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Acknowledgement required on a particular item.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z1</TDFORMAT>
+     <TDLINE>&lt;I&gt;We require an order acknowledgement for this item.&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_TEXT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;PRT_ITM_TXT&amp; = &apos;Y&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>item level text</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>INCLUDE &amp;T166P-TXNAM&amp; OBJECT &amp;T166P-TDOBJECT&amp; ID &amp;T166P-TDID&amp; LANGUAGE &amp;EKKO-SPRAS&amp; PARAGRAPH Z1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>info record text</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>INCLUDE &amp;T166P-TXNAM&amp; OBJECT &amp;T166P-TDOBJECT&amp; ID F02 LANGUAGE &amp;EKKO-SPRAS&amp; PARAGRAPH Z1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>item text</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>INCLUDE &amp;T166P-TXNAM&amp; OBJECT &amp;T166P-TDOBJECT&amp; ID F01 LANGUAGE &amp;EKKO-SPRAS&amp; PARAGRAPH Z1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Service Duration</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKKO-BSART&amp; = &apos;ZF&apos; OR &amp;EKKO-BSART&amp; = &apos;FO&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z1</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z1</TDFORMAT>
+     <TDLINE>Duration of Service: &amp;EKKO-KDATB&amp; - &amp;EKKO-KDATE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z1</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Warning Message</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>FOR MEDIUM AND HIGH RISK ONLY</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Scope of EHS risks as per approved Form 10072</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z1</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>delivery text</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>INCLUDE &amp;T166P-TXNAM&amp; OBJECT &amp;T166P-TDOBJECT&amp; ID F04 LANGUAGE &amp;EKKO-SPRAS&amp; PARAGRAPH Z1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>quotation info</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>SET DATE MASK = &apos;MMM DD, YYYY&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EINE-ANGDT&amp; &lt;&gt; &apos;00000000&apos; AND &amp;EINE-ANGDT&amp; &lt;&gt; &amp;SPACE&amp; OR &amp;EINE-ANGNR&amp; &lt;&gt; &amp;SPACE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z1</TDFORMAT>
+     <TDLINE>&amp;&apos;Quotation No.: &apos;EINE-ANGNR&amp;   &amp;&apos;Date: &apos;EINE-ANGDT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>DEFINE &amp;PRT_ITM_TXT&amp; = &apos;N&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>4.6B - Ship to address for each individual line item, if required</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_DELADDRESS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z1</TDFORMAT>
+     <TDLINE>&lt;B&gt;Please deliver to:&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKPO-ADRN2(K)&amp; EQ &apos;          &apos; AND &amp;EKPO-ADRNR(K)&amp; EQ &apos;          &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>main - test1 - change this tag to Z1 to see if this routine prints</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ADDRESS DELIVERY PARAGRAPH Z1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>  TITLE    &amp;SADR-ANRED&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  NAME     &amp;SADR-NAME2&amp;, &amp;SADR-NAME3&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  STREET   &amp;SADR-STRAS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  POBOX    &amp;SADR-PFACH&amp;  CODE &amp;SADR-PSTL2&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  CITY     &amp;SADR-ORT01&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  POSTCODE &amp;SADR-PSTLZ&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  COUNTRY  &amp;SADR-LAND1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  REGION   &amp;SADR-REGIO&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  FROMCOUNTRY &amp;T001-LAND1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDADDRESS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKPO-ADRN2(K)&amp; NE &apos;          &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>MAIN - TEST2 - Change this tag to Z1 to see if this routine prints</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE> ADDRESS DELIVERY PARAGRAPH Z1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>    ADDRESSNUMBER &amp;EKPO-ADRN2(K)&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  FROMCOUNTRY &amp;T001-LAND1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE> ENDADDRESS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;SADR-NAME2&amp; = &apos; &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>MAIN - TEST5 - Change this tag to Z1 to see if this routine prints</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>   ADDRESS DELIVERY PARAGRAPH Z1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>       ADDRESSNUMBER &amp;EKPO-ADRNR&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>       FROMCOUNTRY &amp;T001-LAND1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>   ENDADDRESS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>MAIN - Delivery is to Storage Location P4*</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKPO-WERKS(2)&amp; = &apos;P4&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  ADDRESS DELIVERY PARAGRAPH Z1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z1</TDFORMAT>
+     <TDLINE>UNION GAS LIMITED</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>     NAME         &amp;SADR-NAME2&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>     STREET       &amp;SADR-STRAS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>     POBOX        &amp;SADR-PFACH&amp;  CODE &amp;SADR-PSTL2&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>     CITY         &amp;SADR-ORT01&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>     POSTCODE     &amp;SADR-PSTLZ&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>     REGION       &amp;SADR-REGIO&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>     FROMCOUNTRY  &amp;T001-LAND1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  ENDADDRESS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>MAIN - Delivery to Storage Location other than P4*</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE> ADDRESS DELIVERY PARAGRAPH Z1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>     TITLE    &amp;SADR-ANRED&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>     NAME     &amp;SADR-NAME2&amp;, &amp;SADR-NAME3&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>     STREET   &amp;SADR-STRAS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>     POBOX    &amp;SADR-PFACH&amp;  CODE &amp;SADR-PSTL2&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>     CITY     &amp;SADR-ORT01&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>     POSTCODE &amp;SADR-PSTLZ&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>     REGION   &amp;SADR-REGIO&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>     FROMCOUNTRY &amp;T001-LAND1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>  ENDADDRESS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_CONDITIONS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_CONDITIONS_UNIT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_MCONDITIONS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_MCONDITIONS_UNIT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_MCONDITIONS_VALID</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_MCONDITIONS_SCALE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_MCONDITIONS_SCALE_FROM</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_MCONDITIONS_SCALE_TO</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_MCONDITIONS_QUANT_SCALE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_MCONDITIONS_QUANT_SCALE_U</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_MCONDITIONS_VALUE_SCALE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_MCONDITIONS_VALUE_SCALE_U</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>HEAD_MCONDITIONS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_SCHEDULE_HEADER_NEW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_SCHEDULE_HEADER</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_SCHEDULE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_SCHEDULE_DAY</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_SCHEDULE_HEADER_L1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_SCHEDULE_HEADER_L2</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_SCHEDULE_HEADER_L3</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_SCHEDULE_HEADER_L4</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_SCHEDULE_HEADER_L5</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_SCHEDULE_HEADER_L6</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_SCHEDULE_L</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_SCHEDULE_DAY_L</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_SCHEDULE_REM_L</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ITEM_SCHEDULE_DAY_REM_L</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>TOTAL_AMOUNT_ITEMS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>TOTAL_AMOUNT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>total amount</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>PROTECT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;PRT_TOTAL&amp; = &apos;Y&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>TT</TDFORMAT>
+     <TDLINE>,,-----------------------------,,----------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>TT</TDFORMAT>
+     <TDLINE>,,Total net item value &amp;EKKO-WAERS&amp;,,&amp;KOMK-SUPOS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>IF &amp;PRT_TAX&amp; = &apos;Y&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>,,PST,,&amp;KOMVD-KWERT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;PRT_TAX&amp; = &apos;Y&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>,,-----------------------------,,----------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKPO-MWSKZ&amp; = &apos;T1&apos; OR &amp;EKPO-MWSKZ&amp; = &apos;I3&apos; OR &amp;EKPO-MWSKZ&amp; = &apos;T5&apos; OR &amp;EKPO-MWSKZ&amp; = &apos;I9&apos;  OR &amp;EKPO-MWSKZ&amp; = &apos;Q2&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>TT</TDFORMAT>
+     <TDLINE>,,PST,,&amp;KOMVD-KWERT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSEIF &amp;EKPO-MWSKZ&amp; = &apos;T3&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>TT</TDFORMAT>
+     <TDLINE>,,PST,,&amp;KOMVD-KWERT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSEIF &amp;EKPO-MWSKZ&amp; = &apos;H1&apos; OR &amp;EKPO-MWSKZ&amp; = &apos;H3&apos; OR &amp;EKPO-MWSKZ&amp; = &apos;H5&apos; OR &amp;EKPO-MWSKZ&amp; = &apos;HA&apos; OR &amp;EKPO-MWSKZ&amp; = &apos;HB&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>TT</TDFORMAT>
+     <TDLINE>,,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSEIF &amp;EKPO-MWSKZ&amp; = &apos;HC&apos; OR &amp;EKPO-MWSKZ&amp; = &apos;HE&apos; OR &amp;EKPO-MWSKZ&amp; = &apos;HF&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>TT</TDFORMAT>
+     <TDLINE>,,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>TT</TDFORMAT>
+     <TDLINE>,,PST Zero</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;PRT_TAX&amp; = &apos;Y&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKPO-MWSKZ&amp; = &apos;T1&apos; OR &amp;EKPO-MWSKZ&amp; = &apos;T2&apos; OR &amp;EKPO-MWSKZ&amp;  = &apos;T5&apos; OR &amp;EKPO-MWSKZ&amp; = &apos;Q2&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>TT</TDFORMAT>
+     <TDLINE>,,GST Extra</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSEIF &amp;EKPO-MWSKZ&amp; = &apos;H1&apos; OR &amp;EKPO-MWSKZ&amp; = &apos;H3&apos; OR &amp;EKPO-MWSKZ&amp; = &apos;H5&apos; OR &amp;EKPO-MWSKZ&amp; = &apos;HA&apos; OR &amp;EKPO-MWSKZ&amp; = &apos;HB&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>TT</TDFORMAT>
+     <TDLINE>,,HST Extra</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSEIF &amp;EKPO-MWSKZ&amp; = &apos;HC&apos; OR &amp;EKPO-MWSKZ&amp; = &apos;HE&apos; OR &amp;EKPO-MWSKZ&amp; = &apos;HF&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>TT</TDFORMAT>
+     <TDLINE>,,HST Extra</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>TT</TDFORMAT>
+     <TDLINE>,,GST Zero</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>START OF CHANGES BY AKMADASU FOR CHG0233285</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>SET DATE MASK = &apos;YYYYMMDD&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>PERFORM F_YEAREND_CHECK IN PROGRAM ZPURCHASE01_SCRIPT_SUB</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>USING &amp;GV_CHECK&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>CHANGING &amp;GV_CHECK&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>CHANGING &amp;GV_TEXT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDPERFORM</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;GV_CHECK&amp; = &apos;X&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>TT</TDFORMAT>
+     <TDLINE>,,&lt;B&gt;&amp;GV_TEXT&amp;, &amp;SY-DATUM(4)&amp;&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>END OF CHANGES BY AKMADASU FOR CHG0233285</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDPROTECT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>DEFINE &amp;PRT_TOTAL&amp; = &amp;SPACE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>DEFINE &amp;PRT_TAX&amp; = &amp;SPACE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>DEFINE &amp;LAST_MWSKZ&amp; = &amp;SPACE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Special Message regarding Purolator Collect Shipments</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>2001/06/18 Message added - can be commented out after Sept 30, 2001</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>The date mask must be set in order for the date test to work</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>SET DATE MASK = &apos;YYYYMMDD&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;SY-DATUM&amp; &lt; &apos;20011101&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>,,&lt;B&gt;NOTE TO SUPPLIER RE COLLECT SHIPMENTS&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>&lt;B&gt;NOTE TO SUPPLIER RE COLLECT SHIPMENTS:&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>&lt;B&gt;Please be advised that Union Gas has changed our contract courier</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>from Purolator to Loomis.  For those shipments authorized by Union Gas</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>to be sent COLLECT, the applicable Union Gas purchase order number</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>should be indicated on the bill of lading and the 3rd Party Billing</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Account No. MA7050 specified.  All Union Gas shipments are automatically</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>insured free of charge to a maximum of $200.00 without being declared on</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>the manifest.  All shipments with a declared value exceeding $200.00</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>must have a pre-authorization number, obtained from the local Loomis</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Courier Service branch prior to shipping.  This number is to appear in</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>the Special Agreement box on the waybill.  Insurance on declared values</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>in excess of $200.00 is available at a charge of 3.0% of the declared</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>value; however, it will be at the supplier&apos;s discretion and cost.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE> Declared values shall not be greater than $1,000.00. Third-party</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>insurers are an alternative and are usually more cost-effective should</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>you choose to insure the shipment.&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Special Message for year end (Nov 1 - Dec 15)</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>YEAREND_MSG</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>SET DATE MASK = &apos;YYYYMMDD&apos; &quot; COMMENTED BY AKMADASU FOR CHG0233285</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>BOC by KMB 3.11.2020 CHG0197719 Year end message</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>START OF COMMENTED BY AKMADASU FOR CHG0233285</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>PERFORM F_YEAREND_CHECK IN PROGRAM ZPURCHASE01_SCRIPT_SUB</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>USING &amp;GV_CHECK&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>CHANGING &amp;GV_CHECK&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>CHANGING &amp;GV_TEXT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ENDPERFORM</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>IF &amp;GV_CHECK&amp; = &apos;X&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>END OF COMMENTED BY AKMADASU FOR CHG0233285</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>BOC by KMB on 19.12.17 ACR-5621 Statement on PO Form Removal Request</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>START OF COMMENTED BY AKMADASU FOR CHG0233285</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>,,&lt;B&gt;&amp;GV_TEXT&amp;, &amp;SY-DATUM(4)&amp;&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>END OF COMMENTED BY AKMADASU FOR CHG0233285</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>,,&lt;B&gt;GOODS AND SERVICES MUST BE RECEIVED AND INVOICED PRIOR TO DECEMBER</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>9, &amp;SY-DATUM(4)&amp;&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>15, &amp;SY-DATUM(4)&amp;&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>EOC by KMB on 19.12.17 ACR-5621 Statement on PO Form Removal Request</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ENDIF AK</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>EOC by KMB 3.11.2020 CHG0197719 Year end message</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Supplement</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>SUPPL_TEXT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>PROTECT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z1</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>INCLUDE &amp;T166A-TXNAM&amp; OBJECT &amp;T166A-TDOBJECT&amp; ID &amp;T166A-TDID&amp; LANGUAGE &amp;EKKO-SPRAS&amp; PARAGRAPH Z1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDPROTECT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Special Message regarding Shipments</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>The date mask must be set in order for the date test to work</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>SET DATE MASK = &apos;YYYYMMDD&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>IF &amp;SY-DATUM&amp; &lt; &apos;20011101&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>&lt;B&gt;NOTE TO SUPPLIER RE COLLECT SHIPMENTS:&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>&lt;B&gt;Please be advised that Union Gas has changed our contract courier</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>from Purolator to Loomis.  For those shipments authorized by Union Gas</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>to be sent COLLECT, the applicable Union Gas purchase order number</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>should be indicated on the bill of lading and the 3rd Party Billing</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Account No. MA7050 specified.  All Union Gas shipments are</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>automatically insured free of charge to a maximum of $200.00 without</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>being declared on the manifest.  All shipments with a declared value</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>exceeding $200.00 must have a pre-authorization number, obtained from</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>the local Loomis Courier Service branch prior to shipping.  This number</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>is to appear in the Special Agreement box on the waybill.  Insurance on</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>declared values in excess of $200.00 is available at a charge of 3.0%</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>of the declared value; however, it will be at the supplier&apos;s discretion</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>and cost.  Declared values shall not be greater than $1,000.00.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>third-party insurers are an alternative and are usually more</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>cost-effective should you choose to insure the shipment.&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>LAST</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>BOC BY KUMARCHS CHG0212613 :Adding Terms &amp; Conditions Text</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>DEFINE &amp;LAST_PAGE&amp; = &apos;TRUE&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>EOC BY KUMARCHS CHG0212613 :ADDING TERMS &amp; CONDITIONS TEXT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>PROTECT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>INCLUDE &amp;T024E-TXGRU&amp; OBJECT TEXT ID ST LANGUAGE &amp;EKKO-SPRAS&amp; PARAGRAPH Z1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDPROTECT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>BOC BY KUMARCHS CHG0212613 :ADDING TERMS &amp; CONDITIONS TEXT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKKO-BSART&amp; = &apos;NB&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>NEW-PAGE SECOND</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>EOC BY KUMARCHS CHG0212613 :Adding Terms &amp; Conditions Text</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>PROTECT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>PROTECT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>ENDPROTECT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDPROTECT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>PAGE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX FRAME 10 TW INTENSITY 10</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>II</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z4</TDFORMAT>
+     <TDLINE> PAGE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z4</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>F1</TDFORMAT>
+     <TDLINE>  &amp;PAGE&amp; of &amp;SAPSCRIPT-JOBPAGES+1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>PAGETXT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z4</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z4</TDFORMAT>
+     <TDLINE>FAX TO:</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z4</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z4</TDFORMAT>
+     <TDLINE>PAGE:</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>PONUMBER</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>CR</TDFORMAT>
+     <TDLINE>P.O. Number &amp;EKKO-EBELN&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>QUESTION</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>BOC by kmb on 12.11.2018 CHG0131803 Logo and address changes</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>  &lt;B&gt;QUESTIONS TO:&lt;/&gt;  Procurement Dept, Union Gas, 50 Keil Dr N.,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z6</TDFORMAT>
+     <TDLINE>  &lt;B&gt;QUESTIONS TO:&lt;/&gt;  Procurement Dept, Enbridge Gas Inc., 50 Keil Dr</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>N., Chatham ON N7M 5M1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>EOC by kmb on 12.11.2018 CHG0131803 Logo and address changes</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z6</TDFORMAT>
+     <TDLINE>                 &lt;B&gt;Phone:&lt;/&gt; 519-436-4600 x 5002212</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>=</TDFORMAT>
+     <TDLINE>   &lt;B&gt;Fax:&lt;/&gt; 519-436-4665</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>=</TDFORMAT>
+     <TDLINE>   &lt;B&gt;Email:&lt;/&gt; psupport@uniongas.com</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>README</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>This window is to provide you with some general information about this</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>layout. Please make sure that this window will NEVER be included in any</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>PAGE WINDOW.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>The SAP delivered version of this layout is called MEDRUCK.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>The transaction to link the SAP system to a new PO layout set is OMTB.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>For purchase order, it is configured that 2 copies of PO will be</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>printed each time. For first copy of the PO will call this layout set.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>The second copy of the PO will called a layout set called ZPURCHASE05.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ZPURCHASE05 is an duplication of this layout with the document title</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>changed to PURCHASE ORDER ACKNOWLEDGEMENT.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Therefore, whenever changes is required in the PO, the best way to</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>reflect these changes in ZPURCHASE05 is to:</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>(1) make the changes in ZPURCHASE01</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>(2) copy ZPURCHASE01 TO ZPURCHASE05</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>(3) change document title in ZPURCHASE05 to PURCHASE ORDER ACK.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>SHIPTXT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKKO-BUKRS&amp; &lt;&gt; &apos;UGL&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z4</TDFORMAT>
+     <TDLINE>SHIP TO:C/O</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z4</TDFORMAT>
+     <TDLINE>SHIP TO:</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>TERMS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKKO-BSART&amp; = &apos;NB&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX FRAME 10 TW INTENSITY 10</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Vendor confirms that this Purchase Order is subject to the written</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>agreement (if any) between Vendor and the Enbridge Gas Inc. entity</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>identified herein, or in the absence of a written agreement, the G</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>eneral Terms and Conditions agre</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ed to by Vendor, and any written terms specified herein.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKKO-BSART&amp; &lt;&gt; &apos;NB&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX FRAME 10 TW INTENSITY 10</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>F2</TDFORMAT>
+     <TDLINE>Vendor confirms that this Purchase Order is subject to the written</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>agreement (if any) between Vendor and the Enbridge Gas Inc. entity</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>identified herein, or in the absence of a written agreement, the General</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Terms and Conditions agreed to by Vendor, and any written terms</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>specified herein.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>IF &amp;EKKO-BSART&amp; = &apos;NB&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>IF &amp;NEXTPAGE&amp; = 0</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>NEW-PAGE  LAST</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>INCLUDE ZENB_PO OBJECT TEXT ID ST LANGUAGE EN</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>TERMS1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T3</TDFORMAT>
+     <TDLINE>STANDARD PURCHASE ORDER TERMS AND CONDITION</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T5</TDFORMAT>
+     <TDLINE>(Canada IL0-1 - Issue Version: April 2020)</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>1. &lt;C2&gt;General.&lt;/&gt; This purchase order (&quot;&lt;C2&gt;&lt;C6&gt;Order&lt;/&gt;&lt;/&gt;&quot;) comprises</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>the other documents incorporated by reference on the face of the Order.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>The  Seller, Supplier or Vendor (&quot;&lt;C2&gt;Supplier&lt;/&gt;&quot;) identified on the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>face ofthe Order agrees to sell, and the Enbridge entity identified on</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>the faceof the Order (&quot;&lt;C2&gt;Company&lt;/&gt;&quot;) agrees to buy, the goods,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>articles, and materials described in the Order (together with such</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>documentation as specified onthe face of the Order, collectively, &quot;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>=</TDFORMAT>
+     <TDLINE>&lt;C2&gt;Goods&lt;/&gt;&quot;) and services related thereto.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>2. &lt;C2&gt;Acceptance of the Order. Supplier&apos;s acceptance of the Order,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>whether in writing or by performance, will be only upon these terms and</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>conditions , which are incorporated into and made a part of each Order;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>no other terms or conditions shall be binding on Company unless: (i)</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>conspicuously referenced on the face of the Order to which such other</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>terms and conditions apply; and (ii) expressly agreed to by Company. Any</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>quote, invoice, acknowledgement or other form or communication issued by</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Supplier in connection with the Order will be for Supplier&apos;s record and</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>accounting purposes only and any terms and conditions referenced therein</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>will not apply to the Order.&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>3. &lt;C2&gt;Order Number.&lt;/&gt; Company&apos;s Order number and corresponding item</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>line number(s) as shown on the face of the Order must appear on all</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>invoices, correspondence, shipping documents, packages and any other</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>documents relating to the Order.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>4. &lt;C2&gt;Delivery, Risk and Title.&lt;/&gt; Supplier shall deliver the Goods to</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>the location(s) designated by Company in the order (&quot;&lt;C2&gt;Delivery</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Point&quot;).&lt;/&gt; Supplier shall prepay transportation costs for delivery of</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>the Goods to the Delivery Point, unless otherwise specified in the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Order, and if so specified, the transportation charges will be included</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>as a separate item in the invoice for the applicable Goods, and not in</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>an additional or separate invoice.  Title transfers to Company upon:</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>(i)Company&apos;s acceptance of the Goods; or (ii) Company&apos;s payment for the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Goods (in whole or in part); whichever occurs first.  Risk of loss for</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>the Goods shall transfer in accordance with the 2020 Incoterm set out on</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>the face of this Order.  Supplier warrants it will have good and</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>transferable title to the Goods at the time of title transfer to</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Company, and further that title to the Goods will transfer to Company</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>free and clear of any and all liens or encumbrances.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>5. &lt;C2&gt;Warranty.&lt;/&gt; Supplier warrants that the Goods, and the services</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>related thereto, will (i) conform in all respects to the requirements of</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE> the Order; (ii) comply with the more stringent of industry or Company&apos;s</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>standards; (iii) conform strictly to applicable specifications,drawings,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>samples or other description upon which the Order is based; (iv) to the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>extent that Supplier is aware of Company&apos;s intended use and purpose for</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>the Goods, be fit, safe and effective for their intended useand purpose,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>and operate as intended; and (v) be merchantable and free from defects</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>in material, workmanship, and design. All warranties set forth in the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Order will remain in effect for one (1)year from the date of Company&apos;s</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>acceptance, or eighteen (18) months delivery of the Goods, whichever</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>occurs latest, or as stated on the face of the Order.  All warranties</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>will not be deemed waived by reason of Company&apos;s receipt, inspection, or</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>by payment for the Goods.  Supplier shall assignand transfer all</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>assignable warranties it receives from its vendors and manufacturers to</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Company.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>In the event of a breach of warranty, Supplier shall repair and/or</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>replace the defective Goods at no cost to Company (including, without</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>limitation, shipping costs).  Goods will not be considered in breach of</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>this warranty if a defect is caused primarily by Company&apos;s improper</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>installation, operation or maintenance.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>6. &lt;C2&gt;Delay.&lt;/&gt; Supplier shall deliver the Goods on the date(s)</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>specified in the Order, during Company&apos;s normal business hours or as</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>otherwise instructed by Company. Timely completion and delivery is a</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>material term of the Order.  Timely delivery is delivery of Goods, which</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>conform to requirements of the Order, to the Delivery Point on or before</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>the agreed delivery date.  If Supplier is unable to make a timely</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>delivery, it shall notify Company of the anticipated delay as soon as it</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>learns of same, such notice becoming effective upon receipt by Company.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE> Supplier&apos;s notice shall state the reasons for the delay and the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>anticipated date of delivery.  If the delay (a) is not caused in or in</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>part by the negligence or intentional fault of Supplier and (b) will not</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>contribute to a delay in Company&apos;s schedule or otherwise cause damages</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>to Company or any entity to whom Company is providing services, then</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Company may, but is not obligated to, agree to extend the date of</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>delivery, without additional liability to Supplier, to the earlier of:</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>(i) the anticipated date of delivery</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Page &amp;PAGE&amp; of &amp;SAPSCRIPT-JOBPAGES+1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>TERMS2</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>stated in Supplier&apos;s notice, or (ii) ten (10) business days after the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>original agreed delivery date.  If delivery is not accomplished before</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>the agreed delivery date, as such may be extended by these terms, then</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Supplier will be liable to Company for all direct damages caused by the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>delay.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>7. &lt;C2&gt;Force Majeure.&lt;/&gt; (a) Neither party shall be liable for any</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>failure or delay in the performance of its obligations under this Order</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>to the extent such failure or delay both: (i) is caused, directly or</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>indirectly, without fault by such party, by: fire, flood, earthquake,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>epidemic, pandemic, elements of nature or acts of God; third party</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>labour disruptions, acts of war, terrorism, riots, civil disorders,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>rebellions or revolutions; quarantines, embargoes and other similar</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>governmental action; or any other similar cause, whether or not</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>foreseeable, that is beyond the reasonable control of such party; and</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>(ii) could not have been prevented by reasonable precautions and cannot</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>reasonably be circumvented by the non-performing party through the use</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>of alternate sources, workaround plans or other means. Events meeting</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>both of the criteria set forth in clauses (i) and (ii) above are</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>referred to collectively as &quot;&lt;C2&gt;Force Majeure Events.&lt;/&gt;&quot; (b) Upon the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>occurrence of a Force Majeure Event, the non-performing party shall be</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>excused from any further performance or observance of the affected</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>obligation(s) for as long as such circumstances prevail and such party</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>continues to attempt to recommence performance or observance whenever</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>and to whatever extent possible without delay. Any party so delayed in</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>its performance will immediately notify the other by telephone or by the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>most timely means otherwise available (to be confirmed in writing within</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>two business days of the inception of such delay) and describe in</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>reasonable detail the circumstances causing such delay.  If Supplier</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>fails to perform some or all of its obligations hereunder, during any</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>consecutive period of more than thirty (30) days due to a Force Majeure</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Event, Company will have the right to terminate this Order without</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>payment of any termination fee or amount.  Where the Order is partially</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>performed or provided, the price for such period of the Force Majeure</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Event will be adjusted on an equitable basis taking into account, among</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>other things, the Goods actually delivered and Supplier will promptly</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>refund any amounts overpaid by Company as result of such adjustment.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>8. &lt;C2&gt;Rejection and Acceptance of Goods.&lt;/&gt; Company may reject any</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Goods that do not conform to the requirements of this Order and to</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>return non-conforming Goods to Supplier at Supplier&apos;s expense. Company&apos;s</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>acceptance or inspection of any Goods is not a waiver of any of</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Company&apos;s rights hereunder, at law or otherwise. Receipt of the Goods,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>acknowledgement of receipt of the Goods, or payment of Supplier&apos;s</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>invoices does not constitute acceptance of the Goods.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>9. &lt;C2&gt;Invoicing, Taxes and Customs.&lt;/&gt; Company shall pay all invoice</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>amounts pursuant to the payment terms on the face of the Order upon</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>receipt of undisputed invoice(s). Company and Supplier shall work</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>together in good faith to resolve all invoice disputes. The prices</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>stated are exclusive of all taxes, including applicable sales and use</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>taxes, customs duties and excise taxes (collectively, &quot;&lt;C2&gt;Taxes&lt;/&gt;&quot;)</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>including any amounts payable in respect of the federal Goods and</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Services Tax or Harmonized Sales Tax imposed pursuant to the Excise Tax</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Act &quot;&lt;C3&gt;(Canada)&lt;/&gt;&quot; and the Quebec Sales Tax (collectively, &quot;&lt;C2&gt;GST</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>=</TDFORMAT>
+     <TDLINE>&lt;/&gt;&quot;). Taxes imposed on Company that Supplier is required to collect shall be separately stated and identified on each invoice</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>issued by Supplier in compliance with appropriate tax laws or</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>regulations.  Supplier shall include on all invoices its GST</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>registration number together with all other particulars as may be</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>required by Company to substantiate claims for input tax credits in</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>respect of GST charged by Supplier. Company shall provide Supplier with</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>exemption documentation as required by the applicable governmental</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>authority where exemption from Taxes is claimed.For further</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>clarification, Supplier will be responsible for paying its income taxes</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>and any other taxes of any kind in any jurisdiction that might become</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>payable in relation to the sale of goods.Company shall bear no</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>responsibility for any income, gross margin, franchise, capital,net</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>worth or other type of direct tax that may inure to Supplier as a result</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>of the Order. If Supplier manufacturers outside of Canada or purchases</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>outside of Canada, he must ensure that he, his agent, or representative</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>is the Exporter of Record and Importer of Record for customs purposes.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>10. &lt;C2&gt;Liens.&lt;/&gt; Supplier shall timely pay its subcontractors and</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>vendors, and indemnifies and defends Company from and against all claims</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>by third parties and liens and encumbrances on Company&apos;s property</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>related in any way to Supplier&apos;s performance of the Order.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>11. &lt;C2&gt;Changes.&lt;/&gt; Company may at any time make reasonable changes in</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>any one or more of the following:  (1) drawings, plans, designs and</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>specifications;(2) quantities; (3) delivery schedule; or (4) place,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>manner or time of delivery.  If any such change increases or decreases</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>the cost of the Goods to be provided or results in an extension of the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>shipping schedule, Supplier shall give Company</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Page &amp;PAGE&amp; of &amp;SAPSCRIPT-JOBPAGES+1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>TERMS3</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>written notice stating the effect of such change within ten (10) days</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>after receipt of the change request. No claim for an increase authorized</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>in advance and in writing by Company.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>12. &lt;C2&gt;Compliance.&lt;/&gt; Supplier shall comply with all applicable</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>federal, state and local laws and regulations that affect the Order. All</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>deliveries to Company&apos;s premises must be carried out in a safe manner,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>and Supplier shall comply with, and cause all other parties acting on</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Supplier&apos;s behalf to comply with all safety policies, rules and warnings</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>communicated by Company.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>13. &lt;C2&gt;Insurance Requirements.&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>,,(a),,Supplier shall maintain at its own expense, the insurance</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>coverage outlined herein with licensed, reputable and reliable insurers</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>&lt;C2&gt; Commercial General Liability&lt;/&gt; coverage with a limit of Two</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Million Dollars ($2,000,000) each occurrence for bodily injury and</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>property damage arising out of or relating to Supplier&apos;s activities</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>under this Order.  The policy shall include coverage for, contractual</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>liability, cross liability, severability of interests and products and</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>completed operations. Supplier shall ensure that this policy hereunder:</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>i) includes Company as additional insured; ii) provides a waiver of</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>insurers rights of subrogation in favor of Company; and iii) is written</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>to respond on a primary and non-contributory basis. Insurance shall not</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>be canceled without thirty (30) days&apos; prior written notice to Company.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>,,(b),,Upon request, Supplier shall provide to Company Certificate(s) of</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Insurance certifying Supplier&apos;s compliance with this Order.  In the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>event of a reduction in Supplier insurance limits during the term which</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>may otherwise reduce the limits of insurance required to comply with</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>this Order, the Supplier shall promptly provide Company with notice of</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>same, and immediately thereafter secure such additional insurance as is</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>required to comply with the terms of this Order. Company&apos;s acceptance of</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>certificates or correspondence associated thereto does not constitute a</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>waiver, release or modification of the requirements under this Order.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>&quot;Certificate Holder&quot; shall be the Company.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE> ,,(c),,In the event Supplier fails to comply with insurance</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>requirementsunder this Order, at its sole discretion, Company may, but</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>shall not be obligated to, obtain such insurance for Company&apos;s sole</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>benefit as Company deems necessary to address any failure on the part of</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>the Supplier to obtain the insurance required pursuant to this Order.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Any cost thereof shall be payable by the Supplier to Company on demand</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>and Company may, at its election, deduct the cost thereof or set-off</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>from any monies which are due or may become due to Supplier. No</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>liability shall attach to Company for any decision on the part of</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Company to forego the purchase of additional insurance under this</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Section 13, nor does Company&apos;s decision not to purchase additional</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>insurance pursuant to this Section 13 constitute a waiver, release or</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>modification of the requirements under this Order, or constitute a</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>statement by Company that Supplier&apos;s insurance coverage at any time</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>during the term hereof is in compliance with the requirements under this</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Order.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>,,(d),,Company will not be responsible for any premiums, deductibles,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>self-insured retentions or any other costs for the insurance provided by</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Supplier in this Order.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>14. &lt;C2&gt;INDEMNITY. NOTWITHSTANDING ANYTHING ELSE IN THE ORDER TO THE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>CONTRARY, SUPPLIER SHALL INDEMNIFY, RELEASE, HOLD HARMLESS, AND DEFEND</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>COMPANY, ITS PARENT, SUBSIDIARY AND AFFILIATED COMPANIES, AND ITS AND</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>THEIR OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, ASSIGNS AND SUCCESSORS IN</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>INTEREST FROM AND AGAINST ALL CLAIMS, DISPUTES, SUITS, COMPLAINTS,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>LIABILITIES, DAMAGES, AND EXPENSES OF WHATEVER NATURE &lt;C2&gt;(including,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>without limitation, attorneys&apos; fees)&lt;/&gt;, &lt;C2&gt;INCLUDING, WITHOUT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>LIMITATION, FOR INJURY TO ANY PERSON (INCLUDING DEATH) OR DAMAGE TO ANY</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>PROPERTY, RESULTING FROM OR IN ANY WAY CONNECTED WITH SUPPLIER&apos;S</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>PERFORMANCE OF THE ORDER, EXCEPT THAT THE OBLIGATIONS HEREUNDER DO NOT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>APPLY TO COMPANY&apos;S SOLE NEGLIGENCE OR WILLFUL MISCONDUCT.&lt;/&gt;&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>15. &lt;C2&gt;Intellectual Property Warranty and Indemnity. &lt;/&gt; Supplier</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>warrants that the Goods and the related services do not infringe or</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>misappropriate any letters patent, trademark or copyright or any other</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>intellectual property rights of any third party.  &lt;C2&gt;Supplier shall</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>release, indemnify, save harmless and defend Company all claims,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>liabilities, damages, and expenses (including, without limitation,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>attorneys&apos; fees) arising in favor of any person or entity and based on</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>misappropriation of trade secrets, infringement or claim ofinfringement</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>of a patent, trademark, trade name, copyright or other proprietary right</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>in the Goods provided by Supplier, except to the extent directly caused</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>by specifications expressly provided by Company.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>=</TDFORMAT>
+     <TDLINE>&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Page &amp;PAGE&amp; of &amp;SAPSCRIPT-JOBPAGES+1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>TERMS4</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>16. &lt;C2&gt;Company Disclosed IP.&lt;/&gt; Company and/or its applicable affiliate</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>shall retain all Intellectual Property Rights in all specifications</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>provided by Company and confidential information disclosed or provided</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>to Supplier hereunder to provide the Goods and the  related services (&quot;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>&lt;C2&gt;Company Disclosed IP&lt;/&gt;&quot;) and nothing herein transfers or grants</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Supplier any right, title, or interest or Intellectual Property Right or</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>license  in or to any Company Disclosed IP other than a non-exclusive,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>revocable, terminable license to use same solely for the purpose of</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>delivering the Goods and related services to Company, and if required</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>under this Order, developing the Goods and related services pursuant to</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>the upon termination of this Order, developing the Goods and related</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>services pursuant to the specifications.Upon completion of deliveries or</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>work hereunder, or upon termination of this Order, Supplier shall</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>deliver applications and return all confidential information to Company</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>unless otherwise agreed in writing. &quot;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>=</TDFORMAT>
+     <TDLINE>&lt;C2&gt;Intellectual Property Rights&lt;/&gt;&quot; means all rights in intellectual pr  operty of every kind, nature or description and any other</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>proprietary rights throughout the world, including: (i) copyrights and</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>all rights associated with works of authorship, neighbouring rights and</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>moral rights, whether registered or unregistered; (ii) industrial design</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>rights; (iii) integrated circuit topography rights and mask works; (iv)</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>rights in trade secrets, confidential information and know-how; (v)</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>trademarks, trade names, certification marks and distinguishing guise</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>rights, whether registered or or unregistered; (vi) patent rights; and</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>(vii) all registrations, applications, renewals, extensions,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>continuations, continuations-in-part, divisions, reissues, and priority</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>rights thereof now or hereafter in force (including any rights in any of</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>the foregoing).</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>17. &lt;C2&gt;Return of Company Disclosed IP.&lt;/&gt;  Supplier shall return all</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Company Disclosed IP and any other property including intellectual</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>property received by it from or on behalf of Company or any of its</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>affiliates that is in its or its representatives&apos; possession and shall</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>destroy or erase any and all copies it may have made thereof, within</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>ten(10) days of: (i) a written request by Company, or (ii) termination</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>or expiration of this Order, or (iii) termination of the business</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>relationship between the parties by mutual written consent. Upon request</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>of Company, Supplier shall provide written certification by an officer</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>of Supplier that such confidential information, intellectual property,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>and other property, and copies thereof, have been destroyed or erased by</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>it and by its representatives. confidential information, intellectual</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>property, and other property, and copies thereof, have been destroyed or</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>erased by it and by its representatives.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>18. &lt;C2&gt;Intellectual Property Ownership and License.&lt;/&gt; Subject to</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Section 19 below, all ideas, concepts, drawings and similar items</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>created by Supplier in connection with the performance of this Order</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>shall be the property of Company and shall be immediately delivered by</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Supplier to Company, with all compensation to Supplier for such ideas,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>concepts, drawings and similar items being included in the price(s) 19</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>below, Supplier grants to Company a non-exclusive, royalty-free,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>transferable, irrevocable license under all foreign and domestic patents</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>now or hereafter owned by Supplier to use (for any purpose) and sell the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Goods purchased under this Order.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>19. &lt;C2&gt;Pre-Existing Intellectual Property Rights.&lt;/&gt;  Supplier, its</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>affiliates, subcontractors and their respective representatives remain</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>the sole and exclusive owners of Intellectual Property Rights developed</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>or acquired prior to the date of this Order, or developed independently</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>of this Order, however, to the extent such pre-existing Intellectual</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Property Rights are embedded in a Good, Supplier shall, and shall cause</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>its affiliates, subcontractors and their grant Company and its</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>affiliates a perpetual, irrevocable, worldwide, royalty-free, fully paid</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>license to use such Intellectual Property Rights embedded in the Goods.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE> 20. &lt;C2&gt;Third Party Intellectual Property Rights.&lt;/&gt;  Supplier agrees</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>not to disclose or provide to Company any confidential information in</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>which it or a third party not affiliated with Company has any</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Intellectual Property Rights.  Notwithstanding and without derogating</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>from the foregoing, if Supplier should provide or disclose any such</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>confidential information to Company or any of its affiliates, and, to</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>the extent there are any Intellectual Property Rights subsisting or</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>incorporated in the Goods or related services, Supplier shall ensure</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>that Company and its affiliates has, and Supplier hereby grants to</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Company and its affiliates, a worldwide, non-exclusive, sub-licensable,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>irrevocable and non-terminable license to exercise all Intellectual</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Property Rights in such confidential information, the Goods and related</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>services.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>21. &lt;C2&gt;Waiver of Consequential Damages.&lt;/&gt;  Except for Supplier&apos;s</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>indemnity obligation arising from a third party claim, including</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>infringement of their intellectual property rights, Supplier&apos;s</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>confidentiality obligations, death or bodily injury, Supplier&apos;s</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Page &amp;PAGE&amp; of &amp;SAPSCRIPT-JOBPAGES+1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>TERMS5</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>gross negligence, or Supplier&apos;s willful misconduct, neither party will</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>be liable for any special, incidental, indirect, punitive, or</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>consequential damages.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>22. &lt;C2&gt;Limitation of Liability.&lt;/&gt;  Except for Supplier&apos;s indemnity</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>obligations, confidentiality obligations, death or bodily injury,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Supplier&apos;s willful misconduct, or Supplier&apos;s gross negligence,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Supplier&apos;s maximum cumulative liability relative to all other claims and</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>liabilities, whether or not insured, will not exceed the greater of $2</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>million or the value of the Order.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>23. &lt;C2&gt;Confidentiality.&lt;/&gt; Both Company and Supplier, on behalf of</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>themselves and their employees, agree that any ideas, concepts, or</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>proprietary information received from the other in connection with the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>performance of the Order will not be disclosed to third persons except</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>to the extent necessary for the proper performance of the Order.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>24. &lt;C2&gt;Termination for Cause.&lt;/&gt; Company may terminate all or any part</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>of the Order for: (i) Supplier&apos;s failure to make deliveries by the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>date(s) specified; (ii) Supplier&apos;s breach of any of the terms hereof,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>including ,without limitation, the warranties of Supplier; (iii) change</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>in price the Goods; (iv) Supplier&apos;s failure to provide adequate</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>assurance of its ability to meet quality standards; (v) Supplier&apos;s</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>failure to make progress on any Goods so as to endanger performance of</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>the Order; or (vi) in the event of any proceeding by or against Supplier</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>in bankruptcy or insolvency or for the appointment of a receiver or</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>trustee or an assignment for the benefit of creditors.  Upon</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>terminationfor cause, Company shall provide written notice of</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>termination and have no further obligation to Supplier. Upon receipt of</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>notice of termination, Supplier shall discontinue all work pertaining to</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>the Order and use its best efforts to mitigate additional costs</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>resulting from the termination.  Supplier shall preserve and protect</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>materials in supply, work in progress, and finished work, the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>disposition of which shall be as directed by Company. Supplier is not</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>entitled to any prospective profits or damages.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>25. &lt;C2&gt;Termination for Convenience.&lt;/&gt; Company may terminate all or any</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>part of the Order for convenience upon written notice to Supplier.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Company shall either: (i) pay those cancellation for convenience</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>chargesspecified on the face of this Order; or (ii) if no cancellation</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>for convenience charges are specified on the face of this Order, accept</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>and pay for materials in supply, work in progress and finished work, as</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>well as reasonable additional costs caused by the termination. Supplier</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>is not entitled to any prospective profits or damages. In no event will</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>the total amount paid to Supplier under a terminated Order exceed the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>original value of the Order.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>26. &lt;C2&gt;Notice.&lt;/&gt;  All notices, consents and requests hereunder must</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>bein writing and served by personal service, by mail or by e-mail to the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>address of the receiving party set forth on the face of this Order (or</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>such different address as may be designated by such Party in a notice to</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>the other party, from time to time). Notices, consents and requests</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>served by personal service shall be deemed served when delivered.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE> Notices, consents and requests served by mail must be sent by</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>registered mail, return receipt requested, and shall be deemed served 10</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>business days after mailing. Notices, consents and requests served by</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>e-mail shall be deemed served on the date of sending, provided: (i) no</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>incomplete or bounce-back error transmission is received by the sending</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Party; and (ii) if such day is not a business day or if the notice or</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>communication is received after 5:00 PM (at the place of receipt) on any</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>business day, the notice or communication shall be deemed to have been</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>sent and received on the immediately following business day.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>27. &lt;C2&gt;Independent Contractor.&lt;/&gt; Supplier is an independent contractor</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>in all respects pertaining to its performance of the Order.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>28. &lt;C2&gt;Waiver.&lt;/&gt; Waiver by Company of any provision hereof shall not</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>constitute a continuing waiver or a waiver of any other provision, nor</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>shall it affect in any manner any right or remedy to which Company is</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>entitled for any breach or default by Supplier, whether or not similar.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>29. &lt;C2&gt;Remedies Cumulative.&lt;/&gt; All rights and remedies reserved under</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>the Order and these terms shall be cumulative and in addition to any</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>further rights and remedies provided in law or equity.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>30. &lt;C2&gt;Assignment.&lt;/&gt; Supplier shall not assign or transfer any right</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>or obligation under the Order without Company&apos;s prior written consent.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Page &amp;PAGE&amp; of &amp;SAPSCRIPT-JOBPAGES+1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>TERMS6</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>31. &lt;C2&gt;Governing Law, Forum.&lt;/&gt; The Order shall be governed by the laws</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>of the province in which the Company&apos;s head office is located, without</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>reference to its conflict of laws rules or principles.  Each party</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>irrevocably submits to the exclusive jurisdiction of the courts of the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>province in which the Company&apos;s head office is located for the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>interpretation and enforcement of this Order, and unconditionally waives</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>any defense of an inconvenient forum to the maintenance of any action</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>orproceeding in any such court, any objection to venue with respect to</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>any such action or proceeding and any right of jurisdiction onaccount of</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>the place of residence or domicile of either party.  A final judgment on</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>any such dispute, as to which all appeals, if any, have been exhausted,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>shall be conclusive and may be enforced in other jurisdictions in any</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>manner provided by law.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>32. &lt;C2&gt;Set Off.&lt;/&gt; Company may set-off and deduct from any amounts</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>payable to Supplier any amounts owing by Supplier to Company pursuant to</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>this Order or any other agreement between Supplier and Company.  The</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>failure by Company to set-off or deduct any amount from an invoiced</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>payment will not constitute a waiver of Company&apos;s right to set-off,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>deduct or collect such amount.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>33. &lt;C2&gt;Severability.&lt;/&gt; If any provision of this Agreement is finally</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>determined by any court of competent jurisdiction to be illegal or</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>unenforceable, that provision will be severed from this Agreement and</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>the remaining provisions will continue in full force and effect.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>34. &lt;C2&gt;Survival.&lt;/&gt; The provisions of this Order which are intended to</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>extend beyond its termination, including the liability, indemnity,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>compliance, warranty, intellectual property and confidentiality</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>provisions, and the provisions applicable to the enforcement of those</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>provisions and/or the enforcement of rights and obligations incurred</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>hereunder that are not fully discharged prior to the termination of this</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Order, will survive termination to the extent necessary to effect the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>intent of the parties and enforce such rights and obligations.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>35. &lt;C2&gt;Language.&lt;/&gt; The parties have required that this Order and all</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>documents and notices be written in English.  Les parties aux présents</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>ont exigé que la présente convention ainsi que tous les documents et</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>avis qui s&apos;y rattachent ou qui en découleront soit rédigés en la langue</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>anglaise.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>36. &lt;C2&gt;Audit.&lt;/&gt;  Company and its authorized representatives shall</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>havethe right to audit all costs (excluding the build-up of prices or</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>rates under lump-sum pricing) and all other records of Supplier (and any</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>subcontractors retained by Supplier) related solely to performance of</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>this Order, upon fifteen (15) days&apos; written notice to Supplier (or sub</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>contractor), including access to Supplier&apos;s (and subcontractor&apos;s) books</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>records and documentation supporting all billed amounts in accordance</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>with this Section. This right to audit shall remain in effectfor a</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>period of one year from the date the Goods are accepted by Company.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE> Company through its employees or agents shall have reasonable access to</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Supplier&apos;s facilities and during normal business hours at all times to</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>observe and inspect the fabrication, manufacturing, assembly, coating,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>testing, loading, transportation and stockpiling of the Goods.  Supplier</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>will respond to such information requests as Company may reasonably</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>request in connection with such inspection and observation.  Each party</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>agrees, while at the other&apos;s facilities, to comply with all applicable</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>federal, state and local laws and to observe such safety rules as that</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>party may prescribe for the protection of personnel and property.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>37. &lt;C2&gt;Interpretation.&lt;/&gt;  Headings used herein are for the convenience</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>of reference only and shall not be considered in construing or</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>interpreting this Agreement. The words &quot;herein&quot;, &quot;hereunder&quot;, &quot;hereof&quot;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>and other similar words refer to this Order as a whole and not to any</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>particular paragraph or part of the Order. &quot;Includes&quot;, &quot;including&quot; and</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>similar terms shall mean &quot;including [or includes, as applicable] without</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>limitation&quot;.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>38. &lt;C2&gt;Counterparts.&lt;/&gt;  This Order, and any amendment, supplement or</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>schedule to this Order, may be executed in any number of counterparts,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>and may be executed using electronic signatures.  The executed</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>signaturepage(s) from each counterpart may be joined together and</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>attached to an original and together shall constitute one and the same</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>instrument.  Exchange of counterparts of a document of this Order may be</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>provided by fax or other electronic means including email delivery.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T3</TDFORMAT>
+     <TDLINE>[END OF TERMS AND CONDITIONS]</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Page &amp;PAGE&amp; of &amp;SAPSCRIPT-JOBPAGES+1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>TERMS7</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+     <TDLINE>18. Intellectual Property Ownership and License. Subject to Section 19</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>below, all ideas, concepts, drawings and similar items created by</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Supplier in connection with the performance of this Order shall be the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>property of Company and shall be immediately delivered by Supplier to</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Company, with all compensation to Supplier for such ideas, concepts,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>drawings and similar items being included in the price(s) stated in</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>thisOrder. Subject to Section 19 below, Supplier grants to Company a</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>non-exclusive, royalty-free, transferable, irrevocable license under</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>allforeign and domestic patents now or hereafter owned by Supplier to</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>use (for any purpose) and sell the Goods purchased under this Order.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+     <TDLINE>19. Pre-Existing Intellectual Property Rights. Supplier, its affiliates</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>=</TDFORMAT>
+     <TDLINE>,subcontractors and their respective representatives remain the sole and exclusive owners of Intellectual Property Rights developed</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>or acquired prior to the date of this Order, or developed independently</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>of this Order, however, to the extent such pre-existing Intellectual</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Property Rights are embedded in a Good, Supplier shall, and shall cause</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>its affiliates, subcontractors and their respective representatives to</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>grantCompany and its affiliates a perpetual, irrevocable, worldwide,</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>royalty-free, fully paid license to use such Intellectual Property</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Rights embedded in the Goods.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+     <TDLINE>20. Third Party Intellectual Property Rights. Supplier agrees not to</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>disclose or provide to Company any confidential information in which it</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>or a third party not affiliated with Company has any Intellectual</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Property Rights. Notwithstanding and without derogating from the</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>foregoing, if Supplier should provide or disclose any such confidential</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>information to Company or any of its affiliates, and, to the extent</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>there are any Intellectual Property Rights subsisting or incorporated</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>inthe Goods or related services, Supplier shall ensure that Company and</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>its affiliates has, and Supplier hereby grants to Company and its</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>affiliates, a worldwide, non-exclusive, sub-licensable, irrevocable and</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>non-terminable license to exercise all Intellectual Property Rights in</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>such confidential information, the Goods and related services.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>*</TDFORMAT>
+     <TDLINE>21. Waiver of Consequential Damages. Except for Supplier#s indemnity</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>obligation arising from a third party claim, including infringement of</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>their intellectual property rights, Supplier#s confidentiality</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>obligations, death or bodily injury, Supplier#s gross negligence, or</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>Supplier#s willful misconduct, neither party will be liable for any</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>special, incidental, indirect, punitive, or consequential damages.</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>VNDTXT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z4</TDFORMAT>
+     <TDLINE>VENDOR:</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>WATERMK</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Watermark (To be printed on every page for non-production systems)</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;SY-SYSID&amp; &lt;&gt; &apos;P01&apos; AND &amp;SY-SYSID&amp; &lt;&gt; &apos;P11&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>BITMAP &apos;ZTEST_WATERMARK&apos; OBJECT GRAPHICS ID BMAP TYPE BCOL</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>WM</TDFORMAT>
+     <TDLINE>TEST     SAMPLE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>WM</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>WM</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>WM</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>WM</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>WM</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>WM</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>WM</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>WM</TDFORMAT>
+     <TDLINE>TEST     SAMPLE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>WM</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>WM</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>WM</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>WM</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>WM</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>WM</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>WM</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>WM</TDFORMAT>
+     <TDLINE>TEST     SAMPLE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>ZHEADER</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>DEFINE &amp;CHG&amp; = &apos;Y&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;TNAPR-KSCHL&amp; = &apos;MAHN&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKKO-BSART&amp; = &apos;ZF&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>CC</TDFORMAT>
+     <TDLINE>&lt;B2&gt;SERVICE RELEASE ORDER&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>CC</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSEIF &amp;EKKO-BSART&amp; = &apos;RP&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>CC</TDFORMAT>
+     <TDLINE>&lt;B2&gt;REPAIR PURCHASE ORDER&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>CC</TDFORMAT>
+     <TDLINE>&lt;B2&gt;PURCHASE ORDER&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>&lt;B2&gt;REMINDER&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSEIF &amp;TNAPR-KSCHL&amp; = &apos;NEU2&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKKO-BSART&amp; = &apos;ZF&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>CC</TDFORMAT>
+     <TDLINE>&lt;B2&gt;SERVICE RELEASE ORDER&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSEIF &amp;EKKO-BSART&amp; = &apos;RP&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>CC</TDFORMAT>
+     <TDLINE>&lt;B2&gt;REPAIR PURCHASE ORDER&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>CC</TDFORMAT>
+     <TDLINE>&lt;B2&gt;PURCHASE ORDER&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>CC</TDFORMAT>
+     <TDLINE>&lt;B2&gt;ACKNOWLEDGEMENT&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;T166T-CHTXT&amp; &lt;&gt; &apos;      &apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>CC</TDFORMAT>
+     <TDLINE>&lt;B2&gt;CHANGE TO&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKKO-BSART&amp; = &apos;ZF&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>CC</TDFORMAT>
+     <TDLINE>&lt;B2&gt;SERVICE RELEASE ORDER&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSEIF &amp;EKKO-BSART&amp; = &apos;RP&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>CC</TDFORMAT>
+     <TDLINE>&lt;B2&gt;REPAIR PURCHASE ORDER&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ELSE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>CC</TDFORMAT>
+     <TDLINE>&lt;B2&gt;PURCHASE ORDER&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>IF &amp;EKKO-KONNR&amp; &lt;&gt; &amp;SPACE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>CC</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>CC</TDFORMAT>
+     <TDLINE>&lt;B&gt;RELEASE AGAINST CONTRACT &amp;EKKO-KONNR&amp;&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>SDP57610: Modify Purchase Order form to include CLM Contract Number</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>PERFORM GET_CLM_NUMBER IN PROGRAM ZMPUM001_CLM</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>USING &amp;GWA_EKPO-KONNR&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>USING &amp;GWA_EKPO-KTPNR&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>CHANGING &amp;LV_CLM_NUMBER&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ENDPERFORM</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>SDP88669:Modify Purchase Order form to include Ariba/CLM Contract Number</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>PERFORM GET_CLM_NUMBER IN PROGRAM ZMPUM001_CLM</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>USING &amp;EKKO-KONNR&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>CHANGING &amp;LV_CLM_NUMBER&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDPERFORM</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>CR</TDFORMAT>
+     <TDLINE>&lt;B&gt;,,&amp;LV_CLM_NUMBER&amp;&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>ZPONUM</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z4</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>LL</TDFORMAT>
+     <TDLINE>&lt;B3&gt;&amp;EKKO-EBELN&amp;&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>ZTITLE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>POSITION WINDOW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>IF &amp;TNAPR-KSCHL&amp; = &apos;MAHN&apos;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>BOX FRAME 10 TW</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>Z5</TDFORMAT>
+     <TDLINE>,,ITEM,,QUANTITY,,UoM,,MATERIAL NO.,,DESCRIPTION,,DELIVERY DATE,,UNIT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>PRICE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>ENDIF</TDLINE>
+    </TLINE>
+   </TDLINES>
+  </asx:values>
+ </asx:abap>
+</abapGit>

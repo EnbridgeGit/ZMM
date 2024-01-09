@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Ariba OLA Create/update</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZARIBA_CONTRACTF01</SOBJ_NAME>
+    <SOBJ_NAME>LZARIBA_CONTRACTTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZARIBA_CONTRACT</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZLOOKUP_OLA_UG1</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>RFC Lookup for Contract &amp; OLA ID</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>OLA_ID</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>EBELN</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>CONTRACT_ID</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>KONNR</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>STATUS_FLAG</PARAMETER>
+       <TYP>CHAR5</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>OLA_ID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Purchasing Document Number</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CONTRACT_ID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Number of Principal Purchase Agreement</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>STATUS_FLAG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Status</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZMM_CONTRACT_CREATE_UG</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Ariba Contract Create/Update</SHORT_TEXT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>CONTRACT_DATA</PARAMETER>
+       <DBSTRUCT>ZCONTRACTDATA_UG</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>RETURN</PARAMETER>
+       <DBSTRUCT>BAPIRET2</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>CONTRACT_DATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>MM Contract Data Fields</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return Parameter</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZUPLOAD_OLA_UG</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Initial load of OLA ID for lookup</SHORT_TEXT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>OLA_DATA</PARAMETER>
+       <DBSTRUCT>ZCONTRACT_OLAID</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>RETURN</PARAMETER>
+       <DBSTRUCT>BAPIRET2</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>OLA_DATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>OLAID for Ariba Contracts</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return Parameter</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

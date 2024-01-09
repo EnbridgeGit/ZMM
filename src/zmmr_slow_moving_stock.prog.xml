@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>ZMMR_SLOW_MOVING_STOCK</NAME>
+    <SUBC>1</SUBC>
+    <APPL>M</APPL>
+    <RLOAD>E</RLOAD>
+    <FIXPT>X</FIXPT>
+   </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>Search Criteria</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>Report Criteria</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>004</KEY>
+     <ENTRY>Report Options</ENTRY>
+     <LENGTH>14</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>005</KEY>
+     <ENTRY>From Transaction Date</ENTRY>
+     <LENGTH>21</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>006</KEY>
+     <ENTRY>To Transaction Date</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>007</KEY>
+     <ENTRY>All</ENTRY>
+     <LENGTH>3</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>008</KEY>
+     <ENTRY>On</ENTRY>
+     <LENGTH>7</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>009</KEY>
+     <ENTRY>Off</ENTRY>
+     <LENGTH>11</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>010</KEY>
+     <ENTRY>Material Deletion Flag</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>011</KEY>
+     <ENTRY>Plant Deletion Flag</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>012</KEY>
+     <ENTRY>Storage Loc Deletion Flag</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>013</KEY>
+     <ENTRY>Stock transfers with no storage loc. are not included</ENTRY>
+     <LENGTH>53</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>014</KEY>
+     <ENTRY>Only materials with a non-zero quantity are reported</ENTRY>
+     <LENGTH>52</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>098</KEY>
+     <ENTRY>C: is not a Valid Drive.</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>099</KEY>
+     <ENTRY>Invalid Path:</ENTRY>
+     <LENGTH>13</LENGTH>
+    </item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>Slow Moving Stock Report</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_ALV</KEY>
+     <ENTRY>ALV Report</ENTRY>
+     <LENGTH>18</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_EXCEL</KEY>
+     <ENTRY>EXCEL Spreadsheet (foreground)</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_FILE</KEY>
+     <ENTRY>Download Excel File To:</ENTRY>
+     <LENGTH>31</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_ATWRT</KEY>
+     <ENTRY>NLA Code</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_BWART</KEY>
+     <ENTRY>Movement Type</ENTRY>
+     <LENGTH>21</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_LGORT</KEY>
+     <ENTRY>Storage Location</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_MATKL</KEY>
+     <ENTRY>Material Group</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_MATNR</KEY>
+     <ENTRY>Material Number</ENTRY>
+     <LENGTH>23</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_SOBKZ</KEY>
+     <ENTRY>Special Stock Indicator</ENTRY>
+     <LENGTH>31</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_WERKS</KEY>
+     <ENTRY>Plant</ENTRY>
+     <LENGTH>13</LENGTH>
+    </item>
+   </TPOOL>
+   <LONGTEXTS>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>ZMMR_SLOW_MOVING_STOCK</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0004</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00035</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZMMR_SLOW_MOVING_STOCK</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00004</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PURPOSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>This program will create a slow moving stock report.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>ABAP Program: ZMMR_SLOW_MOVING_STOCK</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Transaction Code: ZMM_SLOW_STOCK</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;INTEGRATION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PREREQUISITES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Program ZMMI_LAST_MSEG_TABLE_UPDATE must be run to create the material</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>last used date in table ZMM_LAST_MSEG.  The table is currently updated</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>once a week (at 6:00 am on Mondays).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FEATURES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Only materials with a non zero quantity are reported.  The quantity must</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>be held at the storage location level in order to appear in this report.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE> This will cause some stock transfer data to be excluded from the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>report.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;SELECTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The &apos;Search Criteria&apos; section will identify the materials that can be</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>used in the report.  These fields are : material group, material master,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>plant &amp; storage location.  None of these fields are mandatory.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE> The &apos;Report Criteria&apos; section represents the limiting factors.  The</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>from &amp; to date range are the only mandatory fields.  These dates</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>cover the timeframe that the material was last used.  It will</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>automatically default to a range that will include all material</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>documents.  This timeframe is based on the material document entry date</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>(MKPF-CPUDT).  The NLA code can be left empty and all values will be</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>selected.  The user can enter specific values to limit the report.  This</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>field is case sensitive.  To further limit the material documents used,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the material movement type and special stock indicator may be used.  The</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>user may need to bypass movement types that are for record keeping as</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>opposed to true movements.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;STANDARD_VARIANTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;OUTPUT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The output can be sent to ALV or to a foreground EXCEL file.  The fields</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>in the output are: material number, material description, material</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>group, NLA code, plant, MRP type, safety stock, reorder point, maximum</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>stock, storage location, quantity on hand, unit of measure, price, price</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>units, stock value, currency, storage bin, last used date, material</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>document number, material document year, movement type &amp; special</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>stock indicator.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;ACTIVITIES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>This report makes program ZMINR003 obsolete.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PDTS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PDTS>
+    <SHORT_TEXT>zdownpayment</SHORT_TEXT>
+    <PLVAR>01</PLVAR>
+    <METHOD>
+     <OTYPE>TS</OTYPE>
+     <OBJID>02000130</OBJID>
+     <SWOTP>BUS2012</SWOTP>
+     <SWMTD>ZDOWNPAYMENT_REQUIRE</SWMTD>
+     <METHTYPE>BO</METHTYPE>
+     <BACKGROUND>X</BACKGROUND>
+     <SYNCHRON>X</SYNCHRON>
+     <TSKRELSTAT>R</TSKRELSTAT>
+    </METHOD>
+   </PDTS>
+   <CONTAINER>
+    <CONTAINER>
+     <PROPERTIES>
+      <OWN_ID>
+       <INSTID>TS02000130</INSTID>
+       <TYPEID>CL_SWF_CNT_HRS_PERSISTENCE</TYPEID>
+       <CATID>CL</CATID>
+      </OWN_ID>
+      <PROPSTRING>23</PROPSTRING>
+      <XMLVERSION>0002</XMLVERSION>
+      <INTERNAL>X</INTERNAL>
+      <EXDEFINITN>
+       <NAME>_DEF_EXT</NAME>
+       <POR>
+        <INSTID>DIALOG_STEP_CONTAINER</INSTID>
+        <TYPEID>CL_SWF_CNT_PERSISTENCE_DEF_EXT</TYPEID>
+        <CATID>CL</CATID>
+       </POR>
+      </EXDEFINITN>
+     </PROPERTIES>
+     <ELEMENTS>
+      <L NAME="DOWNPAYMENT_STEP:DownPayment_Step:" TYPE="::XFELD:C:1:0" PROPS="0C000A01"/>
+     </ELEMENTS>
+    </CONTAINER>
+   </CONTAINER>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZLMM_INVOICE_ATTACH_DWNLD</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>CI Item: Invoice attachments download</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>DWNLD_ATTACHMENTS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Download invoice attachments</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_ARCHIVE_ATTACHMENT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get archived attachments</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_NONARCHIVE_ATTACHMENT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get non archived attachments</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>VALIDATIONS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Validate invoice numbers</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>VALIDATIONS</CMPNAME>
+     <SCONAME>FISCAL_YR</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Fiscal Year</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>VALIDATIONS</CMPNAME>
+     <SCONAME>INVOICES</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Range table for BELNR</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>VALIDATIONS</CMPNAME>
+     <SCONAME>RETURN_CODE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Return code for method</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

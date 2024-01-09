@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_AQSG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AQGDBBS>
+    <AQGDBBS>
+     <CLAS>VENDOR</CLAS>
+     <NUM>MM_PURCHASE</NUM>
+    </AQGDBBS>
+   </AQGDBBS>
+   <AQGSCAT>
+    <AQGSCAT>
+     <CLAS>VENDOR</CLAS>
+     <ART>J</ART>
+     <TSTRUC>LFA1</TSTRUC>
+    </AQGSCAT>
+   </AQGSCAT>
+   <AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00001</TINDX>
+     <HEAD>X</HEAD>
+     <MAXL>063</MAXL>
+     <TEXT>Vendor Information</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00005</TINDX>
+     <MAXL>080</MAXL>
+     <TEXT>Vendor Master (General Section)</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00063</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Chk.digit</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00133</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>One-time</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00137</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Payee i.dc</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00163</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Sex</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00171</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>QM system</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00185</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>VSR</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00189</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Plant rel.</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00197</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Status of Data Transfer to Subs.Release</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00203</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Pmnt block</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00217</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>AltPayeeAc</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00335</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Cross Docking: Collective Numbering Is Supported</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00338</TINDX>
+     <MAXL>080</MAXL>
+     <TEXT>Vendor Master (Company Code)</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00376</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Cust. clrg</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00408</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Lst key dt</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00410</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Int.cal.fr</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00416</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Loc.proc.</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00424</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Chk d.inv.</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00434</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Indiv.pmnt</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00478</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>EDI</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00494</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>AltPayeeAc</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00508</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Acct stmnt</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00540</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Execution</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00544</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Prepayment Relevance (Vendor Master)</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00549</TINDX>
+     <MAXL>080</MAXL>
+     <TEXT>Vendor master record purchasing organization data</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00589</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Inco. 2</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00637</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>PO: vendor</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00639</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Price mkg.</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00641</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Rack-jobb.</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00661</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Sort crit.</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00705</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Service-Based Invoice Verification</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>VENDOR</CLAS>
+     <TINDX>00713</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>BVol.comp.</TEXT>
+    </AQGTS>
+   </AQGTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

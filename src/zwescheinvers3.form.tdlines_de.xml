@@ -1,0 +1,1144 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<abapGit version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TDLINES>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>FUSS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Release 2.1: BOTTOM-Anweisungen entfernt</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>WE3FUSS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>F1</TDFORMAT>
+     <TDLINE>Aussteller,,&amp;*MKPF-USNAM&amp;        ,,U N T E R S C H R I F T</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>KOPF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Release 2.1: TOP-Anweisungen entfernt</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Belegkopf WE-Schein Version 3 LVS-Material</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>WE3LVSKOPF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>LK</TDFORMAT>
+     <TDLINE>&amp;AM07M-HDLNE&amp;                      ,,Nr.,,&amp;*MKPF-MBLNR&amp;,,Seite,,&amp;PAGE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Wareneingangsdatum :,,&amp;*MKPF-BUDAT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Tagesdatum         :,,&amp;*MKPF-CPUDT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Werk        :,,&amp;*T001W-WERKS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Bezeichnung :,,&amp;*T001W-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>&amp;AM07M-LITXT&amp;,,&amp;AM07M-LIBZG&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Name        :,,&amp;*AM07M-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Bestellung  :,,&amp;*EKKO-EBELN&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M4</TDFORMAT>
+     <TDLINE>EinkGruppe  :,,&amp;*EKKO-EKGRP&amp;,,&amp;*T024-EKNAM&amp;,,Telefon</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>     :,,&amp;*T024-EKTEL&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T1</TDFORMAT>
+     <TDLINE>Pos,,Material             ,,Bezeichnung</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T5</TDFORMAT>
+     <TDLINE>Lnr /Typ/Koordinate  ,,TB-Nummer,,Pri             ,,Menge,,ME</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>WE3BACOLVSKOPF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L1</TDFORMAT>
+     <TDLINE>&amp;AM07M-HDLNE&amp;                            ,,Seite,,&amp;PAGE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>BC</TDFORMAT>
+     <TDLINE>,,&lt;BC&gt;&amp;*MKPF-MBLNR&amp;&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Wareneingangsdatum :,,&amp;*MKPF-BUDAT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Tagesdatum         :,,&amp;*MKPF-CPUDT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Werk        :,,&amp;*T001W-WERKS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Bezeichnung :,,&amp;*T001W-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>&amp;AM07M-LITXT&amp;,,&amp;AM07M-LIBZG&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Name        :,,&amp;*AM07M-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Bestellung  :,,&amp;*EKKO-EBELN&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M4</TDFORMAT>
+     <TDLINE>EinkGruppe  :,,&amp;*EKKO-EKGRP&amp;,,&amp;*T024-EKNAM&amp;,,Telefon</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>     :,,&amp;*T024-EKTEL&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T1</TDFORMAT>
+     <TDLINE>Pos,,Material             ,,Bezeichnung</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T5</TDFORMAT>
+     <TDLINE>Lnr /Typ/Koordinate  ,,TB-Nummer,,Pri             ,,Menge,,ME</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Belegkopf WE-Schein Version 3 Lagermaterial</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>WE3KOPF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>LK</TDFORMAT>
+     <TDLINE>&amp;AM07M-HDLNE&amp;                      ,,Nr.,,&amp;*MKPF-MBLNR&amp;,,Seite,,&amp;PAGE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Wareneingangsdatum :,,&amp;*MKPF-BUDAT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Tagesdatum         :,,&amp;*MKPF-CPUDT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Werk        :,,&amp;*T001W-WERKS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Bezeichnung :,,&amp;*T001W-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>&amp;AM07M-LITXT&amp;,,&amp;AM07M-LIBZG&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Name        :,,&amp;*AM07M-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Bestellung  :,,&amp;*EKKO-EBELN&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M4</TDFORMAT>
+     <TDLINE>EinkGruppe  :,,&amp;*EKKO-EKGRP&amp;,,&amp;*T024-EKNAM&amp;,,Telefon</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>     :,,&amp;*T024-EKTEL&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T1</TDFORMAT>
+     <TDLINE>Pos,,Material             ,,Bezeichnung</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T2</TDFORMAT>
+     <TDLINE>LOrt,,Charge         ,,Lagerplatz                 ,,Menge,,ME</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>WE3BACOKOPF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L1</TDFORMAT>
+     <TDLINE>&amp;AM07M-HDLNE&amp;                                         ,,Seite,,&amp;PAGE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>BC</TDFORMAT>
+     <TDLINE>,,&lt;BC&gt;&amp;*MKPF-MBLNR&amp;&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Wareneingangsdatum :,,&amp;*MKPF-BUDAT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Tagesdatum         :,,&amp;*MKPF-CPUDT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Werk        :,,&amp;*T001W-WERKS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Bezeichnung :,,&amp;*T001W-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>&amp;AM07M-LITXT&amp;,,&amp;AM07M-LIBZG&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Name        :,,&amp;*AM07M-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Bestellung  :,,&amp;*EKKO-EBELN&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M4</TDFORMAT>
+     <TDLINE>EinkGruppe  :,,&amp;*EKKO-EKGRP&amp;,,&amp;*T024-EKNAM&amp;,,Telefon</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>     :,,&amp;*T024-EKTEL&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T1</TDFORMAT>
+     <TDLINE>Pos,,Material             ,,Bezeichnung</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T2</TDFORMAT>
+     <TDLINE>LOrt,,Charge         ,,Lagerplatz                 ,,Menge,,ME</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Belegkopf WE-Schein Vers. 3 Verbrauchsmaterial</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>WE3KOPF1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>LK</TDFORMAT>
+     <TDLINE>&amp;AM07M-HDLNE&amp;,,Nr.,,&amp;*MKPF-MBLNR&amp;,,Seite,,&amp;PAGE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Wareneingangsdatum :,,&amp;*MKPF-BUDAT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Tagesdatum         :,,&amp;*MKPF-CPUDT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Werk        :,,&amp;*T001W-WERKS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Bezeichnung :,,&amp;*T001W-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>&amp;AM07M-LITXT&amp;,,&amp;AM07M-LIBZG&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Name        :,,&amp;*AM07M-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Bestellung  :,,&amp;*EKKO-EBELN&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M4</TDFORMAT>
+     <TDLINE>EinkGruppe  :,,&amp;*EKKO-EKGRP&amp;,,&amp;*T024-EKNAM&amp;,,Telefon</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>     :,,&amp;*T024-EKTEL&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T1</TDFORMAT>
+     <TDLINE>Pos,,Material             ,,Bezeichnung</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T3</TDFORMAT>
+     <TDLINE>Kontierung           ,,Empfänger                  ,,Menge,,ME</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>WE3BACOKOPF1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>LK</TDFORMAT>
+     <TDLINE>&amp;AM07M-HDLNE&amp;                                     ,,Seite,,&amp;PAGE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>BC</TDFORMAT>
+     <TDLINE>,,&lt;BC&gt;&amp;*MKPF-MBLNR&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Wareneingangsdatum :,,&amp;*MKPF-BUDAT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Tagesdatum         :,,&amp;*MKPF-CPUDT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Werk        :,,&amp;*T001W-WERKS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Bezeichnung :,,&amp;*T001W-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>&amp;AM07M-LITXT&amp;,,&amp;AM07M-LIBZG&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Name        :,,&amp;*AM07M-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Bestellung  :,,&amp;*EKKO-EBELN&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M4</TDFORMAT>
+     <TDLINE>EinkGruppe  :,,&amp;*EKKO-EKGRP&amp;,,&amp;*T024-EKNAM&amp;,,Telefon</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>     :,,&amp;*T024-EKTEL&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T1</TDFORMAT>
+     <TDLINE>Pos,,Material             ,,Bezeichnung</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T3</TDFORMAT>
+     <TDLINE>Kontierung           ,,Empfänger                  ,,Menge,,ME</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>MAIN</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Release 2.1: Elemente (/E) außerhalb von PROTECT-Anweisungen gesetzt</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Position WE-Schein Version 3 LVS-Material</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>WE3LVSMAT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>PROTECT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T1</TDFORMAT>
+     <TDLINE>&amp;MSEG-ZEILE&amp;,,&amp;MSEG-MATNR&amp;,,&amp;EKPO-TXZ01&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T5</TDFORMAT>
+     <TDLINE>&amp;MSEG-LGNUM&amp; /&amp;MSEG-LGTYP&amp;/&amp;MSEG-LGPLA&amp;,,&amp;MSEG-TBNUM&amp;,,&amp;MSEG-TBPRI&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>,,&amp;MSEG-MENGE&amp;,,&amp;MSEG-MEINS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T5</TDFORMAT>
+     <TDLINE>&amp;T157E-GRTXT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDPROTECT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Position WE-Schein Version 3 Verbrauchsmaterial</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>WE3VERBRMAT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>PROTECT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T1</TDFORMAT>
+     <TDLINE>&amp;MSEG-ZEILE&amp;,,&amp;MSEG-MATNR&amp;,,&amp;EKPO-TXZ01&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>&amp;AM07M-RSTYP&amp;,,&amp;AM07M-KONTIERUNG&amp;,,&amp;MSEG-WEMPF&amp;,,&amp;MSEG-MENGE&amp;,,&amp;MSEG-MEINS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T4</TDFORMAT>
+     <TDLINE>&amp;T157E-GRTXT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDPROTECT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>*---- Position WE-Schein Version 3 Lagermaterial ----------------------*</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>WE3LGMAT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>PROTECT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T1</TDFORMAT>
+     <TDLINE>&amp;MSEG-ZEILE&amp;,,&amp;MSEG-MATNR&amp;,,&amp;EKPO-TXZ01&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T2</TDFORMAT>
+     <TDLINE>&amp;MSEG-LGORT&amp;,,&amp;MSEG-CHARG&amp;,,&amp;MABDR-LGPBE&amp;,,&amp;MSEG-MENGE&amp;,,&amp;MSEG-MEINS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T2</TDFORMAT>
+     <TDLINE>&amp;T157E-GRTXT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDPROTECT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>RÜKOPF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Release 2.1: TOP-Anweisungen entfernt</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Belegkopf WE-Schein Version 3 LVS-Material</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>WE3LVSKOPF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>LK</TDFORMAT>
+     <TDLINE>&amp;AM07M-HDLNE&amp;                      ,,Nr.,,&amp;*MKPF-MBLNR&amp;,,Seite,,&amp;PAGE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Wareneingangsdatum :,,&amp;*MKPF-BUDAT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Tagesdatum         :,,&amp;*MKPF-CPUDT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Werk        :,,&amp;*T001W-WERKS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Bezeichnung :,,&amp;*T001W-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>&amp;AM07M-LITXT&amp;,,&amp;AM07m-LIBZG&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Name        :,,&amp;*AM07M-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Bestellung  :,,&amp;*EKKO-EBELN&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M4</TDFORMAT>
+     <TDLINE>EinkGruppe  :,,&amp;*EKKO-EKGRP&amp;,,&amp;*T024-EKNAM&amp;,,Telefon</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>     :,,&amp;*T024-EKTEL&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T1</TDFORMAT>
+     <TDLINE>Pos,,Material             ,,Bezeichnung</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T5</TDFORMAT>
+     <TDLINE>Lnr /Typ/Koordinate  ,,TB-Nummer,,Pri             ,,Menge,,ME</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T5</TDFORMAT>
+     <TDLINE>Rückliefergrund</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>WE3BACOLVSKOPF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L1</TDFORMAT>
+     <TDLINE>&amp;AM07M-HDLNE&amp;                            ,,Seite,,&amp;PAGE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>BC</TDFORMAT>
+     <TDLINE>,,&lt;BC&gt;&amp;*MKPF-MBLNR&amp;&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Wareneingangsdatum :,,&amp;*MKPF-BUDAT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Tagesdatum         :,,&amp;*MKPF-CPUDT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Werk        :,,&amp;*T001W-WERKS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Bezeichnung :,,&amp;*T001W-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>&amp;AM07M-LITXT&amp;,,&amp;AM07M-LIBZG&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Name        :,,&amp;*AM07M-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Bestellung  :,,&amp;*EKKO-EBELN&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M4</TDFORMAT>
+     <TDLINE>EinkGruppe  :,,&amp;*EKKO-EKGRP&amp;,,&amp;*T024-EKNAM&amp;,,Telefon</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>     :,,&amp;*T024-EKTEL&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T1</TDFORMAT>
+     <TDLINE>Pos,,Material             ,,Bezeichnung</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T5</TDFORMAT>
+     <TDLINE>Lnr /Typ/Koordinate  ,,TB-Nummer,,Pri             ,,Menge,,ME</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T5</TDFORMAT>
+     <TDLINE>Rückliefergrund</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Belegkopf WE-Schein Version 3 Lagermaterial</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>WE3KOPF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>LK</TDFORMAT>
+     <TDLINE>&amp;AM07M-HDLNE&amp;                      ,,Nr.,,&amp;*MKPF-MBLNR&amp;,,Seite,,&amp;PAGE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Wareneingangsdatum :,,&amp;*MKPF-BUDAT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Tagesdatum         :,,&amp;*MKPF-CPUDT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Werk        :,,&amp;*T001W-WERKS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Bezeichnung :,,&amp;*T001W-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>&amp;AM07M-LITXT&amp;,,&amp;AM07M-LIBZG&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Name        :,,&amp;*AM07M-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Bestellung  :,,&amp;*EKKO-EBELN&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M4</TDFORMAT>
+     <TDLINE>EinkGruppe  :,,&amp;*EKKO-EKGRP&amp;,,&amp;*T024-EKNAM&amp;,,Telefon</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>     :,,&amp;*T024-EKTEL&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T1</TDFORMAT>
+     <TDLINE>Pos,,Material             ,,Bezeichnung</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T2</TDFORMAT>
+     <TDLINE>LOrt,,Charge         ,,Lagerplatz                 ,,Menge,,ME</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T2</TDFORMAT>
+     <TDLINE>Rückliefergrund</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>WE3BACOKOPF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L1</TDFORMAT>
+     <TDLINE>&amp;AM07M-HDLNE&amp;                                         ,,Seite,,&amp;PAGE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>BC</TDFORMAT>
+     <TDLINE>,,&lt;BC&gt;&amp;*MKPF-MBLNR&amp;&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Wareneingangsdatum :,,&amp;*MKPF-BUDAT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Tagesdatum         :,,&amp;*MKPF-CPUDT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Werk        :,,&amp;*T001W-WERKS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Bezeichnung :,,&amp;*T001W-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>&amp;AM07M-LITXT&amp;,,&amp;AM07M-LIBZG&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Name        :,,&amp;*AM07M-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Bestellung  :,,&amp;*EKKO-EBELN&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M4</TDFORMAT>
+     <TDLINE>EinkGruppe  :,,&amp;*EKKO-EKGRP&amp;,,&amp;*T024-EKNAM&amp;,,Telefon</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>     :,,&amp;*T024-EKTEL&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T1</TDFORMAT>
+     <TDLINE>Pos,,Material             ,,Bezeichnung</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T2</TDFORMAT>
+     <TDLINE>LOrt,,Charge         ,,Lagerplatz                 ,,Menge,,ME</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T2</TDFORMAT>
+     <TDLINE>Rückliefergrund</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Belegkopf WE-Schein Vers. 3 Verbrauchsmaterial</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>WE3KOPF1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>LK</TDFORMAT>
+     <TDLINE>&amp;AM07M-HDLNE&amp;,,Nr.,,&amp;*MKPF-MBLNR&amp;,,Seite,,&amp;PAGE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Wareneingangsdatum :,,&amp;*MKPF-BUDAT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Tagesdatum         :,,&amp;*MKPF-CPUDT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Werk        :,,&amp;*T001W-WERKS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Bezeichnung :,,&amp;*T001W-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>&amp;AM07M-LITXT&amp;,,&amp;AM07M-LIBZG&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Name        :,,&amp;*AM07M-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Bestellung  :,,&amp;*EKKO-EBELN&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M4</TDFORMAT>
+     <TDLINE>EinkGruppe  :,,&amp;*EKKO-EKGRP&amp;,,&amp;*T024-EKNAM&amp;,,Telefon</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>     :,,&amp;*T024-EKTEL&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T1</TDFORMAT>
+     <TDLINE>Pos,,Material             ,,Bezeichnung</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T3</TDFORMAT>
+     <TDLINE>Kontierung           ,,Empfänger                  ,,Menge,,ME</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T3</TDFORMAT>
+     <TDLINE>Rückliefergrund</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>WE3BACOKOPF1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>LK</TDFORMAT>
+     <TDLINE>&amp;AM07M-HDLNE&amp;                                     ,,Seite,,&amp;PAGE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>BC</TDFORMAT>
+     <TDLINE>,,&lt;BC&gt;&amp;*MKPF-MBLNR&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Wareneingangsdatum :,,&amp;*MKPF-BUDAT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Tagesdatum         :,,&amp;*MKPF-CPUDT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Werk        :,,&amp;*T001W-WERKS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Bezeichnung :,,&amp;*T001W-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>&amp;AM07M-LITXT&amp;,,&amp;AM07M-LIBZG&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Name        :,,&amp;*AM07M-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Bestellung  :,,&amp;*EKKO-EBELN&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M4</TDFORMAT>
+     <TDLINE>EinkGruppe  :,,&amp;*EKKO-EKGRP&amp;,,&amp;*T024-EKNAM&amp;,,Telefon</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>     :,,&amp;*T024-EKTEL&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>-------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T1</TDFORMAT>
+     <TDLINE>Pos,,Material             ,,Bezeichnung</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T3</TDFORMAT>
+     <TDLINE>Kontierung           ,,Empfänger                  ,,Menge,,ME</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>T3</TDFORMAT>
+     <TDLINE>Rückliefergrund</TDLINE>
+    </TLINE>
+   </TDLINES>
+  </asx:values>
+ </asx:abap>
+</abapGit>

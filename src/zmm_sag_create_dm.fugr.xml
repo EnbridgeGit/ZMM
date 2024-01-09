@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>COGS FM Group for DM Spl Deal Create</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZMM_SAG_CREATE_DMF01</SOBJ_NAME>
+    <SOBJ_NAME>LZMM_SAG_CREATE_DMTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZMM_SAG_CREATE_DM</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZMM_SAG_CREATE_DM</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Custome Functional Module for SAG create</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>LV_MODE</PARAMETER>
+       <DEFAULT>&apos;N&apos;</DEFAULT>
+       <TYP>CHAR1</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>LV_UPDATE</PARAMETER>
+       <DEFAULT>&apos;S&apos;</DEFAULT>
+       <TYP>CHAR1</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>HEADER</PARAMETER>
+       <TYP>ZMM_SAGHEADER_DM</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>LV_SUBRC</PARAMETER>
+       <DBFIELD>SYST-SUBRC</DBFIELD>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>LV_OUTPUT</PARAMETER>
+       <TYP>CHAR100</TYP>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>IT_ITEMSAG</PARAMETER>
+       <DBSTRUCT>ZMM_ITEMSAG</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>IT_PRICONDSAG</PARAMETER>
+       <DBSTRUCT>ZMM_PRICECONDSAG</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>IT_SAGMAINTAIN</PARAMETER>
+       <DBSTRUCT>ZMM_SAGMAINTAIN</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>IT_RETURN</PARAMETER>
+       <DBSTRUCT>ZMM_RETURNMSG</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>LV_MODE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Single-Character Indicator</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>LV_UPDATE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Single-Character Indicator</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>HEADER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Scheduling Agreement Create FM Header</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>LV_SUBRC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return Value of ABAP Statements</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>LV_OUTPUT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Character field of length 100</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_ITEMSAG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Structure for SA Create FM Item level</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_PRICONDSAG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Structure for SA Create FM Price cond</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_SAGMAINTAIN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Structure for SA Create FM SA MAIN</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Structure for Return msg in SAG</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

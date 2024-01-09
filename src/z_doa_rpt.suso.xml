@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SUSO" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TOBJ>
+    <OBJCT>Z_DOA_RPT</OBJCT>
+    <FIEL1>ZDOA_USR</FIEL1>
+    <OCLSS>MM_E</OCLSS>
+   </TOBJ>
+   <TOBJT>
+    <LANGU>E</LANGU>
+    <OBJECT>Z_DOA_RPT</OBJECT>
+    <TTEXT>Authorization for ZMMR_THRESHOLD_REPORT</TTEXT>
+   </TOBJT>
+  </asx:values>
+ </asx:abap>
+</abapGit>

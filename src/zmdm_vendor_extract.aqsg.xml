@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_AQSG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AQGDBBS>
+    <AQGDBBS>
+     <CLAS>ZMDM_VENDOR_EXTRACT</CLAS>
+     <NUM>ZMDM</NUM>
+    </AQGDBBS>
+   </AQGDBBS>
+   <AQGSCAT>
+    <AQGSCAT>
+     <CLAS>ZMDM_VENDOR_EXTRACT</CLAS>
+     <ART>J</ART>
+     <TSTRUC>LFA1</TSTRUC>
+    </AQGSCAT>
+   </AQGSCAT>
+   <AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>ZMDM_VENDOR_EXTRACT</CLAS>
+     <TINDX>00001</TINDX>
+     <HEAD>X</HEAD>
+     <MAXL>063</MAXL>
+     <TEXT>MDM Vendor Extract</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>ZMDM_VENDOR_EXTRACT</CLAS>
+     <TINDX>00004</TINDX>
+     <MAXL>080</MAXL>
+     <TEXT>Vendor Master (General Section)</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>ZMDM_VENDOR_EXTRACT</CLAS>
+     <TINDX>00028</TINDX>
+     <MAXL>055</MAXL>
+     <TEXT>STATUS</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>ZMDM_VENDOR_EXTRACT</CLAS>
+     <TINDX>00029</TINDX>
+     <MAXL>030</MAXL>
+     <TEXT>STATUS</TEXT>
+    </AQGTS>
+   </AQGTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

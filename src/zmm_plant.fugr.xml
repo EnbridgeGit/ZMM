@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Tax code for plant</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZMM_PLANTTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZMM_PLANT</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZMM_GET_TAX_CODE</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Get tax code for plant</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IMP_PLANT</PARAMETER>
+       <TYP>WERKS_D</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EXP_TAX_CODE</PARAMETER>
+       <TYP>Z_TAX_CODE</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IMP_PLANT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Plant</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EXP_TAX_CODE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tax code</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

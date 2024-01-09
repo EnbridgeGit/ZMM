@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>SRM SC Attachment</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZSRM_SC_ATTACHTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZSRM_SC_ATTACH</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZSRMF_CHECK_ATTACHMENT</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Check Attachment in PR</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>OBJKY</PARAMETER>
+       <TYP>OBJKY</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FILENAME</PARAMETER>
+       <TYP>CHAR200</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>W_EXIST</PARAMETER>
+       <TYP>CHAR1</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>OBJKY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Document management object key</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FILENAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Text field length 200</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>W_EXIST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Single-Character Indicator</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

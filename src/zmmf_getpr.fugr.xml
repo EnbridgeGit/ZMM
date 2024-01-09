@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>FG for getting PR</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZMMF_GETPRTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZMMF_GETPR</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZMMF_GET_MAT_TYPE</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Get The Material Type from ECC</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_MATNR</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>MATNR</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>E_MTART</PARAMETER>
+       <TYP>MTART</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>E_FLAG</PARAMETER>
+       <TYP>CHAR01</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_MATNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Material Number</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_MTART</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Material Type</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_FLAG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>IF Material Not Found, Flag = X</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZMMF_GET_PR</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>To get the Requestor and Ship to from ECC</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_BANFN</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>BANFN</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>E_AFNAM</PARAMETER>
+       <TYP>AFNAM</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>E_ERNAM</PARAMETER>
+       <TYP>ERNAM</TYP>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>LIT_EBAN</PARAMETER>
+       <DBSTRUCT>ZMMS_GET_RP</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_BANFN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Purchase Requisition Number</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_AFNAM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Name of Requisitioner/Requester</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_ERNAM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Name of Person who Created the Object</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>LIT_EBAN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Purchase Requisition</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,4 @@
+FUNCTION-POOL ZMM_SAG_CREATE_DM.               "MESSAGE-ID ..
+
+* INCLUDE LZMM_SAG_CREATED...                " Local class definition.
+ DATA:   BDCDATA LIKE BDCDATA OCCURS 0 WITH HEADER LINE.

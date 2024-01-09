@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_TRAN" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TSTC>
+    <TCODE>ZQ09</TCODE>
+    <PGMNA>ZIZQUI21</PGMNA>
+    <CINFO>hA==</CINFO>
+   </TSTC>
+   <TSTCT>
+    <SPRSL>E</SPRSL>
+    <TCODE>ZQ09</TCODE>
+    <TTEXT>Archived MatSerialNo.</TTEXT>
+   </TSTCT>
+   <AUTHORIZATIONS>
+    <TSTCA>
+     <TCODE>ZQ09</TCODE>
+     <OBJCT>I_TCODE</OBJCT>
+     <FIELD>TCD</FIELD>
+     <VALUE>IQ09</VALUE>
+    </TSTCA>
+   </AUTHORIZATIONS>
+   <I18N_TPOOL>
+    <TSTCT>
+     <SPRSL>D</SPRSL>
+     <TTEXT>MatSerialNr anzeigen</TTEXT>
+    </TSTCT>
+   </I18N_TPOOL>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Get contract</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZMM_CONTRACTTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZMM_CONTRACT</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZMM_GET_CONTRACT</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Get contract</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>EXP_EBELN</PARAMETER>
+       <TYP>EBELN</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>EXP_LIFNR</PARAMETER>
+       <TYP>ELIFN</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NO_CONTRACT_FOUND</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>EXP_EBELN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Purchasing Document Number</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EXP_LIFNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Vendor Account Number</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NO_CONTRACT_FOUND</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>No contract found</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

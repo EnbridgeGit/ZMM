@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_AQQU" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AQGQCAT>
+    <AQGQCAT>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_MATERIAL</QNUM>
+     <CLAS>ZMDM_MATERIAL_EXTRACT</CLAS>
+    </AQGQCAT>
+   </AQGQCAT>
+   <AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_MATERIAL</QNUM>
+     <TINDX>00001</TINDX>
+     <HEAD>X</HEAD>
+     <MAXL>060</MAXL>
+     <TEXT>MDM Material Extract</TEXT>
+    </AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_MATERIAL</QNUM>
+     <TINDX>00005</TINDX>
+     <MAXL>030</MAXL>
+     <TEXT>Material Number</TEXT>
+    </AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_MATERIAL</QNUM>
+     <TINDX>00006</TINDX>
+     <MAXL>030</MAXL>
+     <TEXT>Vendor Part Number</TEXT>
+    </AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_MATERIAL</QNUM>
+     <TINDX>00007</TINDX>
+     <MAXL>030</MAXL>
+     <TEXT>VNAME</TEXT>
+    </AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_MATERIAL</QNUM>
+     <TINDX>00008</TINDX>
+     <MAXL>030</MAXL>
+     <TEXT>Vendor Number</TEXT>
+    </AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_MATERIAL</QNUM>
+     <TINDX>00009</TINDX>
+     <MAXL>030</MAXL>
+     <TEXT>Manufacturer Part Number</TEXT>
+    </AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_MATERIAL</QNUM>
+     <TINDX>00010</TINDX>
+     <MAXL>030</MAXL>
+     <TEXT>MFRNAME</TEXT>
+    </AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_MATERIAL</QNUM>
+     <TINDX>00011</TINDX>
+     <MAXL>030</MAXL>
+     <TEXT>Number of a Manufacturer</TEXT>
+    </AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_MATERIAL</QNUM>
+     <TINDX>00012</TINDX>
+     <MAXL>030</MAXL>
+     <TEXT>BU</TEXT>
+    </AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_MATERIAL</QNUM>
+     <TINDX>00013</TINDX>
+     <MAXL>030</MAXL>
+     <TEXT>MODLE</TEXT>
+    </AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_MATERIAL</QNUM>
+     <TINDX>00014</TINDX>
+     <MAXL>030</MAXL>
+     <TEXT>PRIMARY</TEXT>
+    </AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_MATERIAL</QNUM>
+     <TINDX>00015</TINDX>
+     <MAXL>030</MAXL>
+     <TEXT>ACTIVE</TEXT>
+    </AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_MATERIAL</QNUM>
+     <TINDX>00016</TINDX>
+     <MAXL>030</MAXL>
+     <TEXT>External System ID</TEXT>
+    </AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_MATERIAL</QNUM>
+     <TINDX>00017</TINDX>
+     <MAXL>030</MAXL>
+     <TEXT>COMMENTS</TEXT>
+    </AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_MATERIAL</QNUM>
+     <TINDX>00018</TINDX>
+     <MODIF>0001</MODIF>
+     <MAXL>030</MAXL>
+     <TEXT>Flag Material for Deletio</TEXT>
+    </AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_MATERIAL</QNUM>
+     <TINDX>00019</TINDX>
+     <MODIF>0001</MODIF>
+     <MAXL>030</MAXL>
+     <TEXT>Cross-Plant Material Stat</TEXT>
+    </AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_MATERIAL</QNUM>
+     <TINDX>00020</TINDX>
+     <MAXL>030</MAXL>
+     <TEXT>MDM Item Number</TEXT>
+    </AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_MATERIAL</QNUM>
+     <TINDX>00021</TINDX>
+     <MAXL>030</MAXL>
+     <TEXT>Material Type</TEXT>
+    </AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_MATERIAL</QNUM>
+     <TINDX>00043</TINDX>
+     <MAXL>030</MAXL>
+     <TEXT>MDM Item Number</TEXT>
+    </AQGTQ>
+   </AQGTQ>
+  </asx:values>
+ </asx:abap>
+</abapGit>

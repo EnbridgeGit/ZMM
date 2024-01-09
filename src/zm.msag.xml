@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZM</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>ZM MESSAGE CLASS FOR MATERIALS MANAGEMENT</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>&amp; &amp; &amp; &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Error opening Batch Input Session: &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Error in processing Material Master: &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Error closing Batch Input Session: &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Material Number &amp; was processed.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Error    Locating file &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Error opening file &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>E: Reference line item &amp; not found in reservation &amp;.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>Material &amp; Characteristic &amp; Error: &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>Error openning file &amp;; SYSTEM MESSAGE: &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Please Enter C, D or R for a value in STATUS</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>Warranty Process Complete</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>Warranty Reset Complete</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>013</MSGNR>
+     <TEXT>Record is currently Locked</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>014</MSGNR>
+     <TEXT>Warranty ID is locked. Please try EXECUTING again. (Lock=&amp;)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>015</MSGNR>
+     <TEXT>Warranty &amp; has already been marked as &apos;D&apos; or &apos;C&apos;.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>016</MSGNR>
+     <TEXT>A Plant Number must also be entered for a Storage Location.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>017</MSGNR>
+     <TEXT>Select either Material Group(s) or Material(s), but not both.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>018</MSGNR>
+     <TEXT>Must enter Material Group(s) OR Material(s)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>019</MSGNR>
+     <TEXT>You can&apos;t change status for more then one warranty ! Just one in a time.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>031</MSGNR>
+     <TEXT>Error inserting record with key &amp; into table &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>032</MSGNR>
+     <TEXT>Document not found</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>033</MSGNR>
+     <TEXT>Another user has locked NR table. Pls try saving again after a few secs.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>034</MSGNR>
+     <TEXT>Warranty ID is locked. Please try saving again. (Lock=&amp;)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>035</MSGNR>
+     <TEXT>No warranty issues with vendor &amp; found</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>036</MSGNR>
+     <TEXT>Total credit and Line item total must be equal</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>037</MSGNR>
+     <TEXT>Another user has locked Warranty ID &amp;. Pls save again after 1 minute</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>038</MSGNR>
+     <TEXT>Enter either Percentage -or- Absolute dollar amount</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>039</MSGNR>
+     <TEXT>Use only one of the criteria. Either Percentage Or Absolute. Not both!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>040</MSGNR>
+     <TEXT>Please enter tax code for selected line items</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>041</MSGNR>
+     <TEXT>Warranty ID &amp; and Material Doc &amp; created successfully</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>042</MSGNR>
+     <TEXT>Accounting Doc &amp; created successfully</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>043</MSGNR>
+     <TEXT>Tax code &amp; does not exist for TAXCA.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>044</MSGNR>
+     <TEXT>Please assign a warranty ID for selected item</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>045</MSGNR>
+     <TEXT>Please allocate dollar amount for selected item</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>046</MSGNR>
+     <TEXT>Variance can not exceed 99.99%</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>047</MSGNR>
+     <TEXT>Change of credit status for warranty &amp; successfully completed !</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>099</MSGNR>
+     <TEXT>Record locked &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZM</ARBGB>
+     <MSGNR>100</MSGNR>
+     <TEXT>&amp; &amp; &amp; &amp;</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

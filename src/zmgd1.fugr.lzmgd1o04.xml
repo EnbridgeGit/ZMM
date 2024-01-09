@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>LZMGD1O04</NAME>
+    <SUBC>I</SUBC>
+    <APPL>S</APPL>
+    <RSTAT>T</RSTAT>
+    <RLOAD>D</RLOAD>
+   </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>R</ID>
+     <ENTRY>Material Master: PBO Modules for Units of Measure</ENTRY>
+     <LENGTH>49</LENGTH>
+    </item>
+   </TPOOL>
+  </asx:values>
+ </asx:abap>
+</abapGit>

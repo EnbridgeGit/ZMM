@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>ZSENDMAIL</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZSENDMAILTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZSENDMAIL</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZSENDMAIL</FUNCNAME>
+     <SHORT_TEXT>Send mail</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IT_EMAILID</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZMMTT_MAIL_RECIPIENT</TYP>
+      </RSIMP>
+     </IMPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IT_EMAILID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Table type for recipient to send mail</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>Z_ORIGREQ</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>BANFN</DOMNAME>
+    <HEADLEN>24</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>24</SCRLEN3>
+    <DDTEXT>Reference Requisition/SC</DDTEXT>
+    <REPTEXT>Reference Requisition/SC</REPTEXT>
+    <SCRTEXT_S>Ref Req/SC</SCRTEXT_S>
+    <SCRTEXT_M>Ref Req/SC</SCRTEXT_M>
+    <SCRTEXT_L>Reference Requisition/SC</SCRTEXT_L>
+    <DTELMASTER>E</DTELMASTER>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>

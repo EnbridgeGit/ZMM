@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZMM_MESSAGE</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>Message class for MM messages</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_MESSAGE</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>Error, Item &amp;, Material &amp; does not exist on original PR.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_MESSAGE</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Error, Item &amp;, Material Group &amp; does not exist on original PR.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_MESSAGE</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Authorization Code &amp; already in use on an existing PO.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_MESSAGE</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Shopping Cart &amp; should be in APPROVED status.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_MESSAGE</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Amount exceeds the threshold limit, please enter Authorization Code.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_MESSAGE</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Purchase Req &amp; queue detail has been sent.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_MESSAGE</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Queue entry has been deleted.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_MESSAGE</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>No queue exists in a not ready state.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_MESSAGE</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>No email address found.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_MESSAGE</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>RFC destination for SRM system not found.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_MESSAGE</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Multiple vendor with same price &amp; lead time. Source of supply not assign.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_MESSAGE</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>Enter approximate cost of the product/service.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_MESSAGE</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>Please enter service confirmer.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_MESSAGE</ARBGB>
+     <MSGNR>013</MSGNR>
+     <TEXT>PO amount &amp; exceeds cumulative change Shopping Cart amount &amp;.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_MESSAGE</ARBGB>
+     <MSGNR>014</MSGNR>
+     <TEXT>The Authorization Code &amp; is not a change Shopping Cart.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_MESSAGE</ARBGB>
+     <MSGNR>015</MSGNR>
+     <TEXT>Update the Authorization Code to the most recent approved Change Request.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_MESSAGE</ARBGB>
+     <MSGNR>016</MSGNR>
+     <TEXT>Auth Code already in use. Please enter change and Auth Code, then SAVE.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_MESSAGE</ARBGB>
+     <MSGNR>017</MSGNR>
+     <TEXT>Item &amp;, &amp; changed. Req can only be ordered in &amp;.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_MESSAGE</ARBGB>
+     <MSGNR>018</MSGNR>
+     <TEXT>Split accounting by quantity is not permitted for this requisition.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_MESSAGE</ARBGB>
+     <MSGNR>019</MSGNR>
+     <TEXT>UOM &amp; is not valid for this requisition.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_MESSAGE</ARBGB>
+     <MSGNR>020</MSGNR>
+     <TEXT>PO &amp; has split acct, header data parked please complete Item details</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_MESSAGE</ARBGB>
+     <MSGNR>021</MSGNR>
+     <TEXT>&amp; -  This is an ARIBA Purchase Order.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_MESSAGE</ARBGB>
+     <MSGNR>022</MSGNR>
+     <TEXT>Shopping Cart  &amp; should be in REJECTED status.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_MESSAGE</ARBGB>
+     <MSGNR>023</MSGNR>
+     <TEXT>&amp; &amp; &amp; &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMM_MESSAGE</ARBGB>
+     <MSGNR>024</MSGNR>
+     <TEXT>PO amount exceeds allowable Authorization code amount.</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

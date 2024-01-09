@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>ZMMMA002</NAME>
+    <SUBC>1</SUBC>
+    <APPL>M</APPL>
+    <RLOAD>E</RLOAD>
+    <FIXPT>X</FIXPT>
+    <LDBNAME>D$S</LDBNAME>
+   </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>PLEASE ENTER THE INFORMATION OR USE VARIANTS</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>SOURCE LIST CREATION ENHANCEMENT ERROR&apos;S</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>003</KEY>
+     <ENTRY>MM/DD/YYYY</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>004</KEY>
+     <ENTRY>MATERIAL</ENTRY>
+     <LENGTH>8</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>005</KEY>
+     <ENTRY>NUMBER</ENTRY>
+     <LENGTH>6</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>006</KEY>
+     <ENTRY>VENDOR</ENTRY>
+     <LENGTH>6</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>007</KEY>
+     <ENTRY>OLD</ENTRY>
+     <LENGTH>3</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>008</KEY>
+     <ENTRY>FIX</ENTRY>
+     <LENGTH>3</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>009</KEY>
+     <ENTRY>MRP</ENTRY>
+     <LENGTH>3</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>010</KEY>
+     <ENTRY>BLOCK</ENTRY>
+     <LENGTH>5</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>011</KEY>
+     <ENTRY>VALID</ENTRY>
+     <LENGTH>5</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>012</KEY>
+     <ENTRY>VALID</ENTRY>
+     <LENGTH>5</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>013</KEY>
+     <ENTRY>PLANT</ENTRY>
+     <LENGTH>5</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>014</KEY>
+     <ENTRY>FROM</ENTRY>
+     <LENGTH>4</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>015</KEY>
+     <ENTRY>TO</ENTRY>
+     <LENGTH>2</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>016</KEY>
+     <ENTRY>ERROR</ENTRY>
+     <LENGTH>5</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>017</KEY>
+     <ENTRY>MESSAGE</ENTRY>
+     <LENGTH>7</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>030</KEY>
+     <ENTRY>/</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>498</KEY>
+     <ENTRY>       140       150       160       170       180       190       200       210       220       230       240       250</ENTRY>
+     <LENGTH>120</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>499</KEY>
+     <ENTRY>        10        20        30        40        50        60        70        80        90       100       110       120       130</ENTRY>
+     <LENGTH>130</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>500</KEY>
+     <ENTRY>123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>501</KEY>
+     <ENTRY>123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>MM: SOURCE LIST CREATION ENHANCEMENT                 ZMMMA002 GSPARTAL</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>ENDDAT</KEY>
+     <ENTRY>VALID TO</ENTRY>
+     <LENGTH>16</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SOURCE</KEY>
+     <ENTRY>EXCEL FILE</ENTRY>
+     <LENGTH>18</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>STARTDAT</KEY>
+     <ENTRY>VALID FORM</ENTRY>
+     <LENGTH>18</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>VENFILE</KEY>
+     <ENTRY>VENDOR FLAT FILE</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+   </TPOOL>
+   <LONGTEXTS>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>ZMMMA002</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0002</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00032</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZMMMA002</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00002</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>REPORT</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,CENTRA-UNION GAS LIMITED - SOURCE LIST CREATION ENHANCEMENT  ZMMMA002</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DESCRIPTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,This program will maintain the Source List for most plant/vendor</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>relationship in the Centra Union environment.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>INPUT</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,The program will require that an Excel spreadsheet be populated with</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the with the following information: OLD MATERIAL NUMBER(8), PLANT(4),</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>VALID FROM (date)(6), VALID TO(date)(6), OLD VENDOR NUMBER(5), POrg(4),</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>FIX(1), MRP(1).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,All fields must be entered with the maximum space allocated e.g.(OLD</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>MATERIAL NUMBER 00012345 should be entered with the leading zeros and</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>NOT 12345).  The maximum space allocated is indicated by the number in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the brackets besides the field name(above).  The OLD VENDOR NUMBER</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>field must handled in the same fashion as the OLD MATERIAL NUMBER</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>field.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,Both DATE fields must be entered MM/DD/YY. The user MUST enter the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&apos;/&apos;   e.g.(12/31/96).  When the user navigates out of the field after</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>entering the date, the &apos;/&apos; will automatically be removed.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,The FIX field can ONLY contain the value  X or a blank.  If a blank</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>is required, the user must still populate the field with the a space</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>(e.g. pressing spacebar once then tab).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,The MRP field can ONLY contain the values 1 or 2 or a blank.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,After the Excel spreadsheet is populated the first 3 rows will be</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>deleted so that all column headings are removed and only data exists.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>The spreadsheet will be saved as type CSV (Comma delimited) (*.csv).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>The file name should be named  zmmma002. Do not enter the extension</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>.csv,  because it is entered automatically.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,When saved, the file will be transferred to the UNIX box by the means</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>of a FTP.  Once there the ABAP program ZMMMA002  can be executed and</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the batch session will be created.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,This program does NOT output anything onto the screen.  Instead, this</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>program will be scheduled as a batch session without user intervention.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

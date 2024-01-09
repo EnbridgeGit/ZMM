@@ -1,0 +1,3 @@
+FUNCTION-POOL ZHR_FG_GET_ACCT_ASSIGN.       "MESSAGE-ID ..
+
+* INCLUDE LZHR_FG_GET_ACCT_ASSIGND...        " Local class definition

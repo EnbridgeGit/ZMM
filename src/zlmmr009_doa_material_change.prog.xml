@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>ZLMMR009_DOA_MATERIAL_CHANGE</NAME>
+    <SUBC>1</SUBC>
+    <APPL>M</APPL>
+    <RLOAD>E</RLOAD>
+    <FIXPT>X</FIXPT>
+   </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <LENGTH>5</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>General Material Data</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>003</KEY>
+     <ENTRY>Plant Data</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>004</KEY>
+     <ENTRY>Storage Location Data</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>005</KEY>
+     <ENTRY>Pricing</ENTRY>
+     <LENGTH>7</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>006</KEY>
+     <ENTRY>Material Description</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>007</KEY>
+     <ENTRY>Units of Measure</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>008</KEY>
+     <ENTRY>Choose the Type of Material Change Document</ENTRY>
+     <LENGTH>43</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>009</KEY>
+     <ENTRY>Report Options</ENTRY>
+     <LENGTH>14</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>011</KEY>
+     <ENTRY>Change Document Header - in order of fastest to slowest fields</ENTRY>
+     <LENGTH>62</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>012</KEY>
+     <ENTRY>Plant Data Net Impact</ENTRY>
+     <LENGTH>21</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>013</KEY>
+     <ENTRY>For Plant</ENTRY>
+     <LENGTH>9</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>014</KEY>
+     <ENTRY>Limit To Types</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>098</KEY>
+     <ENTRY>C: is not a Valid Drive.</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>099</KEY>
+     <ENTRY>Invalid Path:</ENTRY>
+     <LENGTH>13</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>100</KEY>
+     <ENTRY>Mat Desc</ENTRY>
+     <LENGTH>9</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>101</KEY>
+     <ENTRY>Material Desc</ENTRY>
+     <LENGTH>13</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>102</KEY>
+     <ENTRY>Material Descripion</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>103</KEY>
+     <ENTRY>Material Descripion</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>DOA MRP Strategy Changes Report</ENTRY>
+     <LENGTH>31</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_ALV</KEY>
+     <ENTRY>ALV Report</ENTRY>
+     <LENGTH>18</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_EXCEL</KEY>
+     <ENTRY>EXCEL (in foreground)</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_FILE</KEY>
+     <ENTRY>Download Excel File To:</ENTRY>
+     <LENGTH>31</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_MARC</KEY>
+     <ENTRY>Plant Data</ENTRY>
+     <LENGTH>18</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_PDNI</KEY>
+     <ENTRY>Plant Data Net Impact</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_CHGNR</KEY>
+     <ENTRY>Change Doc Number</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_DATE</KEY>
+     <ENTRY>Change Date</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_MATNR</KEY>
+     <ENTRY>Material Number</ENTRY>
+     <LENGTH>23</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_TCODE</KEY>
+     <ENTRY>Transaction Code</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_USER</KEY>
+     <ENTRY>SAP User</ENTRY>
+     <LENGTH>16</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_UTIME</KEY>
+     <ENTRY>Time</ENTRY>
+     <LENGTH>12</LENGTH>
+    </item>
+   </TPOOL>
+   <LONGTEXTS>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>ZLMMR009_DOA_MATERIAL_CHANGE</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0004</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00040</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZLMMR009_DOA_MATERIAL_CHANGE</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00004</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PURPOSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>This program will report on the change documents created for material</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>masters.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>ABAP program: ZMMMR064</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Transaction Code: ZMMMR064</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;INTEGRATION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PREREQUISITES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The date range must be less than 10 years.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FEATURES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The change document data is the same as when you go to transaction MM03</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>(Display Material), click on ENVIRONMENT and click on DISPLAY CHANGES.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The change document tables are huge, so make sure to minimize your</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>selection.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;SELECTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The selection options are separated into 2 sections.  The first section</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>is the change document header options.  These are material number,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>change document number, SAP user, change date, change time and</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>transaction code.  Only date is mandatory.  The selection options on the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>screen are in order of the fields that impact the performance most to</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>least.  So entering a material number(s) at the top of the selection</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>screen makes the program run the fastest.  Try to enter as much</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>information as possible to help the performance.  Even if you enter the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>transaction code, it will improve the performance.  The second section</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>is for the change document item.  You can see all change documents by</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>using the ALL MATERIAL CHANGE DOCUMENTS.  If you are only interested in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>one or a few types of change documents, click on LIMIT TO TYPES BELOW</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>and select any number of the options (or checkboxes) below it.  You must</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>select at least one.  You must remove all check boxes to use ALL</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>MATERIAL CHANGE DOCUMENTS.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;STANDARD_VARIANTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;OUTPUT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Choose one of ALV report or EXCEL (in foreground).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Note: The TABLE KEY field in the EXCEL file has an added single quote as</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the first character.  This is to prevent EXCEL from switching to</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>scientific notation.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The fields in the output are: material number, change document number,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>SAP user, date, time, transaction code, type ( CHANGE or ENTRY), field</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>description, old value, new value, table key.  The table key is a</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>combination of values.  For example, 030000000000000130449P100A001,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>stands for SAP client 030, material number 130449, plant P100 and</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>storage location A001.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;ACTIVITIES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>From the ALV report option, you may double click on the material number</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>and it will take you into transaction MM03 using the material number</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>selected.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

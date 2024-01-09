@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_AQSG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AQGDBBS>
+    <AQGDBBS>
+     <CLAS>PURCHASING</CLAS>
+     <NUM>MM_PURCHASE</NUM>
+    </AQGDBBS>
+   </AQGDBBS>
+   <AQGSCAT>
+    <AQGSCAT>
+     <CLAS>PURCHASING</CLAS>
+     <ART>J</ART>
+     <TSTRUC>EKKO</TSTRUC>
+    </AQGSCAT>
+   </AQGSCAT>
+   <AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>00001</TINDX>
+     <HEAD>X</HEAD>
+     <MAXL>063</MAXL>
+     <TEXT>Purchasing Information</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>00006</TINDX>
+     <MAXL>080</MAXL>
+     <TEXT>Purchasing Document Header</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>00144</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Inco. 2</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>00226</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Purchasing doc. processing state</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>00280</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Take Account of Fixed-Date Purchases</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>00288</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Take Account of Alloc. Table Relevance ID</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>00318</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>OTB Reason Profile for Special Release</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>00342</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Distribution Using Target Value or Item Data</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>00345</TINDX>
+     <MAXL>080</MAXL>
+     <TEXT>Purchasing Document Item</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>00547</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Bindg MRP</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>00675</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Inco. 2</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>00691</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Inv. plan</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>00721</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>KanbanInd.</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>00735</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Transm.</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>00737</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Transm.</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>00739</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Seq. No.</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>00773</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>ML act.</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>00879</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Next FRC</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>00881</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Next JIT</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>00883</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Valuation</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>00889</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>JIT Indic.</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>00951</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Service-Based Invoice Verification</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>01033</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>No Transmission of Cumulative Quantities in SA Release</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>01039</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Cumulative Goods Receipts from Redirected POs</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>01069</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Indicator for Putting Back from Grouped PO Document</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>01078</TINDX>
+     <MAXL>080</MAXL>
+     <TEXT>History per Purchasing Document</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>01254</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Procedure for Updating the Schedule Line Quantity</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>01258</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Comp flag</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>01259</TINDX>
+     <MAXL>080</MAXL>
+     <TEXT>Scheduling Agreement Schedule Lines</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>01343</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Del. date</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>01381</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>OTB Reason Profile for Special Release</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>PURCHASING</CLAS>
+     <TINDX>01401</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>No SCEM Controlling for Purchase Order</TEXT>
+    </AQGTS>
+   </AQGTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

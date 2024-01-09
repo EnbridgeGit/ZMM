@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_IEXT" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <IEXT>
+    <ATTRIBUTES>
+     <DESCRP>Ariba Idoc extension for Orders05</DESCRP>
+     <FIRSTTYP>ZARIBA</FIRSTTYP>
+     <LASTTYP>ZARIBA</LASTTYP>
+     <IDOCTYP>ORDERS05</IDOCTYP>
+    </ATTRIBUTES>
+    <T_SYNTAX>
+     <EDI_IAPI03>
+      <REFSEGTYP>E1EDK01</REFSEGTYP>
+      <NR>0001</NR>
+      <SEGTYP>Z1ARBH1</SEGTYP>
+      <OCCMIN>0000000001</OCCMIN>
+      <OCCMAX>0000000001</OCCMAX>
+      <HLEVEL>01</HLEVEL>
+     </EDI_IAPI03>
+     <EDI_IAPI03>
+      <REFSEGTYP>E1EDK01</REFSEGTYP>
+      <NR>0002</NR>
+      <SEGTYP>Z1ARBH2</SEGTYP>
+      <OCCMIN>0000000001</OCCMIN>
+      <OCCMAX>0000000001</OCCMAX>
+      <HLEVEL>01</HLEVEL>
+     </EDI_IAPI03>
+     <EDI_IAPI03>
+      <REFSEGTYP>E1EDP01</REFSEGTYP>
+      <NR>0001</NR>
+      <SEGTYP>Z1ARBI1</SEGTYP>
+      <PARFLG>X</PARFLG>
+      <OCCMIN>0000000001</OCCMIN>
+      <OCCMAX>0000000001</OCCMAX>
+      <HLEVEL>01</HLEVEL>
+     </EDI_IAPI03>
+     <EDI_IAPI03>
+      <REFSEGTYP>E1EDP01</REFSEGTYP>
+      <NR>0002</NR>
+      <SEGTYP>Z1ARBA1</SEGTYP>
+      <PARSEG>Z1ARBI1</PARSEG>
+      <PARPNO>0001</PARPNO>
+      <OCCMIN>0000000001</OCCMIN>
+      <OCCMAX>9999999999</OCCMAX>
+      <HLEVEL>02</HLEVEL>
+     </EDI_IAPI03>
+    </T_SYNTAX>
+   </IEXT>
+  </asx:values>
+ </asx:abap>
+</abapGit>

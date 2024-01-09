@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_UTILITIES</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Excel file from internal table</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CREATE_XLS_FROM_ITAB</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Create Excel file from internal table</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_XLS_FROM_ITAB</CMPNAME>
+     <SCONAME>CT_DATA</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Internal table</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_XLS_FROM_ITAB</CMPNAME>
+     <SCONAME>E_XSTRING</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>String</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_XLS_FROM_ITAB</CMPNAME>
+     <SCONAME>IS_LAYOUT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>ALV control: Layout structure</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_XLS_FROM_ITAB</CMPNAME>
+     <SCONAME>IT_FIELDCAT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field Catalog for List Viewer Control</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_XLS_FROM_ITAB</CMPNAME>
+     <SCONAME>IT_FILT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>ALV control: Table of filter conditions</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_XLS_FROM_ITAB</CMPNAME>
+     <SCONAME>IT_SORT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>ALV Control: Table of Sort Criteria</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_XLS_FROM_ITAB</CMPNAME>
+     <SCONAME>I_FILENAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Local file for upload/download</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_XLS_FROM_ITAB</CMPNAME>
+     <SCONAME>I_FILETYPE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>File Type</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

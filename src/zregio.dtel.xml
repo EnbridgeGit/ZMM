@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZREGIO</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>REGIO</DOMNAME>
+    <LOGFLAG>X</LOGFLAG>
+    <HEADLEN>06</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>20</SCRLEN3>
+    <DDTEXT>Region (State, Province, County)</DDTEXT>
+    <REPTEXT>Region</REPTEXT>
+    <SCRTEXT_S>Region</SCRTEXT_S>
+    <SCRTEXT_M>Region</SCRTEXT_M>
+    <SCRTEXT_L>Region</SCRTEXT_L>
+    <DTELMASTER>E</DTELMASTER>
+    <SHLPNAME>H_COUNTRY_REGION</SHLPNAME>
+    <SHLPFIELD>BLAND</SHLPFIELD>
+    <DEFFDNAME>REGION</DEFFDNAME>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>

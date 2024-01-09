@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<abapGit version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TDLINES>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>MAIN</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>POS_NEWPAGE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>NEW-PAGE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>POS_UEB0</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L</TDFORMAT>
+     <TDLINE>Werk                :,,&amp;ISEG-WERKS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Bezeichnung         :,,&amp;T001W-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Inventurbeleg       :,,&amp;ISEG-IBLNR&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Angelegt von        :,,&amp;IKPF-USNAM&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Geplantes Zähldatum :,,&amp;IKPF-GIDAT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Inventurreferenz    :,,&amp;IKPF-XBLNI&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Sonderbestand       :,,&amp;IKPF-SOBKZ&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>                               Kundenauftrag:&amp;ISEG-KDAUF&amp;,,&amp;ISEG-KDPOS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L1</TDFORMAT>
+     <TDLINE>Pos,,Material,,Charge,,LOrt,,Lagerplatz</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L2</TDFORMAT>
+     <TDLINE>Materialkurztext,,Bestandsart</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L3</TDFORMAT>
+     <TDLINE>Status der Position,,gezählte Menge,,ME</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>POS_UEB1</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L</TDFORMAT>
+     <TDLINE>Werk                :,,&amp;ISEG-WERKS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Bezeichnung         :,,&amp;T001W-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Inventurbeleg       :,,&amp;ISEG-IBLNR&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Angelegt von        :,,&amp;IKPF-USNAM&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Geplantes Zähldatum :,,&amp;IKPF-GIDAT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Inventurreferenz    :,,&amp;IKPF-XBLNI&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Sonderbestand       :,,&amp;IKPF-SOBKZ&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>                               Lieferant    :&amp;ISEG-LIFNR&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L1</TDFORMAT>
+     <TDLINE>Pos,,Material,,Charge,,LOrt,,Lagerplatz</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L2</TDFORMAT>
+     <TDLINE>Materialkurztext,,Bestandsart</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L3</TDFORMAT>
+     <TDLINE>Status der Position,,gezählte Menge,,ME</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>POS_UEB2</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L</TDFORMAT>
+     <TDLINE>Werk                :,,&amp;ISEG-WERKS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Bezeichnung         :,,&amp;T001W-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Inventurbeleg       :,,&amp;ISEG-IBLNR&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Angelegt von        :,,&amp;IKPF-USNAM&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Geplantes Zähldatum :,,&amp;IKPF-GIDAT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Inventurreferenz    :,,&amp;IKPF-XBLNI&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Sonderbestand       :,,&amp;IKPF-SOBKZ&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>                               Kunde        :&amp;ISEG-KUNNR&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L1</TDFORMAT>
+     <TDLINE>Pos,,Material,,Charge,,LOrt,,Lagerplatz</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L2</TDFORMAT>
+     <TDLINE>Materialkurztext,,Bestandsart</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L3</TDFORMAT>
+     <TDLINE>Status der Position,,gezählte Menge,,ME</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>POS_UEB3</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L</TDFORMAT>
+     <TDLINE>Werk                :,,&amp;ISEG-WERKS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Bezeichnung         :,,&amp;T001W-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Inventurbeleg       :,,&amp;ISEG-IBLNR&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Angelegt von        :,,&amp;IKPF-USNAM&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Geplantes Zähldatum :,,&amp;IKPF-GIDAT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Inventurreferenz    :,,&amp;IKPF-XBLNI&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L1</TDFORMAT>
+     <TDLINE>Pos,,Material,,Charge,,LOrt,,Lagerplatz</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L2</TDFORMAT>
+     <TDLINE>Materialkurztext,,Bestandsart</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L3</TDFORMAT>
+     <TDLINE>Status der Position,,gezählte Menge,,ME</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>POS_UEB4</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L</TDFORMAT>
+     <TDLINE>Werk                :,,&amp;ISEG-WERKS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Bezeichnung         :,,&amp;T001W-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Inventurbeleg       :,,&amp;ISEG-IBLNR&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Angelegt von        :,,&amp;IKPF-USNAM&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Geplantes Zähldatum :,,&amp;IKPF-GIDAT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Inventurreferenz    :,,&amp;IKPF-XBLNI&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Sonderbestand       :,,&amp;IKPF-SOBKZ&amp;                         PSP-Element</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE> :&amp;ISEG-PS_PSP_PNR&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L1</TDFORMAT>
+     <TDLINE>Pos,,Material,,Charge,,LOrt,,Lagerplatz</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L2</TDFORMAT>
+     <TDLINE>Materialkurztext,,Bestandsart</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L3</TDFORMAT>
+     <TDLINE>Status der Position,,gezählte Menge,,ME</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>POS_BELZEILE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>PROTECT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L1</TDFORMAT>
+     <TDLINE>&amp;ISEG-ZEILI&amp;,,&amp;ISEG-MATNR&amp;,,&amp;ISEG-CHARG&amp;,,&amp;ISEG-LGORT&amp;,,&amp;MABDR-LGPBE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L2</TDFORMAT>
+     <TDLINE>&amp;MABDR-MAKTX&amp;,,&amp;T064B-BTEXT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L3</TDFORMAT>
+     <TDLINE>&amp;T064T-STEXT&amp;,,_______________,,&amp;ISEG-ERFME&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDPROTECT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>POS_ENDPAGE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L</TDFORMAT>
+     <TDLINE>                      _________________</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDLINE>    ________________________________</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L</TDFORMAT>
+     <TDLINE>                           Datum                      Unterschrift</TDLINE>
+    </TLINE>
+   </TDLINES>
+  </asx:values>
+ </asx:abap>
+</abapGit>

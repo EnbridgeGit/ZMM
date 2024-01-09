@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Function group for PO release date</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZSRM_GETPORDTTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZSRM_GETPORDT</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZSRM_GETPORDATE</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>RFC to get PO release date and return to SRM system</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IM_EBELN</PARAMETER>
+       <TYP>EBELN</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EX_PORELDATE</PARAMETER>
+       <TYP>CDDATUM</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EX_PORELTIME</PARAMETER>
+       <TYP>CDUZEIT</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IM_EBELN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Purchasing Document Number</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EX_PORELDATE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Date</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EX_PORELTIME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Time changed</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

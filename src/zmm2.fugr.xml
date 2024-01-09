@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>MM functions - Warranty Transactions</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZMM2TOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZMM2</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>Z_MM_DELETE_INDX</FUNCNAME>
+     <UPDATE_TASK>1</UPDATE_TASK>
+     <SHORT_TEXT>Delete records in INDX cluster table</SHORT_TEXT>
+    </item>
+    <item>
+     <FUNCNAME>Z_MM_DELETE_ZMWAP</FUNCNAME>
+     <UPDATE_TASK>1</UPDATE_TASK>
+     <SHORT_TEXT>DELETE FROM ZMWAP</SHORT_TEXT>
+    </item>
+    <item>
+     <FUNCNAME>Z_MM_UPDATE_ZMWAP</FUNCNAME>
+     <UPDATE_TASK>1</UPDATE_TASK>
+     <SHORT_TEXT>Update Table ZMWAP</SHORT_TEXT>
+    </item>
+    <item>
+     <FUNCNAME>Z_SHLP_EXIT_ZMAT1MPN</FUNCNAME>
+     <SHORT_TEXT>Search Help exit for Material part number</SHORT_TEXT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>SHLP</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>SHLP_DESCR</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>CALLCONTROL</PARAMETER>
+       <DBFIELD>DDSHF4CTRL</DBFIELD>
+       <REFERENCE>X</REFERENCE>
+      </RSCHA>
+     </CHANGING>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>RECORD_TAB</PARAMETER>
+       <DBSTRUCT>SEAHLPRES</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>SHLP_TAB</PARAMETER>
+       <TYP>SHLP_DESCT</TYP>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>RECORD_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Search help result structure</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SHLP_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>List of Alternative Elementary Search Helps</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SHLP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Description of Search Help</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CALLCONTROL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Control Structure for F4 Process with Search Help Exit</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

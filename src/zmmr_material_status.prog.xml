@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>ZMMR_MATERIAL_STATUS</NAME>
+    <SUBC>1</SUBC>
+    <APPL>M</APPL>
+    <RLOAD>E</RLOAD>
+    <FIXPT>X</FIXPT>
+   </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>Search Criteria</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>Report Criteria</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>004</KEY>
+     <ENTRY>Report Options</ENTRY>
+     <LENGTH>14</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>007</KEY>
+     <ENTRY>All</ENTRY>
+     <LENGTH>3</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>008</KEY>
+     <ENTRY>On</ENTRY>
+     <LENGTH>7</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>009</KEY>
+     <ENTRY>Off</ENTRY>
+     <LENGTH>11</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>010</KEY>
+     <ENTRY>Material Deletion Flag</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>011</KEY>
+     <ENTRY>Plant Deletion Flag</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>012</KEY>
+     <ENTRY>Storage Loc Deletion Flag</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>098</KEY>
+     <ENTRY>C: is not a valid Drive.</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>099</KEY>
+     <ENTRY>Directory Path Does not Exist:</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>Material Status Report</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_ALL</KEY>
+     <ENTRY>Include All Entries</ENTRY>
+     <LENGTH>27</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_ALV</KEY>
+     <ENTRY>ALV Report</ENTRY>
+     <LENGTH>18</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_DELM1</KEY>
+     <ENTRY>Deleted</ENTRY>
+     <LENGTH>15</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_DELM2</KEY>
+     <ENTRY>Not Deleted</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_EXCEL</KEY>
+     <ENTRY>EXCEL Spreadsheet (foreground)</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_FILE</KEY>
+     <ENTRY>EXCEL File Download Directory</ENTRY>
+     <LENGTH>37</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_STATUS</KEY>
+     <ENTRY>Include Only Entries Below</ENTRY>
+     <LENGTH>34</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_ATWRT</KEY>
+     <ENTRY>    NLA Code</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_LGORT</KEY>
+     <ENTRY>Storage Location</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_MATKL</KEY>
+     <ENTRY>Material Group</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_MATNR</KEY>
+     <ENTRY>Material Number</ENTRY>
+     <LENGTH>23</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_MMSTA</KEY>
+     <ENTRY>    Plant-Specific Status</ENTRY>
+     <LENGTH>33</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_MSTAE</KEY>
+     <ENTRY>    Material X-plant Status</ENTRY>
+     <LENGTH>35</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_WERKS</KEY>
+     <ENTRY>Plant</ENTRY>
+     <LENGTH>13</LENGTH>
+    </item>
+   </TPOOL>
+   <LONGTEXTS>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>ZMMR_MATERIAL_STATUS</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0004</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00033</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZMMR_MATERIAL_STATUS</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00004</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PURPOSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>This report program is used to search the material tables for values</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>that indicate a material is obsolete or no longer needed.  The tables</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>being searched are MARA, MARC &amp; MARD.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>ABAP Program: ZMMR_MATERIAL_STATUS</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Transaction Code: ZMMR_MATERIAL_STATUS</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;INTEGRATION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PREREQUISITES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>By default, all values of flagged for deletion, material status and</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>NLA_CODE will be shown.  The user may opt to show only selected</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>combinations of these by clicking on the INCLUDE ONLY ENTRIES BELOW</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>radio button and entering the values they wish to see.  The combinations</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>are an EXACT match on ALL entered values.  Hints:  1)  The user can</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>leave the selection screen value empty or use an &apos;*&apos; as a wild card to</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>accept all values.  2)  NLA_CODE is case sensitive.  Use the = operator</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>if you want only blank values.  3)  Status field entries must be exact</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>data matches (e.g. 01, 02, ...).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FEATURES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;SELECTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The searching is done based on the SEARCH CRITERIA entered.  In general,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the reading of the material tables is done from the highest level to the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>lowest i.e. material group -&gt; material number -&gt; plant -&gt; storage</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>location. If more than 1 search criteria is used, the program provides</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>both the data that is in common, plus any higher level materials that</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>may be orphaned (i.e. a material with no storage location).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;STANDARD_VARIANTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;OUTPUT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE> The report will list the following data: material group, material,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>plant, storage location, quantity on hand, NLA_CODE, material status</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE> values, flagged for deletion indicators &amp; material views.  The</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>results  will be presented to the user in either an ALV report or being</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>sent directly into an EXCEL file.  This is based on the REPORT OPTIONS</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>radio buttons.  When a material master does not have a plant attached to</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>it, the plant and storage location fields are empty.  When a plant has</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>no storage locations attached to it, the storage location fields are</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>empty.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;ACTIVITIES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>This program makes program ZMMMR131 obsolete.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

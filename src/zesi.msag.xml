@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZESI</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>Message class for SAP E-Sourcing ERP Integration</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZESI</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>Purchase requisition &amp; &amp; has already been included in another ES RFQ.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZESI</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>RFQ &amp; has already been sent to e-Sourcing system. Changes not allowed.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZESI</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>ES RFQ does not allow delivery date in the past.</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

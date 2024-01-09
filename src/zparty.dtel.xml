@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZPARTY</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>ZPARTY</DOMNAME>
+    <LOGFLAG>X</LOGFLAG>
+    <HEADLEN>35</HEADLEN>
+    <SCRLEN1>05</SCRLEN1>
+    <SCRLEN2>05</SCRLEN2>
+    <SCRLEN3>35</SCRLEN3>
+    <DDTEXT>PipeLine Short Text</DDTEXT>
+    <REPTEXT>PipeLine Text</REPTEXT>
+    <SCRTEXT_S>Party</SCRTEXT_S>
+    <SCRTEXT_M>Party</SCRTEXT_M>
+    <SCRTEXT_L>PipeLine Short Text</SCRTEXT_L>
+    <DTELMASTER>E</DTELMASTER>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>

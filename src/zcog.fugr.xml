@@ -1,0 +1,715 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Cost Of Gas Function Group</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZCOGF01</SOBJ_NAME>
+    <SOBJ_NAME>LZCOGTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZCOG</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZLMMI001_GASSUP_GOODSRECEIPT</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Inbound COG Gas Supply Goods Receipt</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>SAP_BATCH_ID</PARAMETER>
+       <TYP>ZZSAPBATCHID</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>PER_YEAR</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZZPERYEAR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>PER_MTH</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZZPERMTH</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>GAS_DAY</PARAMETER>
+       <TYP>ZZGAS_DAY</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>CONTRACTID</PARAMETER>
+       <TYP>ZZCONTRACTNO</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>CONTRACT_REF</PARAMETER>
+       <TYP>ZZCONREF</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>SERV_TYPE</PARAMETER>
+       <TYP>ZZSERVTYPE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>RATE_CLASS</PARAMETER>
+       <TYP>ZZRATECLS</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>SERV_CLASS</PARAMETER>
+       <TYP>ZZSERVCLS</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>OFFER_PARTYID</PARAMETER>
+       <TYP>ZZOFFERPARTYID</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>OFFER_PARTY</PARAMETER>
+       <TYP>ZZOFFERPARTY</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FROM_TRADE_LOCID</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZZFROMTRLOCID</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FROM_TRADE_LOC</PARAMETER>
+       <TYP>ZZFROMTRADELOC</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>TO_TRADE_LOCID</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZZTOTRLOCID</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>TO_TRADE_LOC</PARAMETER>
+       <TYP>ZZTOTRADELOC</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>SERV_SUB_TYPE</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZZSUBTYPE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>SERV_USAGE</PARAMETER>
+       <TYP>ZZSERVUSAGE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>OVERRUNIND</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZZOVERIND</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>QUANTITY</PARAMETER>
+       <TYP>ZZQUANTITY</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>UOM</PARAMETER>
+       <TYP>ZZUOM</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>SENT_IND</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZZSENTIND</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>SAP_DOC_ID</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZZSAPDOCID</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>TESTRUN</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>CHAR0001</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>GOODSMVT_HEADRET</PARAMETER>
+       <TYP>BAPI2017_GM_HEAD_RET</TYP>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>RETURNMSG</PARAMETER>
+       <DBSTRUCT>BAPIRET2</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>SAP_BATCH_ID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE SAP Batch ID</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>PER_YEAR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Period Year</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>PER_MTH</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Period Month</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>GAS_DAY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Gas Day</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CONTRACTID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE / SAP Contract Number</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CONTRACT_REF</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Contract Reference Number</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SERV_TYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Service Type</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RATE_CLASS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Rate Class</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SERV_CLASS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Service Class</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OFFER_PARTYID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Offered By Party ID</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OFFER_PARTY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Offered By Party</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FROM_TRADE_LOCID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE From Trading Location ID</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FROM_TRADE_LOC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE From Trading Location</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TO_TRADE_LOCID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE To Trading Location ID</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TO_TRADE_LOC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE To Trading Location</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SERV_SUB_TYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Service Sub Type</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SERV_USAGE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Service Usage</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OVERRUNIND</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Overrun Indicator</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>QUANTITY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Contract Quantity Field</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>UOM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Unit Of Measure</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SENT_IND</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE File Sent Indicator</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SAP_DOC_ID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>SAP Document ID</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TESTRUN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Individual, User-Defined Character</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>GOODSMVT_HEADRET</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>MMIM: Output Structure For General FM To Post Goods Movement</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RETURNMSG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return Messages</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZLMMI002_GASSUP_SCHAGR</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>RFC to send scheduling agreement data to Biztalk</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>SA_NUMBER</PARAMETER>
+       <TYP>EBELN</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>DOC_TYPE</PARAMETER>
+       <TYP>BSART</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>START_DATE</PARAMETER>
+       <TYP>KDATB</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>END_DATE</PARAMETER>
+       <TYP>KDATE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>OFFER_PARTYID</PARAMETER>
+       <TYP>EIKTO</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>UOM</PARAMETER>
+       <TYP>MEINS</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>DEST</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>CHAR20</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>DAILY_QUANTITY</PARAMETER>
+       <TYP>KTMNG</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>COMP_CODE</PARAMETER>
+       <TYP>BUKRS</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>DELE_FLAG</PARAMETER>
+       <TYP>LOEKZ</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>PLANT</PARAMETER>
+       <TYP>WERKS</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>ZZTRLOC1</PARAMETER>
+       <TYP>ZTRLOCID</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>ZZTRLOC2</PARAMETER>
+       <TYP>ZTRLOCID</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>ZZTRLOC3</PARAMETER>
+       <TYP>ZTRLOCID</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>ZZTRLOC4</PARAMETER>
+       <TYP>ZTRLOCID</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>ZZPARTY</PARAMETER>
+       <TYP>ZPARTY</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>RETURNCODE</PARAMETER>
+       <TYP>INT4</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>SA_NUMBER</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Purchasing Document Number</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>DOC_TYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Order Type (Purchasing)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>START_DATE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Start of Validity Period</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>END_DATE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>End of Validity Period</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OFFER_PARTYID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Shipper&apos;s (Our) Account Number at the Customer or Vendor</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>UOM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Base Unit of Measure</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>DEST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Char 20</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>DAILY_QUANTITY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Target Quantity</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>COMP_CODE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Company Code</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>DELE_FLAG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Asset class marked for deletion</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>PLANT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Plant Table for National (Centrally Agreed) Contracts</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ZZTRLOC1</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Trading Location</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ZZTRLOC2</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Trading Location 2</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ZZTRLOC3</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Trading Location 3</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ZZTRLOC4</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Trading Location 4</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ZZPARTY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>PipeLine Short Text</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RETURNCODE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Natural Number</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZLMMI004_TRANS_SERVENTRY</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Inbound Gas Transportation Service Entry Sheet</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>SAP_BATCH_ID</PARAMETER>
+       <TYP>ZZSAPBATCHID</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>PER_YEAR</PARAMETER>
+       <TYP>ZZPERYEAR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>PER_MTH</PARAMETER>
+       <TYP>ZZPERMTH</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>GAS_DAY</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZZGAS_DAY</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>CONTRACT_ID</PARAMETER>
+       <TYP>ZZCONTRACTID</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>CONTRACT_REF</PARAMETER>
+       <TYP>ZZCONREF</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>SERV_TYPE</PARAMETER>
+       <TYP>ZZSERVTYPE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>RATE_CLASS</PARAMETER>
+       <TYP>ZZRATECLS</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>SERV_CLASS</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZZSERVCLS</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>OFFER_PARTY_ID</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZZOFFERPARTYID</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>OFFER_PARTY</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZZOFFERPARTY</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FROM_TRADE_LOCID</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZZFROMTRLOCID</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FROM_TRADE_LOC</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZZFROMTRADELOC</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>TO_TRADE_LOCID</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZZTOTRLOCID</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>TO_TRADE_LOC</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZZTOTRADELOC</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>SERV_SUB_TYPE</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZZSUBTYPE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>SERV_USAGE</PARAMETER>
+       <TYP>ZZSERVUSAGE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>OVERRUNIND</PARAMETER>
+       <TYP>ZZOVERIND</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>QUANTITY</PARAMETER>
+       <TYP>ZZQUANTITY</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>UOM</PARAMETER>
+       <TYP>ZZUOM</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>SENT_IND</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZZSENTIND</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>SAP_DOC_ID</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZZSAPDOCID</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>TESTRUN</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>CHAR0001</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>ENTRYSHEETNO</PARAMETER>
+       <TYP>BAPIESSR-SHEET_NO</TYP>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>RETURNMSG</PARAMETER>
+       <DBSTRUCT>BAPIRET2</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>SAP_BATCH_ID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE SAP Batch ID</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>PER_YEAR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Period Year</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>PER_MTH</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Period Month</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>GAS_DAY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Gas Day</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CONTRACT_ID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Contract ID</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CONTRACT_REF</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Contract Reference Number</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SERV_TYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Service Type</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RATE_CLASS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Rate Class</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SERV_CLASS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Service Class</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OFFER_PARTY_ID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Offered By Party ID</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OFFER_PARTY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Offered By Party</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FROM_TRADE_LOCID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE From Trading Location ID</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FROM_TRADE_LOC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE From Trading Location</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TO_TRADE_LOCID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE To Trading Location ID</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TO_TRADE_LOC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE To Trading Location</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SERV_SUB_TYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Service Sub Type</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SERV_USAGE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Service Usage</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>OVERRUNIND</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Overrun Indicator</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>QUANTITY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Contract Quantity Field</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>UOM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE Unit Of Measure</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SENT_IND</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>CARE File Sent Indicator</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SAP_DOC_ID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>SAP Document ID</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TESTRUN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Individual, User-Defined Character</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ENTRYSHEETNO</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Entry Sheet Number</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RETURNMSG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return Parameter</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_BBP_ENTRYSHEET_CANCEL</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Dienstleistungsbestätigung stornieren</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>ENTRYSHEET</PARAMETER>
+       <TYP>BAPIESSRC-SHEET_NO</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>POSTING_DATE</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>SY-DATUM</TYP>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>RETURN</PARAMETER>
+       <DBSTRUCT>BAPIRET2</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>ENTRYSHEET</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>POSTING_DATE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Current Date of Application Server</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RETURN</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

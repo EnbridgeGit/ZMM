@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>ZMWMR001</NAME>
+    <DBAPL>M</DBAPL>
+    <DBNA>CK</DBNA>
+    <SUBC>1</SUBC>
+    <APPL>M</APPL>
+    <SECU>M_LIS</SECU>
+    <RSTAT>T</RSTAT>
+    <RLOAD>E</RLOAD>
+    <FIXPT>X</FIXPT>
+    <LDBNAME>CKM</LDBNAME>
+   </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>H</ID>
+     <KEY>001</KEY>
+     <ENTRY>Material       Description                      Quantity        Bin</ENTRY>
+     <LENGTH>67</LENGTH>
+    </item>
+    <item>
+     <ID>H</ID>
+     <KEY>002</KEY>
+     <ENTRY> Number                                         On Hand       Location</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>Hazardous Materials</ENTRY>
+     <LENGTH>19</LENGTH>
+    </item>
+   </TPOOL>
+  </asx:values>
+ </asx:abap>
+</abapGit>

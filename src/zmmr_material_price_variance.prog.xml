@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>ZMMR_MATERIAL_PRICE_VARIANCE</NAME>
+    <SUBC>1</SUBC>
+    <APPL>M</APPL>
+    <RLOAD>E</RLOAD>
+    <FIXPT>X</FIXPT>
+   </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>General Search Criteria</ENTRY>
+     <LENGTH>23</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>Do Not Show Data When</ENTRY>
+     <LENGTH>21</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>003</KEY>
+     <ENTRY>Show Data When - Material / Company / Plant ONLY</ENTRY>
+     <LENGTH>48</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>004</KEY>
+     <ENTRY>Summarize Data Options</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>005</KEY>
+     <ENTRY>Output Type</ENTRY>
+     <LENGTH>11</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>006</KEY>
+     <ENTRY>Average Price Calculation Method</ENTRY>
+     <LENGTH>32</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>013</KEY>
+     <ENTRY>Price Variance - Value  +-</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>014</KEY>
+     <ENTRY>Price Variance - Percentage  +-</ENTRY>
+     <LENGTH>31</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>015</KEY>
+     <ENTRY>Stock Variance - Value  +-</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>016</KEY>
+     <ENTRY>Stock Variance - Percent  +-</ENTRY>
+     <LENGTH>28</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>017</KEY>
+     <ENTRY>* For each material: if Total QOH &gt; 0 then &apos;Total Dollars/Total QOH&apos;</ENTRY>
+     <LENGTH>80</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>018</KEY>
+     <ENTRY>                                     formula is used, else if Total QOH = 0 then</ENTRY>
+     <LENGTH>80</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>019</KEY>
+     <ENTRY>                                     &apos;Sum Prices/Count Prices&apos; formula is used</ENTRY>
+     <LENGTH>80</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>020</KEY>
+     <ENTRY>** Same as &apos;Plant Is Flagged For Deletion&apos; (current SAP configuration)</ENTRY>
+     <LENGTH>80</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>098</KEY>
+     <ENTRY>C: is not a Valid Drive.</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>099</KEY>
+     <ENTRY>Invalid Path:</ENTRY>
+     <LENGTH>13</LENGTH>
+    </item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>Material Price Variance Report</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_ALV</KEY>
+     <ENTRY>ALV Report</ENTRY>
+     <LENGTH>18</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_BOTH</KEY>
+     <ENTRY>Combination (recommended) *</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_COMP</KEY>
+     <ENTRY>Material &amp; Company</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_COUNT</KEY>
+     <ENTRY>Sum Prices / Count Prices</ENTRY>
+     <LENGTH>33</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_DELETE</KEY>
+     <ENTRY>Material Flagged For Deletion</ENTRY>
+     <LENGTH>37</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_DOLPER</KEY>
+     <ENTRY>    Variance Dollar Percent +-</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_DOLVAL</KEY>
+     <ENTRY>    Variance Dollar Value +-</ENTRY>
+     <LENGTH>36</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_EXCEL</KEY>
+     <ENTRY>EXCEL Spreadsheet (foreground)</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_FILE</KEY>
+     <ENTRY>Download Spread Sheet To:</ENTRY>
+     <LENGTH>33</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_LBKUM</KEY>
+     <ENTRY>Quantity On Hand Is Zero</ENTRY>
+     <LENGTH>32</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_LVORM</KEY>
+     <ENTRY>Price Flagged For Deletion **</ENTRY>
+     <LENGTH>37</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_MATL</KEY>
+     <ENTRY>Material</ENTRY>
+     <LENGTH>16</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_NONE</KEY>
+     <ENTRY>Report All Pricing Values</ENTRY>
+     <LENGTH>33</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_PLNT</KEY>
+     <ENTRY>Material/Company/Plant</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_PRIPER</KEY>
+     <ENTRY>    Variance Price Percent +-</ENTRY>
+     <LENGTH>37</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_PRIVAL</KEY>
+     <ENTRY>    Variance Price Value +-</ENTRY>
+     <LENGTH>35</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_QTY</KEY>
+     <ENTRY>Total Dollars / Total QOH</ENTRY>
+     <LENGTH>37</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_BUKRS</KEY>
+     <ENTRY>Company</ENTRY>
+     <LENGTH>15</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_MATKL</KEY>
+     <ENTRY>Material Group</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_MATNR</KEY>
+     <ENTRY>Material Number</ENTRY>
+     <LENGTH>23</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_WERKS</KEY>
+     <ENTRY>Plant</ENTRY>
+     <LENGTH>13</LENGTH>
+    </item>
+   </TPOOL>
+   <LONGTEXTS>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>ZMMR_MATERIAL_PRICE_VARIANCE</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0007</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00068</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZMMR_MATERIAL_PRICE_VARIANCE</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00007</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PURPOSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The material price variance report allows the user to compare material</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>prices.  This is especially useful in advanced inventory analysis where</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>large price differences exist between plants for the same material (e.g.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>old low-priced stock in Plant A versus new higher-priced stock in Plant</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>B).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The original data is at the material/company/plant level.  All SAP price</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>data is also at this level.  The report also displays a calculated</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>average price, minimum price, maximum price, price variance, average</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>price value and stock variance.   The data comes from the SAP tables</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>MARA, MARC, MARD &amp; MBEW.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>ABAP Program: ZMMR_MATERIAL_PRICE_VARIANCE</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Transaction Code: ZMM_PRICE_VAR</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;INTEGRATION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PREREQUISITES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Company code allows the user to group all the plants attached to one</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>company code.  The prices are separated at the material level first,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>then company code level and then plant level. (The separation by company</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>code is generated by using table T001K and is created by the program ).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The average price calculation is the average of all the prices across</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the plants, per company, per material. If the report is summarized to</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the company level, the average is for each company.  The minimum price</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>and maximum price fields work the same way.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FEATURES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The average price may be calculated in 3 different ways.   (1)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Combination, (2) Total Dollars / Total QOH (is a &quot;Weighted Average&quot;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>calculation), or (3) Sum Prices / Count Prices (is a &quot;Simple Average&quot;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>calculation).  The Combination approach is the recommended method</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>because it best considers zero QOH measures.  The explanation of</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>formulas in their reverse order provides the easiest understanding: (3)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Simple Average Price = [SUM of applicable plant Prices] divided by</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>[COUNT of applicable plant Prices], (2) Weighted Average Price = [SUM of</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>(Price * QOH) for applicable plants] divided by [SUM of QOH for</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>applicable plants], (1) Combination = if Total QOH &gt; 0 then use Weighted</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Average formula else if Total QOH = 0 then use Simple Average Price</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>formula.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Report data may be summarized in 3 different ways.  (1)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Material/Company/Plant, (2) Material &amp; Company, or (3) Material.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE> It is important to remember that when Material/Company/Plant is</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>selected and multiple company codes are queried, then the Average Price</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>calculation is calculated at the individual company code level.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>There are also options to suppress (not include) prices when the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>quantity is zero or the plant price is marked for deletion or the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>material is marked for deletion.  (Note: Spectra East &quot;Plant Price Is</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Flagged For Deletion&quot; is configured to be identical to &quot;Plant Is Flagged</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>For Deletion&quot;.)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>If the report is at the plant level, the user has several options to</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>limit the report using the price variance and stock  variances.  The</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>PRICE VARIANCE VALUE +- can be used to remove materials where the price</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>variance is within a fixed range.  For example, by entering a 1.00, all</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>price variances within $1.00 of the plant price are removed.  This</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>includes both positive and negative variances to the plant price.  If</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the user wishes to removes prices where the price variance is within 5%,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE> choose the PRICE VARIANCE PERCENT +- and enter 5 in the field next to</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>it.  The user may opt to view the variances weighted by STOCK VARIANCE</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>(i.e. average price * quantity).  The STOCK VARIANCE VALUE +- and STOCK</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>VARIANCE PERCENT +- radio buttons provide these options.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;SELECTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>There are no mandatory fields on the selection screen.  The GENERAL</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>SEARCH CRITERIA  allows the user to choose the materials.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;STANDARD_VARIANTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The user may summarize the data.  All original data is at the plant</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>level.  This can be summarized up to the company level and further</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>summarized to a material level (not recommended).  Plant specific fields</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>will be suppressed when summarizing at the Company Code or Material</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>levels.  The company code column will disappear if the report is</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>summarized to the material level.  In rare instances, pricing units may</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>not match.  If that occurs, the users will see ??????</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;OUTPUT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The output can be either an ALV report (default) or sent to an EXCEL</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>file.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;ACTIVITIES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The program makes ZMMMI015 obsolete.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

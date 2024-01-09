@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_TABL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD02V>
+    <TABNAME>ZMMS_UOM</TABNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <TABCLASS>INTTAB</TABCLASS>
+    <DDTEXT>UOM</DDTEXT>
+   </DD02V>
+   <DD03P_TABLE>
+    <DD03P>
+     <FIELDNAME>ZMSEH3</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000003</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000003</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>External Unit of Measurement in Commercial Format (3-Char.)</DDTEXT>
+    </DD03P>
+    <DD03P>
+     <FIELDNAME>ZMSEHL</FIELDNAME>
+     <ADMINFIELD>0</ADMINFIELD>
+     <INTTYPE>C</INTTYPE>
+     <INTLEN>000030</INTLEN>
+     <DATATYPE>CHAR</DATATYPE>
+     <LENG>000030</LENG>
+     <MASK>  CHAR</MASK>
+     <DDTEXT>Unit of Measurement Text (Maximum 30 Characters)</DDTEXT>
+    </DD03P>
+   </DD03P_TABLE>
+  </asx:values>
+ </asx:abap>
+</abapGit>

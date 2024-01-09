@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Get the company Address</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZMMFG_COMAPNY_ADDRTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZMMFG_COMAPNY_ADDR</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZMMF_GET_COMPANY_ADDRESS</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Get the company Address</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_BUKRS</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>BUKRS</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>E_NAME</PARAMETER>
+       <TYP>AD_NAME1</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>E_CITY1</PARAMETER>
+       <TYP>AD_CITY1</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>E_POST_CODE1</PARAMETER>
+       <TYP>AD_PSTCD1</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>E_STREET</PARAMETER>
+       <TYP>AD_STREET</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>E_COUNTRY</PARAMETER>
+       <TYP>LKVRZ</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>E_REGION</PARAMETER>
+       <TYP>REGIO</TYP>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>IT_T001</PARAMETER>
+       <DBSTRUCT>T001</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_BUKRS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Company Code</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_NAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Name 1</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_CITY1</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>City</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_POST_CODE1</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>City postal code</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_STREET</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Street</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_COUNTRY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Country Key</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_REGION</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Region (State, Province, County)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_T001</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Company Codes</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

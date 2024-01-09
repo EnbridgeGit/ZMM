@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SHLP" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD30V>
+    <SHLPNAME>ZMARA_KWRD</SHLPNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DDTEXT>Material by Keyword</DDTEXT>
+    <ISSIMPLE>X</ISSIMPLE>
+    <SELMETHOD>MARA</SELMETHOD>
+    <SELMTYPE>T</SELMTYPE>
+    <TEXTTAB>MAKT</TEXTTAB>
+    <DIALOGTYPE>C</DIALOGTYPE>
+   </DD30V>
+   <DD32P_TABLE>
+    <DD32P>
+     <SHLPNAME>ZMARA_KWRD</SHLPNAME>
+     <FIELDNAME>ZZKWRD</FIELDNAME>
+     <FLPOSITION>0001</FLPOSITION>
+     <ROLLNAME>Z_KWRD</ROLLNAME>
+     <SHLPINPUT>X</SHLPINPUT>
+     <SHLPSELPOS>10</SHLPSELPOS>
+     <SHLPLISPOS>10</SHLPLISPOS>
+     <SCRLEN3>20</SCRLEN3>
+    </DD32P>
+    <DD32P>
+     <SHLPNAME>ZMARA_KWRD</SHLPNAME>
+     <FIELDNAME>MATNR</FIELDNAME>
+     <FLPOSITION>0002</FLPOSITION>
+     <ROLLNAME>MATNR</ROLLNAME>
+     <SHLPOUTPUT>X</SHLPOUTPUT>
+     <SHLPSELPOS>20</SHLPSELPOS>
+     <SHLPLISPOS>20</SHLPLISPOS>
+     <SCRLEN3>20</SCRLEN3>
+    </DD32P>
+   </DD32P_TABLE>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_AQSG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AQGDBBS>
+    <AQGDBBS>
+     <CLAS>MATERIALMASTER</CLAS>
+     <NUM>MM_PURCHASE</NUM>
+    </AQGDBBS>
+   </AQGDBBS>
+   <AQGSCAT>
+    <AQGSCAT>
+     <CLAS>MATERIALMASTER</CLAS>
+     <ART>J</ART>
+     <TSTRUC>MARA</TSTRUC>
+    </AQGSCAT>
+   </AQGSCAT>
+   <AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>00001</TINDX>
+     <HEAD>X</HEAD>
+     <MAXL>063</MAXL>
+     <TEXT>Material Master Information</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>00008</TINDX>
+     <MAXL>080</MAXL>
+     <TEXT>General Material Data</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>00170</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Stock Transfer Net Change Costing</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>00394</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Log. vars</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>00647</TINDX>
+     <MAXL>080</MAXL>
+     <TEXT>Plant Data for Material</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>00915</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Srce.list</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01035</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Tgt QM sys</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01055</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Date to</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01057</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Multiplier</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01059</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Auto.Reset</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01081</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Mil. goods</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01119</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Adj.period</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01167</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Fxd Price</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01179</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Tied Empt.</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01181</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>SlsValEmpt</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01207</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>JIT Indic.</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01211</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Mat.Grping</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01255</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>OverallPrf</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01257</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>APO relev.</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01275</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Strategy for Putaway and Stock Removal</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01283</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>OB Ref.Mat</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01287</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Valuated Goods Receipt Blocked Stock</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01309</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Purchasing Across Purchasing Group</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01322</TINDX>
+     <MAXL>080</MAXL>
+     <TEXT>Storage Location Data for Material</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01430</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>CorrFactor</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01437</TINDX>
+     <MAXL>080</MAXL>
+     <TEXT>Material Valuation</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01637</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>ML act.</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01720</TINDX>
+     <MAXL>080</MAXL>
+     <TEXT>International Article Numbers (EANs) for Material</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01741</TINDX>
+     <MAXL>080</MAXL>
+     <TEXT>Class Header Data</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01873</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Object-to-dependency assignment number</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01888</TINDX>
+     <MODIF>0001</MODIF>
+     <MAXL>080</MAXL>
+     <TEXT>Characteristics</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01889</TINDX>
+     <MAXL>080</MAXL>
+     <TEXT>Characteristic Values</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>01937</TINDX>
+     <MAXL>055</MAXL>
+     <TEXT>Object-to-dependency assignment number</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>02109</TINDX>
+     <MAXL>055</MAXL>
+     <TEXT>Int. cntr</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>MATERIALMASTER</CLAS>
+     <TINDX>02167</TINDX>
+     <MAXL>055</MAXL>
+     <TEXT>Int. cntr</TEXT>
+    </AQGTS>
+   </AQGTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

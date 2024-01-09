@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>ISNET validation</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZMM_ISNETTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZMM_ISNET</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZMM_GET_ISNET_VENDORS</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Get ISNET vendors</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IMP_ISNVDR</PARAMETER>
+       <TYP>Z_ISNVDR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IMP_LAND1</PARAMETER>
+       <TYP>LAND1_GP</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IMP_REGIO</PARAMETER>
+       <TYP>REGIO</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EXP_ISNQUAL</PARAMETER>
+       <TYP>Z_ISNQUAL</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IMP_ISNVDR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ISNetWorld Vendor Number</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IMP_LAND1</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Country Key</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IMP_REGIO</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Region (State, Province, County)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EXP_ISNQUAL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>ISNetWorld Vendor Qualification</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

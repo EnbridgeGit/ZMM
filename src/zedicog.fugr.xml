@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>EDI COG Function Group</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZEDICOGTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZEDICOG</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZEDI_LPATH_CREATE_CLIENT_DOCNM</FUNCNAME>
+     <SHORT_TEXT>Supply Deals Directory and File Name change</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>DATATYPE</PARAMETER>
+       <DBFIELD>EDIPO-ACTRIG</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>DIRECTORY</PARAMETER>
+       <DBFIELD>EDIPO-OUTPUTDIR</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>FILENAME</PARAMETER>
+       <DBFIELD>EDIPO-OUTPUTFILE</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>CONTROL</PARAMETER>
+       <DBFIELD>EDIDC</DBFIELD>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>PATHNAME</PARAMETER>
+       <DBFIELD>EDI_PATH-PTHNAM</DBFIELD>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>LOGICAL_PATH_ERROR</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>DATATYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Flag: EDI subsystem can be triggered from SAP?</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>DIRECTORY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Name of a directory</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>FILENAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>File name for outbound data</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CONTROL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Control record (IDoc)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>PATHNAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Path name (including file name)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>LOGICAL_PATH_ERROR</PARAMETER>
+       <KIND>X</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

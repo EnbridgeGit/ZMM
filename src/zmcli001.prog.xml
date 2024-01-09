@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>ZMCLI001</NAME>
+    <SUBC>1</SUBC>
+    <APPL>M</APPL>
+    <RLOAD>E</RLOAD>
+    <FIXPT>X</FIXPT>
+    <LDBNAME>D$S</LDBNAME>
+   </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>000</KEY>
+     <ENTRY>PLEASE ACCEPT OR CHANGE SELECTION CRITERIA</ENTRY>
+     <LENGTH>42</LENGTH>
+    </item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>MM:  PIPE CALTALOGUE INFORMATION TO AM/FM</ENTRY>
+     <LENGTH>41</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>LOGICFLE</KEY>
+     <ENTRY>  LOGICAL FILE NAME</ENTRY>
+     <LENGTH>27</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_CHAR</KEY>
+     <ENTRY>  CHARACTERISTIC NAME</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_CLASS</KEY>
+     <ENTRY>  CLASS NAME</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_MATGRP</KEY>
+     <ENTRY>  MATERIAL GROUP</ENTRY>
+     <LENGTH>24</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_MATTP</KEY>
+     <ENTRY>  MATERIAL TYPE</ENTRY>
+     <LENGTH>23</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_PLANT</KEY>
+     <ENTRY>  PLANT</ENTRY>
+     <LENGTH>18</LENGTH>
+    </item>
+   </TPOOL>
+   <LONGTEXTS>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>ZMCLI001</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0002</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00030</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZMCLI001</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00002</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>DESCRIPTION</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The purpose of this program is to create SAP to AM/FM interface file.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>As a default this file includes only materials satisfying following</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>criteria:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>- all materials belong to MATERIAL TYPE = &apos;HIBE&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>- MATERIAL GROUP : 0300, 0400, 0501, 0600, 0709 and from 0800 to 2000</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>are eliminated from a selection</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>- only classes: BRANCH_CONNECTIONS, FLANGES, REDUCERS,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>STOPPER_FITTINGS, STRAIGHT_FITTINGS, TRANSITION_FITTING, PIPES, VALVES,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>VALVE_ACCESSORIES, REPAIR_PARTS, INSULATE_FLG_SETS, OTH_CORROSION_ACC,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>INSULATING_JOINTS and PIPELINE_MATERIALS are included</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>- only characteristics: CATEGORY, COATING, END_TYPE, FLANGE_TYPE,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>GRADE, KEYWORD, LENGTH, MAXIMUM_COMPONENT_PRESSURE_KPA, MATERIAL,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>MODEL_NUMBER, NUMBER_OF_TURNS, PRESSURE_RATING, PRIMARY_DIAMETER__MM,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>PRIMARY_DIAMETER__NPS, PRIMARY_WALL_THICKNESS, SECONDARY_DIAMETER__MM,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>SECONDARY_DIAMETER__NPS, SECONDARY_WALL_THICKNESS and SPECYFICATION are</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>included.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>Input</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>There are several fields in the RECORD that values remain the same for</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>all entries in the file.  These fields are: DUMY1...DUMY31, USER_ID,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>DATE, TIME and ACCESS (see RECORD declaration in a source code for</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>corresopnding default values).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>The value of other fields in the RECORD is assigned based on the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>guidelines in BIS DATA MAPPING WORKSHEET - FUNCTIONAL DEFINITION</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>REFERENCE: IFMM011 Pipe Catalogue (AM/FM) and STOCK TABLE ATTRIBUTES,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>and depends on factors such as:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>- class, that material belongs to</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>- existance or absence of particular characteristic for a material</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;OUTPUT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>As a result a flat file is produced.  Only if there is a problem with</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>openning the file, the system error message is sent to the screen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

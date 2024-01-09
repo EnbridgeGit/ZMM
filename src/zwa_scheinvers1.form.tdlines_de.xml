@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<abapGit version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TDLINES>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>FUSS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Release 2.1: /:BOTTOM - ENDBOTTOM entfernt</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>FUSS</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>LF</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>Bewegungsart:,,&amp;T156T-BWART&amp;,,&amp;T156T-BTEXT&amp;,,Aussteller:,,&amp;MKPF-USNAM&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/W</TDFORMAT>
+     <TDLINE>MAIN</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+     <TDLINE>Release 2.1: Elemente /E außerhalb der /:Anweisungen gesetzt</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>KOPF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L2</TDFORMAT>
+     <TDLINE>W A R E N B E G L E I T S C H E I N        ,,&amp;MKPF-MBLNR&amp;/&amp;MSEG-ZEILE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>--------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>BACOKOPF</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>BC</TDFORMAT>
+     <TDLINE>,,&lt;BC&gt;&amp;AM07M-BELPOS&amp;&lt;/&gt;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>L1</TDFORMAT>
+     <TDLINE>W A R E N B E G L E I T S C H E I N</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>--------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/*</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/E</TDFORMAT>
+     <TDLINE>POS_ZEILE</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>PROTECT</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Buchungsdatum ,,:,,&amp;MKPF-BUDAT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Tagesdatum    ,,:,,&amp;MKPF-CPUDT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Werk          ,,:,,&amp;T001W-WERKS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>K1</TDFORMAT>
+     <TDLINE>Bezeichnung   ,,:,,&amp;T001W-NAME1&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>--------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Material      ,,:,,&amp;MSEG-MATNR&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Charge        ,,:,,&amp;MSEG-CHARG&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Bezeichnung   ,,:,,&amp;MABDR-MAKTX&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M5</TDFORMAT>
+     <TDLINE>Menge         ,,:,,&amp;MSEG-MENGE&amp;,,&amp;MSEG-MEINS&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+     <TDLINE>--------------------------------------------------------------------------</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Lagerort      ,,:,,&amp;MSEG-LGORT&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M1</TDFORMAT>
+     <TDLINE>Lagerplatz    ,,:,,&amp;MABDR-LGPBE&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/</TDFORMAT>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>M2</TDFORMAT>
+     <TDLINE>&amp;AM07M-KOTXT&amp;,,&amp;AM07M-KONTIERUNG&amp;</TDLINE>
+    </TLINE>
+    <TLINE>
+     <TDFORMAT>/:</TDFORMAT>
+     <TDLINE>ENDPROTECT</TDLINE>
+    </TLINE>
+   </TDLINES>
+  </asx:values>
+ </asx:abap>
+</abapGit>

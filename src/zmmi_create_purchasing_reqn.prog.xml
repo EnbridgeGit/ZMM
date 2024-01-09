@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>ZMMI_CREATE_PURCHASING_REQN</NAME>
+    <SUBC>1</SUBC>
+    <RLOAD>E</RLOAD>
+    <FIXPT>X</FIXPT>
+   </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>EXCEL FILE NAME</ENTRY>
+     <LENGTH>15</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>COMMENTS</ENTRY>
+     <LENGTH>8</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>005</KEY>
+     <ENTRY>RUN OPTIONS</ENTRY>
+     <LENGTH>11</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>006</KEY>
+     <ENTRY>Validate only</ENTRY>
+     <LENGTH>13</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>007</KEY>
+     <ENTRY>Validate &amp; load</ENTRY>
+     <LENGTH>15</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>008</KEY>
+     <ENTRY>Validate, load allowing errors</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>009</KEY>
+     <ENTRY>INPUT FILE:  Standard EXCEL file</ENTRY>
+     <LENGTH>32</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>010</KEY>
+     <ENTRY>                         There MUST be a header line</ENTRY>
+     <LENGTH>52</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>011</KEY>
+     <ENTRY>OUTPUT FILE: Input file name + _RESULTS_ + DATE + TIME</ENTRY>
+     <LENGTH>79</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>012</KEY>
+     <ENTRY>                           Contains input file + requisition no + anticipated</ENTRY>
+     <LENGTH>77</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>013</KEY>
+     <ENTRY>                           delivery date + delivery discrepancy days + errors</ENTRY>
+     <LENGTH>77</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>014</KEY>
+     <ENTRY>NOTE:  All record counts or numbers exclude the header line</ENTRY>
+     <LENGTH>59</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>015</KEY>
+     <ENTRY>Input path and filename</ENTRY>
+     <LENGTH>99</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>016</KEY>
+     <ENTRY>                         Maximum 20,000 EXCEL rows</ENTRY>
+     <LENGTH>79</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>017</KEY>
+     <ENTRY>PURCHASING REQUISITIONS: Maximum 999 items</ENTRY>
+     <LENGTH>79</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>018</KEY>
+     <ENTRY>RUN OPTIONS: Step 1 = Validate only (test EXCEL file for errors)</ENTRY>
+     <LENGTH>64</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>019</KEY>
+     <ENTRY>                             Step 2 = Validate &amp; load (create Purchase Req&apos;s)</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>020</KEY>
+     <ENTRY>                              Validate, load allowing errors(*NOT RECOMMENDED*)</ENTRY>
+     <LENGTH>132</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>022</KEY>
+     <ENTRY>DATE FORMAT</ENTRY>
+     <LENGTH>11</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>023</KEY>
+     <ENTRY>YYYY/MM/DD</ENTRY>
+     <LENGTH>10</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>024</KEY>
+     <ENTRY>YYYYMMDD</ENTRY>
+     <LENGTH>8</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>025</KEY>
+     <ENTRY>MM/DD/YYYY</ENTRY>
+     <LENGTH>10</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>026</KEY>
+     <ENTRY>DD/MM/YYYY</ENTRY>
+     <LENGTH>10</LENGTH>
+    </item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>Automatically Create Purchasing Requisitions Using An EXCEL File</ENTRY>
+     <LENGTH>64</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_PCFILE</KEY>
+     <ENTRY>Purchase requisition data</ENTRY>
+     <LENGTH>33</LENGTH>
+    </item>
+   </TPOOL>
+   <LONGTEXTS>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>ZMMI_CREATE_PURCHASING_REQN</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0008</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00097</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZMMI_CREATE_PURCHASING_REQN</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00008</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PURPOSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>This program will create purchasing requisitions from an EXCEL file.  It</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>uses a BAPI to simulate transactions ME51 or ME51N.  The user will be</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>able to use an EXCEL file directly on their computer.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>ABAP Program: ZMMI_CREATE_PURCHASING_REQN</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Transaction Code: ZMM_CREATE_PREQ</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;INTEGRATION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PREREQUISITES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The first row of the EXCEL file MUST be a header line.  It will be</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>bypassed in the processing.  The column widths are allowed to be larger</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>than the data size to allow better readability.  Each row has the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>following fields and they must be in this order: order date,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>requisitioner, plant, storage location, quantity, unit of measure,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>material number, material description, rounding value, lead time,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>requested delivery date, purchasing group, material group, tracking</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>number, price, currency, price unit, account assignment category, g/l</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>account, WBS element, cost center, order, network, activity, unloading</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>point, goods recipient, desired vendor, fixed vendor, purchasing</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>organization, info record number, vendor material, text 1, text 2, text</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>3, text 4 &amp; text 5.  Do not put columns before/after or in the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>middle of the data.  Do not hide columns.  Do not leave data in a column</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>after the last valid row.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Note: Spectra Energy East &amp; West clients both use the same program</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>and EXCEL file/template.  The program looks for a TVARVC entry called</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ZMM_EAST_WEST_IDENTIFIER to contain the value EAST or WEST.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FEATURES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The EXCEL file can be a maximum of 20,000 rows.  You do not have to exit</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the file before running this program, but you must save it.  There is a</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>maximum of 999 items per purchase requisition.  A new purchase</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>requisition is created whenever the requisitioner or plant changes.   If</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the requisitioner is blank, SAP will insert the SAP logon ID.  All data</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>fields will be validated, even if they are not required to create the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>purchasing requisition.  Leading zeros and any data alignment will be</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>done by the program.  EXCEL will normally drop leading zeros.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;SELECTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>(a) The EXCEL input file is a mandatory input.  You can enter it</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>directly or use the symbol to the right of the field to browse/select</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the file name.  (b) The user has 3 RUN OPTIONS: Validate only, Validate</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&amp; load, Validate &amp; load allowing errors (not recommended).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE> Users should always choose the &apos;Validate only&apos; option to test/retest</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the file for errors.  Only after all errors are corrected in the EXCEL</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>file should userschoose the &apos;Validate &amp; load&apos; option.  The</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>validation process compares all the input data to the SAP check tables</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>and reports any errors on your screen.  For example, the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>material/plant/storage location is validated against the SAP table MARD</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>to ensure accuracy.  This validation occurs in all 3 options.  If there</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>are any errors, the user needs to correct the EXCEL data before</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>attempting to load.  The load process creates the purchase requisition.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE> The &apos;Validate &amp; load&apos; option will not attempt to load if there</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>are any validation errors.  The &apos;Validation &amp; load allowing</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>errors&apos; should only be used in extreme circumstances when the user</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>wishes to over-ride the errors.  If the &apos;Validate &amp; load allowing</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>errors&apos; option is run, users may later find it difficult to know what</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>line items load and what line items failed. (c) The user must select</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>which date format is used the the EXCEL file.  If the EXCEL date format</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>is different than the one chosen on the selection screen, an error</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>message (in red) will appear and all further processing will stop.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;STANDARD_VARIANTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;OUTPUT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>There are 3 different types of output that may occur.  First,  an SAP</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>results report/screen will appear.  Any validation errors that the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>program discovers are reported directly back to the user.  These errors</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>are listed for each row in the EXCEL file.  If a hard error occurs (when</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>trying to covert an alphabetic EXCEL cell value to a numeric value), the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>program shows the first error and stops.  There is also a summary area</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>of the number of EXCEL rows, number of validation errors, number of BAPI</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>errors and the number of new purchase requisitions.  This summary is at</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the end of the report.  Secondly, new purchase requisitions are created</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>in SAP (from the load process) .  Lastly, an EXCEL file is created with</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the detailed results of the load process.  It will contain the original</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>input EXCEL file plus the following fields: new requisition number,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>calculated delivery date,  delivery discrepancy in days, SAP error</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>message.  If an SAP error occurs when the BAPI is creating the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>purchasing requisition, only 1 error message is returned and it is</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>attached to all items of the requisition.  The EXCEL file name will be</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the original file name + _RESULTS_ + date + time.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>IMPORTANT: &quot;RESULTS&quot; files should always be monitored for errors.  If</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the &quot;RESULTS&quot; file contains errors, users need to remove all data</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>associated with successfully created purchase requisitions, then fix</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>incorrect data before loading again (or create a different load file).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE> Failure to remove successfully loaded data will result in duplicate</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>purchase requisitions if rerun.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;ACTIVITIES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The order date will be set to the current date if there is no data in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the EXCEL file.  Likewise the price unit will default to 1.  The storage</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>location will default to A001 for the East &amp; 0001 for the West.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE> If there is a material and the requested delivery date is blank, it</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>will use the current date plus the MRP 2 planned delivery days.  If the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>currency is blank, the program will use the plant to find the currency.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE> If the material number is available, the following fields will default</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>in: unit of measure, material group, material description, purchasing</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>group, price, g/l account.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The mandatory fields required to create a purchasing requisition vary,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>depending primarily on the account assignment category  and whether a</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>material number is entered.  In general, the mandatory fields when a</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>material number is known are: plant, storage location,  material number</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>and quantity.  In general, the mandatory fields when a material is</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>unknown are: plant, storage location, unit of measure, material</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>description, quantity, requested delivery date, account assignment</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>category* and applicable account information. *The non-blank values of</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>P, F, G &amp; X for the account assignment category will determine</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>additional fields.</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

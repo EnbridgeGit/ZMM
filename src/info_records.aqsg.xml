@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_AQSG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AQGDBBS>
+    <AQGDBBS>
+     <CLAS>INFO_RECORDS</CLAS>
+     <NUM>MM_PURCHASE</NUM>
+    </AQGDBBS>
+   </AQGDBBS>
+   <AQGSCAT>
+    <AQGSCAT>
+     <CLAS>INFO_RECORDS</CLAS>
+     <ART>J</ART>
+     <TSTRUC>EINA</TSTRUC>
+    </AQGSCAT>
+   </AQGSCAT>
+   <AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>INFO_RECORDS</CLAS>
+     <TINDX>00001</TINDX>
+     <HEAD>X</HEAD>
+     <MAXL>063</MAXL>
+     <TEXT>Info Record Information</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>INFO_RECORDS</CLAS>
+     <TINDX>00004</TINDX>
+     <MAXL>080</MAXL>
+     <TEXT>Purchasing Info Record: General Data</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>INFO_RECORDS</CLAS>
+     <TINDX>00111</TINDX>
+     <MAXL>080</MAXL>
+     <TEXT>Purchasing Info Record: Purchasing Organization Data</TEXT>
+    </AQGTS>
+    <AQGTS>
+     <SPRSL>E</SPRSL>
+     <CLAS>INFO_RECORDS</CLAS>
+     <TINDX>00273</TINDX>
+     <MAXL>060</MAXL>
+     <TEXT>Inco. 2</TEXT>
+    </AQGTS>
+   </AQGTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>FG For Getting Mat Text From ECC</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZMMF_GETTEXTTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZMMF_GETTEXT</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZMMF_GET_TEXT</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Get  Material Text from ECC</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_MATNR</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>MATNR</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>E_LONGTEXT</PARAMETER>
+       <TYP>CHAR1000SF</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>E_SHRTTEXT</PARAMETER>
+       <TYP>CHAR1000SF</TYP>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>T_LTEXT</PARAMETER>
+       <DBSTRUCT>TLINE</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_MATNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Material Number</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_LONGTEXT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Long text</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>E_SHRTTEXT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Character 2000</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_LTEXT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>SAPscript: Text Lines</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

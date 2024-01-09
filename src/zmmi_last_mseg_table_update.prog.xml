@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>ZMMI_LAST_MSEG_TABLE_UPDATE</NAME>
+    <SUBC>1</SUBC>
+    <APPL>M</APPL>
+    <RSTAT>K</RSTAT>
+    <RLOAD>E</RLOAD>
+    <FIXPT>X</FIXPT>
+   </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>R</ID>
+     <ENTRY>Save the latest MSEG material documents on table  ZMM_LAST_MSEG</ENTRY>
+     <LENGTH>63</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_BUDAT</KEY>
+     <ENTRY>Posting Date</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+   </TPOOL>
+   <LONGTEXTS>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>ZMMI_LAST_MSEG_TABLE_UPDATE</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00021</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZMMI_LAST_MSEG_TABLE_UPDATE</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PURPOSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>This program captures the latest material  documents from MSEG and</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>adds/updates table ZMM_LAST_MSEG.  The unique combination of material,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>plant, storage location, movement type, special stock indicator and most</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>recent posting date, determine when entries are to be added/updated to</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ZMM_LAST_MSEG.  The intent is speed up any online programs looking for</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the last usage of a material.  Using MSEG directly is very slow when</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>searching by material.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>ABAP Program: ZMMI_LAST_MSEG_TABLE_UPDATE</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;INTEGRATION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PREREQUISITES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FEATURES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The program is run once a week.  It can be run more often, depending on</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>how current ZMM_LAST_MSEG needs to be kept.  This program is required by</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the ZMMR_SLOW_MOVING_STOCK report.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;SELECTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Normally the posting date is left blank and all the material document</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>data are used.  Only enter a posting date for testing.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;STANDARD_VARIANTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;OUTPUT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Adds  new entries to ZMM_LAST_MSEG.  It will update the latest material</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>document, material document year, document entry date and posting date</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>when the material, plant, storage location, movement type &amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>special stock indicator are the same.  A  summary report of the number</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>of previous ZMM_LAST_MSEG entries and the new record count is listed.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;ACTIVITIES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

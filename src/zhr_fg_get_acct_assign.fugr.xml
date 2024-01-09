@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>User account assignment details</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZHR_FG_GET_ACCT_ASSIGNTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZHR_FG_GET_ACCT_ASSIGN</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZHR_GET_ACCT_ASSIGN</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>User account assignment details</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IM_UNAME</PARAMETER>
+       <TYP>SYUNAME</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IM_BUKRS</PARAMETER>
+       <TYP>BUKRS</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>EV_KOSTL</PARAMETER>
+       <TYP>KOSTL</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EV_AUFNR</PARAMETER>
+       <TYP>AUFNR</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EV_POSID</PARAMETER>
+       <TYP>PS_POSID</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IM_UNAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>User Name</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IM_BUKRS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Company Code</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_KOSTL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Cost Center</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_AUFNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Order Number</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_POSID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Work Breakdown Structure Element (WBS Element)</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

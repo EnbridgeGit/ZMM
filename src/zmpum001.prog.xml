@@ -1,0 +1,988 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>ZMPUM001</NAME>
+    <SQLX>X</SQLX>
+    <SUBC>S</SUBC>
+    <APPL>M</APPL>
+    <RSTAT>K</RSTAT>
+    <RLOAD>D</RLOAD>
+   </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>ER1</KEY>
+     <ENTRY>1st reminder</ENTRY>
+     <LENGTH>13</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>ER2</KEY>
+     <ENTRY>2nd reminder</ENTRY>
+     <LENGTH>13</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>ER3</KEY>
+     <ENTRY>3rd reminder</ENTRY>
+     <LENGTH>13</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>MA1</KEY>
+     <ENTRY>1st urging letter</ENTRY>
+     <LENGTH>17</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>MA2</KEY>
+     <ENTRY>2nd urging letter</ENTRY>
+     <LENGTH>17</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>MA3</KEY>
+     <ENTRY>3rd urging letter</ENTRY>
+     <LENGTH>17</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>TIM</KEY>
+     <ENTRY>Time</ENTRY>
+     <LENGTH>7</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>ZBT</KEY>
+     <ENTRY>Terms of payment:</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>Print Program for Purchasing Documents</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+   </TPOOL>
+   <I18N_TPOOL>
+    <item>
+     <LANGUAGE>D</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>I</ID>
+       <KEY>ER1</KEY>
+       <ENTRY>1. Erinnerung</ENTRY>
+       <LENGTH>13</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>ER2</KEY>
+       <ENTRY>2. Erinnerung</ENTRY>
+       <LENGTH>13</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>ER3</KEY>
+       <ENTRY>3. Erinnerung</ENTRY>
+       <LENGTH>13</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>MA1</KEY>
+       <ENTRY>1. Mahnung</ENTRY>
+       <LENGTH>10</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>MA2</KEY>
+       <ENTRY>2. Mahnung</ENTRY>
+       <LENGTH>10</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>MA3</KEY>
+       <ENTRY>3. Mahnung</ENTRY>
+       <LENGTH>10</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>TIM</KEY>
+       <ENTRY>Uhrzeit</ENTRY>
+       <LENGTH>7</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>ZBT</KEY>
+       <ENTRY>Zahlungsbedingungen:</ENTRY>
+       <LENGTH>20</LENGTH>
+      </item>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Druckprogramm Einkaufsbelege</ENTRY>
+       <LENGTH>28</LENGTH>
+      </item>
+     </TEXTPOOL>
+    </item>
+   </I18N_TPOOL>
+   <LONGTEXTS>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>ZMPUM001</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00176</TXTLINES>
+      <DOKSTATE>R</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZMPUM001</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>HU</TDFORMAT>
+       <TDLINE>&amp;TITLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>PURCHASING DOCUMENTS</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>OVERVIEW</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>T6</TDFORMAT>
+       <TDLINE>A purchasing document is an instrument used by purchasing to procure a</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>material or service.  The following list shows the different purchasing</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>documents available in the SAP system.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>Purchase Requistion (REQ)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Defines a requirement for a material or service.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>Request for Quotation (RFQ)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Transmists a requirement defined in a requisition for a material or</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>service to potential vendors.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>Quotation</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Contains a vendor&apos;s pricing and terms of delivery provided in response</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>to an RFQ.  It is the basis for selecting the vendor to supply the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>required material or service.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>Purchase Order (PO)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The buying entity&apos;s request to a vendor (external suppoier) to supply</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>certain materials or render/perform certain services/works, formalizing</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>a purchase transaction.  It contains specific details of dates and</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>prices.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>T6</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>Contract</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>In the SAP Purchasing component, a type of &quot;outline agreement&quot;, or</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>longer-term buying arrangement.  The contract is the binding</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>declaration to procure a certain material or service from a vendor</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>during a certain period of time.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>Scheduling Agreement</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Another type of &quot;outline&quot; agreement, providing for the subsequent issue</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>of a devliery schedule specifying purchase quantitles, delivery dates,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>and possibly also delivery time-spots.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Under the Union BIS project, only the RFQ, PO, contract and scheduling</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>agreement are customized to better fit the requirement of Union Gas</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Ltd.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>SAP delivered program to produce the report is:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Print Program: ,,,SAPFM06P</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Layout Set:,,,,MEDRUCK</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The new customerized ABAP/4 program is:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Print Program:,,,ZMPUM001</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Include Program:,,ZNMPU001 - replaces FM06PE02</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>T6</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>T6</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Layout Sets:,,,,ZPURCHASE01 - purchase order</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,,,,,,ZPURCHASE02 - RFQ</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,,,,,,ZPURCHASE03 - contract</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,,,,,,ZPUIRCHASE04 - scheduling agreement</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>All the purchasing documents were designed to use the same overall</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>structure.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B2</TDFORMAT>
+       <TDLINE>logo at top left-hand corner</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B2</TDFORMAT>
+       <TDLINE>document name centered on top of the page</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B2</TDFORMAT>
+       <TDLINE>document number at top right-hand corner</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B2</TDFORMAT>
+       <TDLINE>vendor address at left-hand side</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B2</TDFORMAT>
+       <TDLINE>ship-to-address at center area (if all items to be shipped to same</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>address; otherwise, ship to address will be specified at item level)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B2</TDFORMAT>
+       <TDLINE>invoice to address at right-hand side</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B2</TDFORMAT>
+       <TDLINE>general header information include order date, FOB, terms of payment,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>buyer name &amp; phone number</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B2</TDFORMAT>
+       <TDLINE>item information in the main body</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B2</TDFORMAT>
+       <TDLINE>total net item value + PST value + indicate whether GST is extra or</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>zero</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>B2</TDFORMAT>
+       <TDLINE>signature box  at the footer area</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>T6</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>Overview of RFQs</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>HT</TDFORMAT>
+       <TDLINE>There are 3 types of RFQ document:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Request for Quotation Docuemtn</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Change to Request for Quotation Document</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Request for Quotation Reminder</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>HT</TDFORMAT>
+       <TDLINE>All 3 documents are to be printed on blank paper rather than</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>pre-printed forms.  Information appearing on all three docuemtns is the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>same:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>HT</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>in the header area: return by date</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>item no; quantity required, unit of measure, material#, description</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>in footer area: terms of payment, FOB, tax info, quoted by name, ry</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>date, quantity recgnature, date</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>Overview of Purchase Orders</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>HT</TDFORMAT>
+       <TDLINE>There are 4 types of purchase order documents:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>H2</TDFORMAT>
+       <TDLINE>Purchase Order Document</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>H2</TDFORMAT>
+       <TDLINE>Change to Purchase Order Document</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>H2</TDFORMAT>
+       <TDLINE>Purchase Order Acknowledgement</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>H2</TDFORMAT>
+       <TDLINE>Purchase Order Reminder</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>H2</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>All the above documents except the purchase order reminder are designed</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>to print on pre-printed forms.  The purchase order reminder is to be</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>printed on blank paper.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Information appearing on all purchase order reminder are:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>item no, order quantity, unit of measure,material #, description,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>delivery date, quantity received, quantity outstanding</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Information appearing on all other purchase order documents are:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>item no, order quantity, unit of measure, material #, description,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>delivery date, unit price.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>Overview of Contract</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>There is only 3 types of contracts:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Contact</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Change to Contract</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Acknowledgement of Contract</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The contract docuemnts are designed to print on pre-printed forms.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Information appearing on all contract documents are:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>item #, quantity, unit of measure, material #, description, unit price</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>Overview of Scheduling Agreement</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The are 3 types of scheduling agreement docuemnts:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Scheduling Agreement Document</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Change to Scheduling Agreement Document</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Scheduling Agreement Reminder</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Scheduling Agreement Acknowledgement</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>All documents are to be printed on pre-printed forms except for the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>reminder.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Information appearing on the scheduling agreement reminder are:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>item #, qty ordered, unit of measure, material#, description</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>scheduled delivery date, scheduled delivery quantity,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>actual qty delivered, outstanding quantity</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Information appearing on other scheduling agreement documents are:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>item#, qty ordered, unit of measure, material#, description</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>scheduled delivery date, scheduled delivery qty</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>OUTLINE of CHANGES MADE in ABAP/4</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Copied SAPFM06P to ZMPUM001</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Changed FM06PE02 to ZNMPU001  (This is the only include for 4.6B)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Within ZNMOU001, changed the function module ME_PRINT_PO to</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ZME_PRINT_PO_UGL</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Within the function builder,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>created new function copy ZMEDRUCK</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Edited the ZMEDRUCK function group so that it matched MEDRUCK Copied</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>required includes to naming convention Zxxxxxxxx_UGL where xxxxxxxx is</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the SAP include and identifying change with &quot;UGL&quot;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>Summary of Changes</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Added T052U for Terms of Payment description</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Added a SELECT statement to retrieve TERMS OF PAYMENT descripion</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Added code to calculate QTY OUTSTANDING (for Reminder) and QTY OVERDUE</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>for scheduling agreement.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Added code to determine INVOICE TO ADDRESS (which is the same address</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>as Plant P112)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Added code to call the INVTO window in the layout set to display the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>INVOICE TO ADDRESS.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>Added code to get the non-deductible tax amount from a structure TKOMV</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>And store the amount in KOMVD-KWERT</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>OUTLINE OF CHANGES MADE IN SapScript LAYOUT SET</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The SAP-delivered layout set for producing all purchasing docuemnts</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>is called MEDRUCK.  Due to the complexity of how SAP generates the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>purchasing documents, it was decided that one layout set would be used</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>for a document group (eg. RFQ, RFQ Reminder, RFQ ask belongs to the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>same document group) for easier maintenance.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>HT</TDFORMAT>
+       <TDLINE>The 4 new layout sets are structured as follows:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>The document is logically divided into several windows:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>document title</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>document number</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>logo</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>from address</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>to address</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>invoice address</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>page number</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>main</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>item title</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>footer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>HT</TDFORMAT>
+       <TDLINE>Outline of changes made (compared with MEDRUCK)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>several new wimdows were added to the layout sets:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>box&quot; puts a box surrounding the item line area</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>logo: contains the logo</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>page: page number</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>ret_to: contains return-to-address</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>zfooter: contains document footer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>zheader: contains document title</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>zponum: contains document number</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>ztitle: contains item line title</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>meadme: some information to know before maintaining the layout set</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>several windows were not used any more in the new layout set</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>deldate</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>footer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>header</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>info1</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>info2</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>some table fields are introduced in the layout set:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>t024-eknam: buyer&apos;s name</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>t024-ektel: buyer&apos;s phone number</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>komvd-kwert: non-deductible tax (=PST)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N1</TDFORMAT>
+       <TDLINE>Others</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+       <TDLINE>in window MAIN text element CHANGE_REMAKR, a variable *CHG&amp; was</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>defined.  If this variable has a value &apos;Y&apos;, it means that a change</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>remark was put in and therefore, this is a change document.  Since</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>zheader is one of the last windows to be output, the title of the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>report is determined this way.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>N2</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;INTEGRATION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PREREQUISITES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FEATURES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;SELECTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;STANDARD_VARIANTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;OUTPUT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;ACTIVITIES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

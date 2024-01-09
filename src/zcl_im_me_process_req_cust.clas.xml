@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_IM_ME_PROCESS_REQ_CUST</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Imp. class for BAdI imp. ZME_PROCESS_REQ_CUST</DESCRIPT>
+    <STATE>1</STATE>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>Requisitioner is required.</ENTRY>
+     <LENGTH>26</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>Service Receipt Confirmer is required.</ENTRY>
+     <LENGTH>38</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>003</KEY>
+     <ENTRY>Approver</ENTRY>
+     <LENGTH>8</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>004</KEY>
+     <ENTRY>Requestor</ENTRY>
+     <LENGTH>9</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>005</KEY>
+     <ENTRY>does not exist.</ENTRY>
+     <LENGTH>15</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>006</KEY>
+     <ENTRY>The unit of measure of this material requires that</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>007</KEY>
+     <ENTRY>a shopping cart be created,</ENTRY>
+     <LENGTH>39</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>008</KEY>
+     <ENTRY>contact SAPSRMSupport@spectraenergy.com</ENTRY>
+     <LENGTH>39</LENGTH>
+    </item>
+   </TPOOL>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>AUTOSOURCING_PREFVENDOR</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Determine OLA and prefered vendor</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>AUTOSOURCING_PREFVENDOR</CMPNAME>
+     <SCONAME>CH_ITEM</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>00 Purchase Requisition: Change Bar for Item</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>AUTOSOURCING_PREFVENDOR</CMPNAME>
+     <SCONAME>CH_ITEMX</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>OO Purchase Requisition: Item Status</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>AUTOSOURCING_PREFVENDOR</CMPNAME>
+     <SCONAME>IM_ITEM_OLD</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>OO Purchase Requisition: Item Status</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>AUTOSOURCING_PREFVENDOR</CMPNAME>
+     <SCONAME>IM_ITEM_PERSISTENT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Purchase Requisition</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>AUTOSOURCING_PREFVENDOR</CMPNAME>
+     <SCONAME>IM_OLA_UPDATE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Force OLA logic to run</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

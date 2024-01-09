@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_AQQU" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AQGQCAT>
+    <AQGQCAT>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_VENDOR</QNUM>
+     <CLAS>ZMDM_VENDOR_EXTRACT</CLAS>
+    </AQGQCAT>
+   </AQGQCAT>
+   <AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_VENDOR</QNUM>
+     <TINDX>00001</TINDX>
+     <HEAD>X</HEAD>
+     <MAXL>060</MAXL>
+     <TEXT>MDM Vendor Extract</TEXT>
+    </AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_VENDOR</QNUM>
+     <TINDX>00002</TINDX>
+     <MAXL>030</MAXL>
+     <TEXT>STATUS</TEXT>
+    </AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_VENDOR</QNUM>
+     <TINDX>00003</TINDX>
+     <MAXL>030</MAXL>
+     <TEXT>Name 1</TEXT>
+    </AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_VENDOR</QNUM>
+     <TINDX>00004</TINDX>
+     <MODIF>0001</MODIF>
+     <MAXL>030</MAXL>
+     <TEXT>Account Number of Vendor</TEXT>
+    </AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_VENDOR</QNUM>
+     <TINDX>00005</TINDX>
+     <MODIF>0001</MODIF>
+     <MAXL>030</MAXL>
+     <TEXT>Delete flag for vendor at</TEXT>
+    </AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_VENDOR</QNUM>
+     <TINDX>00006</TINDX>
+     <MAXL>030</MAXL>
+     <TEXT>Purchasing Organization</TEXT>
+    </AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_VENDOR</QNUM>
+     <TINDX>00007</TINDX>
+     <MODIF>0001</MODIF>
+     <MAXL>030</MAXL>
+     <TEXT>Central Deletion Flag for</TEXT>
+    </AQGTQ>
+    <AQGTQ>
+     <SPRSL>E</SPRSL>
+     <NUM>ZMDM</NUM>
+     <QNUM>ZMDM_VENDOR</QNUM>
+     <TINDX>00008</TINDX>
+     <MAXL>030</MAXL>
+     <TEXT>Vendor account group</TEXT>
+    </AQGTQ>
+   </AQGTQ>
+  </asx:values>
+ </asx:abap>
+</abapGit>

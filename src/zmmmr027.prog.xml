@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>ZMMMR027</NAME>
+    <SUBC>1</SUBC>
+    <APPL>M</APPL>
+    <RLOAD>E</RLOAD>
+    <FIXPT>X</FIXPT>
+    <LDBNAME>D$S</LDBNAME>
+   </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>Please enter the name of the CLASS.</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>CAPITAL ITEM CATALOGUE</ENTRY>
+     <LENGTH>66</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>003</KEY>
+     <ENTRY>MATERIAL</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>004</KEY>
+     <ENTRY>NUMBER</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>005</KEY>
+     <ENTRY>APPLICATION</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>006</KEY>
+     <ENTRY>KEYWORD</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>007</KEY>
+     <ENTRY>PRIMARY</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>008</KEY>
+     <ENTRY>DESCRIPTION</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>009</KEY>
+     <ENTRY>SECONDARY</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>010</KEY>
+     <ENTRY>MANUFACTURER</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>011</KEY>
+     <ENTRY>PART NUMBER</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>012</KEY>
+     <ENTRY>   SORTED BY KEYWORD</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>013</KEY>
+     <ENTRY>CAPITAL ITEM INDEX</ENTRY>
+     <LENGTH>66</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>014</KEY>
+     <ENTRY>CLASS:</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>015</KEY>
+     <ENTRY>KEYWORDS:</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>016</KEY>
+     <ENTRY>PAGE:</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>017</KEY>
+     <ENTRY>SUB CLASS:</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>018</KEY>
+     <ENTRY>SUPERIOR CLASS:</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>900</KEY>
+     <ENTRY>This catalogue will be sorted by Keyword</ENTRY>
+     <LENGTH>40</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>901</KEY>
+     <ENTRY>Primary Description.</ENTRY>
+     <LENGTH>20</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>AMP</KEY>
+     <ENTRY>@</ENTRY>
+     <LENGTH>1</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>CLT</KEY>
+     <ENTRY>Client:</ENTRY>
+     <LENGTH>7</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>DTE</KEY>
+     <ENTRY>Date:</ENTRY>
+     <LENGTH>5</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>PGE</KEY>
+     <ENTRY>Page;</ENTRY>
+     <LENGTH>5</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>RPT</KEY>
+     <ENTRY>Report:</ENTRY>
+     <LENGTH>7</LENGTH>
+    </item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>MM: CAPITAL ITEM: BY KEYWORD, PRIMARY DESCRIPTION    ZMMMR027 GSPARTAL</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_CLASS</KEY>
+     <ENTRY>CLASS</ENTRY>
+     <LENGTH>70</LENGTH>
+    </item>
+   </TPOOL>
+   <LONGTEXTS>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>ZMMMR027</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0002</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00057</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZMMMR027</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00002</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,CENTRA-UNION GAS LIMITED -- CATALOGUES FOR MATERIAL MANAGEMENT</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;DESCRIPTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,The report will consist of a report heading followed underneath it by</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the names of the columns that will be reported on.  The top left corner</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>will display the date and time the report was executed.  The top right</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>corner will display the program name and underneath it will be</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>displayed the page number. The maximum number of lines that can be</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>printed on a single page is 65.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,At the Selection Screen the name of the class will be automatically</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>be entered for each different catalogue.  Below the name of the Class</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>will be a comment on the sort structure for that catalogue.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,Each catalogues will have a title based on the Superior Class being</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>reported on.   Directly underneath the title will be listed the fields</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>that the catalogues are sorted on.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,In the case where a catalogue is reporting on a Superior Class that</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>has more than one Class beneath it, a solid line will be printed across</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the page with the name of the Class on top, followed by the information</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>for that Class.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,In catalogues where a Superior Class has two levels of subclasses, a</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>new page will be started when the Class (first level subclass) changes.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE> When the SubClass  (second level subclass)  changes a solid line with</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the name of the subclass will be displayed</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,If a index is need for a catalogue, the index will be created after</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>the catalogue is printed.  The index will have a title based on the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>class entered at the selection screen. Directly underneath the title</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>will be listed the fields that the catalogue is sorted on.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,In the case where a catalogue is reporting on a Superior Class that</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>has more than one subclass beneath it, the index will be sort and</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>displayed by Class first. The second sort will occur within each</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>subclass using the keywords.  The same occurs in the case where a</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Superior Class has two levels of subclasses.  For example: under the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Appliance catalogue there is the Superior Class Appliances, underneath</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Appliances there are the Classes:  Accessories, Boilers, Fireplace</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Surround, Furnaces, etc.  underneath these Classes are the Subclasses.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Superior Class:,,Appliance</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>,,Class:  ,,Accessories:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>,,,,SubClass:,,Accessories-Air Conditioners</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>,,,,SubClass:,,Accessories-Furnaces</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>,,Class:,,Boilers</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>,,Class:,,Fireplaces</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,For all catalogues that are reporting on Manufacturer Part Number or</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Model Number, if no Manufacturer Part Number (or Model Number) has been</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>maintain as a characteristic for an item, these materials will be</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>listed first and sorted by material number.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,Compressor and Technician Parts will be combined into one catalogue</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>and will be printed as one.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,Construction Material Catalogues: The first two catalogues for</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Construction Material (ZMMMR006-007)  will be combined into one</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>catalogue and will be printed as one.  For these two catalogues,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>characteristics material is not set up in SAP for class Well_Drillings.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE> Characteristics model_number is not set up in SAP for the classes</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Pipes and Station_Material.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>,,The third catalogue for Construction Material will be printed and</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>sort by Superior Class, Class, then by Subclass.   The information to</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>be printed on the catalogue is identical regardless of class but the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>sort may be different for each sub class.  Much of the sort criteria</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>will not be displayed on the catalogue.  Listed below is the multiple</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>sorts for the Construction Material catalogue:</TDLINE>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

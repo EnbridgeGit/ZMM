@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PDTS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PDTS>
+    <SHORT_TEXT>ZINVCLRK</SHORT_TEXT>
+    <PLVAR>01</PLVAR>
+    <WI_TEXT>Decide between the alternatives available</WI_TEXT>
+    <METHOD>
+     <OTYPE>TS</OTYPE>
+     <OBJID>02000051</OBJID>
+     <SWOTP>DECISION</SWOTP>
+     <SWMTD>PROCESS</SWMTD>
+     <METHTYPE>BO</METHTYPE>
+     <SYNCHRON>X</SYNCHRON>
+     <TSKRELSTAT>R</TSKRELSTAT>
+    </METHOD>
+    <DESCRIPTIONS>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000051</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000001</TABSEQNR>
+      <TLINE>&amp;COMMENTS##&amp;</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000051</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000002</TABSEQNR>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000051</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000003</TABSEQNR>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000051</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000004</TABSEQNR>
+      <TLINE>Choose one of the decision options given. This completes the processing</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000051</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000005</TABSEQNR>
+      <TLINE>of this step.</TLINE>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000051</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000006</TABSEQNR>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000051</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000007</TABSEQNR>
+      <TLINE>Before you make a decision, you can display the attachments and objects</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000051</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000008</TABSEQNR>
+      <TLINE>which have been attached to the user decision. You can also create your</TLINE>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000051</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000009</TABSEQNR>
+      <TLINE>own attachments.</TLINE>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000051</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000010</TABSEQNR>
+      <TLINE>If you choose &lt;H&gt;Cancel&lt;/&gt;, the user decision remains in your inbox for</TLINE>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000051</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000011</TABSEQNR>
+      <TLINE>processing.</TLINE>
+     </HRS1002>
+     <HRS1002>
+      <OTYPE>TS</OTYPE>
+      <OBJID>02000051</OBJID>
+      <LANGU>E</LANGU>
+      <SUBTY>0120</SUBTY>
+      <TABSEQNR>000012</TABSEQNR>
+      <TFORMAT>*</TFORMAT>
+     </HRS1002>
+    </DESCRIPTIONS>
+   </PDTS>
+   <CONTAINER>
+    <CONTAINER>
+     <PROPERTIES>
+      <OWN_ID>
+       <INSTID>TS02000051</INSTID>
+       <TYPEID>CL_SWF_CNT_HRS_PERSISTENCE</TYPEID>
+       <CATID>CL</CATID>
+      </OWN_ID>
+      <PROPSTRING>23000000000008</PROPSTRING>
+      <XMLVERSION>0002</XMLVERSION>
+      <INTERNAL>X</INTERNAL>
+      <EXDEFINITN>
+       <NAME>_DEF_EXT</NAME>
+       <POR>
+        <INSTID>DIALOG_STEP_CONTAINER</INSTID>
+        <TYPEID>CL_SWF_CNT_PERSISTENCE_DEF_EXT</TYPEID>
+        <CATID>CL</CATID>
+       </POR>
+      </EXDEFINITN>
+     </PROPERTIES>
+     <ELEMENTS>
+      <L NAME="DECISION_NOTE:Decision_Note:" TYPE="SOFM:BO:::0:0" PROPS="0C920B01"/>
+      <M NAME="EXTENDED:Extended:" TYPE="::SYST-INPUT:C:1:0" PROPS="0C003301"/>
+      <N NAME="NOTE_REFERENCE:Note_Reference:" TYPE="SOFM:BO:::0:0" PROPS="0C921301"/>
+      <O NAME="BUS2081:Bus2081:" TYPE="BUS2081:BO::u:0:0" PROPS="0C920201"/>
+      <P NAME="COMMENTS:Comments:" TYPE="::CHAR80:h:80:0" PROPS="0C004241"/>
+     </ELEMENTS>
+    </CONTAINER>
+   </CONTAINER>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Send email to multiple Recipients</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZMM_EMAIL_SENDTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZMM_EMAIL_SEND</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZMM_EMAIL_SEND</FUNCNAME>
+     <SHORT_TEXT>FM to send mail to Recipients</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IW_SUBJECT</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>STRING</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IT_EMAIL_DATA</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>SOLI_TAB</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IT_RECEIVERS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZMMTT_MAIL_RECIPIENT</TYP>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>IT_RETURN</PARAMETER>
+       <TYP>BAPIRET2_TAB</TYP>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IW_SUBJECT</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_EMAIL_DATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Objcont and Objhead as Table Type</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_RECEIVERS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Table type for recipient to send mail</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Error Messages</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

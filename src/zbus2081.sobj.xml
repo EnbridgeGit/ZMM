@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SOBJ" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TOJTB>
+    <TOJTB>
+     <NAME>ZBUS2081</NAME>
+     <ACTIVE>X</ACTIVE>
+     <ACTIVELANG>E</ACTIVELANG>
+     <PARENT>BUS2081</PARENT>
+     <PROGNAME>ZBUS2081</PROGNAME>
+     <EDITELEM>ZBUS2081</EDITELEM>
+     <EPRIMETHOD>Display</EPRIMETHOD>
+     <EPRIATTRIB>InvoiceDocNumber</EPRIATTRIB>
+     <APPLIC>M</APPLIC>
+     <CREA_REL>702</CREA_REL>
+     <CHAN_REL>702</CHAN_REL>
+     <VERSION>702</VERSION>
+     <OBJTYPECLS>01</OBJTYPECLS>
+     <KEYLENGTH>14</KEYLENGTH>
+     <MODELONLY>R</MODELONLY>
+     <REL_REL>702</REL_REL>
+    </TOJTB>
+   </TOJTB>
+   <TOJTT>
+    <TOJTT>
+     <NAME>ZBUS2081</NAME>
+     <LANGUAGE>E</LANGUAGE>
+     <NTEXT>ZBUS2081</NTEXT>
+     <STEXT>ZBUS2081</STEXT>
+    </TOJTT>
+   </TOJTT>
+  </asx:values>
+ </asx:abap>
+</abapGit>
